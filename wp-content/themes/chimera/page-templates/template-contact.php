@@ -94,6 +94,9 @@ $contact_form_shortcode = $Herosection['contact_form_shortcode'] ?? [];
         </div>
     </section>
 
+    <!-- Global Presence Section (Reused from Home) -->
+    <?php get_template_part( 'template-parts/home/presence' ); ?>
+
 </main>
 
 <style>

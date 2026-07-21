@@ -392,4 +392,25 @@
 /* Testimonial card styling */
 .ind-testimonial-card {
   transition: background 0.5s ease, opacity 0.5s ease, border-color 0.5s ease;
+}
+
+/* ================================================
+   About Page Components
+   ================================================ */
+
+.about-founder-img {
+  object-position: top center;
+}
+
+.about-culture-section {
+  background-color: #FF4A03;
+}
+
+/* Ensure horizontal scroll works smoothly for timeline */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

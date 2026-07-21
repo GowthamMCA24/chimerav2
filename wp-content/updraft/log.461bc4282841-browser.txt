@@ -1,0 +1,10 @@
+0000.084 (R) [notice] Looking for db archive: file name: backup_2026-07-21-0558_chimera_a3bbb9ec8808-db.gz
+0000.085 (R) [notice] Archive is expected to be size: 1896 KB: OK
+0000.092 (R) [notice] Looking for mu-plugins archive: file name: backup_2026-07-21-0558_chimera_a3bbb9ec8808-mu-plugins.zip
+0000.094 (R) [notice] Archive is expected to be size: 0.8 KB: OK
+0000.097 (R) [notice] Looking for plugins archive: file name: backup_2026-07-21-0558_chimera_a3bbb9ec8808-plugins.zip
+0000.099 (R) [notice] Archive is expected to be size: 26003.6 KB: OK
+0000.099 (R) [notice] Looking for plugins archive: file name: backup_2026-07-21-0558_chimera_a3bbb9ec8808-plugins2.zip
+0000.100 (R) [notice] Archive is expected to be size: 21864.8 KB: OK
+0000.113 (R) [warning] Error: Existing unremoved folders from a previous restore exist (please use the "Delete old folders" button to delete them before trying again): C:\xampp\htdocs\chimerav2/wp-content/updraft/plugins-old
+0000.117 (R) [notice] Restore failed...

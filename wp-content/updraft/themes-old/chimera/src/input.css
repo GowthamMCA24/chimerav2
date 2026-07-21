@@ -1,0 +1,395 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-offwhite text-dark antialiased selection:bg-orange selection:text-white;
+  }
+
+  h1 {
+    @apply font-jost font-semibold leading-none tracking-[-0.12px] align-middle text-[50px] md:text-[84px] text-dark;
+  }
+
+  h2 {
+    @apply font-jost font-semibold leading-none tracking-normal text-[34px] md:text-[44px] text-dark;
+  }
+
+  h3 {
+    @apply font-jost font-semibold leading-none tracking-normal text-[30px] md:text-[44px] text-dark;
+  }
+
+  h4 {
+    @apply font-jost font-semibold leading-none tracking-normal text-[20px] md:text-[30px] text-dark;
+  }
+
+  h5 {
+    @apply font-jost font-semibold leading-none tracking-normal text-[16px] md:text-[18px] text-dark;
+  }
+
+  p {
+    @apply font-sans font-bold leading-[1.5] tracking-normal text-sm md:text-[18px] text-gray;
+  }
+}
+
+/* Custom Gradient utility as specified */
+.bg-orange-gradient {
+  background: linear-gradient(180deg, #FF8B4D 0%, #FF4A03 100%);
+}
+
+@layer components {
+  .container {
+    @apply w-full mx-auto px-[15px];
+  }
+
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+}
+
+/* ================================================
+   Blog Entry Content Typography
+   Applied to the_content() output on single posts
+   ================================================ */
+
+.blog-entry-content {
+  @apply font-sans text-dark leading-relaxed;
+}
+
+.blog-entry-content>*+* {
+  margin-top: 10px;
+}
+
+.blog-entry-content h2 {
+  @apply font-jost font-semibold text-[24px] md:text-[32px] text-dark leading-snug mt-12 mb-4;
+}
+
+.blog-entry-content h3 {
+  @apply font-jost font-semibold text-[20px] md:text-[26px] text-dark leading-snug mt-10 mb-3;
+}
+
+.blog-entry-content h4 {
+  @apply font-jost font-semibold text-[18px] md:text-[22px] text-dark leading-snug mt-8 mb-3;
+}
+
+.blog-entry-content p {
+  @apply font-sans font-normal text-[15px] md:text-lg text-dark leading-[1.8] mb-0;
+}
+
+.blog-entry-content a {
+  @apply text-orange underline decoration-orange/30 hover:decoration-orange transition-colors;
+}
+
+.blog-entry-content strong,
+.blog-entry-content b {
+  @apply font-semibold text-dark;
+}
+
+.blog-entry-content em,
+.blog-entry-content i {
+  @apply italic;
+}
+
+/* Blockquote & Pullquote — Custom Chimera Design */
+.blog-entry-content blockquote:not(.wp-block-pullquote blockquote),
+.blog-entry-content .wp-block-pullquote {
+  @apply relative px-8 pt-12 pb-8 my-10 bg-[#FFF6F0] rounded-[10px] border border-orange border-solid;
+}
+
+.blog-entry-content blockquote:not(.wp-block-pullquote blockquote)::before,
+.blog-entry-content .wp-block-pullquote::before {
+  content: '“';
+  @apply absolute top-0 left-8 text-[80px] leading-none text-orange font-jost font-bold opacity-100;
+  font-family: Georgia, serif;
+}
+
+.blog-entry-content blockquote p,
+.blog-entry-content .wp-block-pullquote p {
+  @apply font-sans font-medium text-[16px] md:text-[22px] leading-[1.4] not-italic z-10 relative;
+  color: #FF4A03 !important;
+  border: none;
+  text-align: left;
+}
+
+.blog-entry-content blockquote cite,
+.blog-entry-content blockquote p:last-child:not(:first-child),
+.blog-entry-content .wp-block-pullquote figcaption {
+  @apply block text-sm font-sans font-normal not-italic mt-6 z-10 relative leading-[1.6] text-left text-gray;
+  color: #666666 !important;
+}
+
+.blog-entry-content blockquote cite::first-line,
+.blog-entry-content blockquote p:last-child:not(:first-child)::first-line,
+.blog-entry-content .wp-block-pullquote figcaption::first-line {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1B1B1B !important;
+}
+
+.blog-entry-content blockquote cite strong,
+.blog-entry-content blockquote cite b,
+.blog-entry-content blockquote p:last-child:not(:first-child) strong,
+.blog-entry-content blockquote p:last-child:not(:first-child) b,
+.blog-entry-content .wp-block-pullquote figcaption strong,
+.blog-entry-content .wp-block-pullquote figcaption b {
+  font-weight: 700;
+  color: #1B1B1B !important;
+}
+
+/* Images inside content */
+.blog-entry-content img {
+  @apply rounded-[12px] w-full h-auto my-8 shadow-sm;
+}
+
+.blog-entry-content figure {
+  @apply my-8;
+}
+
+.blog-entry-content figcaption {
+  @apply text-center text-gray text-xs font-sans font-normal mt-3 italic;
+}
+
+/* Lists */
+.blog-entry-content ul {
+  @apply list-disc pl-6 my-4 space-y-2;
+}
+
+.blog-entry-content ol {
+  @apply list-decimal pl-6 my-4 space-y-2;
+}
+
+.blog-entry-content li {
+  @apply font-sans font-normal text-[15px] md:text-lg text-dark leading-[1.7];
+}
+
+.blog-entry-content li strong {
+  @apply text-dark;
+}
+
+/* Code blocks */
+.blog-entry-content code {
+  @apply bg-lightGray/50 text-dark px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.blog-entry-content pre {
+  @apply bg-dark text-white rounded-[12px] p-5 my-8 overflow-x-auto text-sm leading-relaxed;
+}
+
+.blog-entry-content pre code {
+  @apply bg-transparent text-white p-0 rounded-none;
+}
+
+/* Tables */
+.blog-entry-content table {
+  @apply w-full border-collapse my-8 text-sm;
+}
+
+.blog-entry-content th {
+  @apply bg-lightGray/50 text-dark font-semibold text-left px-4 py-3 border-b-2 border-lightGray;
+}
+
+.blog-entry-content td {
+  @apply px-4 py-3 border-b border-lightGray text-gray;
+}
+
+/* Horizontal rule */
+.blog-entry-content hr {
+  @apply border-t border-lightGray my-10;
+}
+
+/* WordPress specific blocks */
+.blog-entry-content .wp-block-image {
+  @apply my-8;
+}
+
+.blog-entry-content .wp-block-image img {
+  @apply rounded-[12px];
+}
+
+/* ================================================
+   Scrollbar Hide Utility
+   ================================================ */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================================================
+   Line Clamp Utilities
+   ================================================ */
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ================================================
+   Custom Inline CTA Block (Group Block)
+   ================================================ */
+.chimera-cta {
+  @apply bg-[#FF4A03] rounded-[10px] p-6 xl:px-10 py-[30px] my-10 xl:my-12 grid gap-2 xl:gap-4;
+  grid-template-columns: 1fr;
+  grid-template-areas: "h" "p" "b";
+}
+
+.chimera-cta>.wp-block-group__inner-container {
+  display: contents;
+}
+
+@media (min-width: 1280px) {
+  .chimera-cta {
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas: "h b" "p b";
+    @apply items-center gap-x-4 gap-y-2;
+  }
+}
+
+.chimera-cta :is(h1, h2, h3, h4, .cta-title) {
+  grid-area: h;
+  @apply font-jost font-semibold leading-snug !m-0 self-end text-lg xl:text-[22px];
+  color: #fff !important;
+  text-align: left;
+}
+
+.chimera-cta p {
+  grid-area: p;
+  @apply font-sans font-normal leading-relaxed !m-0 self-start text-[15px] xl:text-base;
+  color: rgba(255, 255, 255, .95) !important;
+  text-align: left;
+}
+
+.chimera-cta .wp-block-buttons {
+  grid-area: b;
+  @apply !m-0 self-center justify-self-start mt-2 xl:mt-0;
+}
+
+@media (min-width: 1280px) {
+  .chimera-cta .wp-block-buttons {
+    justify-self: end;
+  }
+}
+
+.chimera-cta .wp-block-button__link {
+  @apply bg-white font-sans font-semibold px-6 xl:px-4 py-3 rounded-[8px] flex items-center justify-center text-dark !border-none !m-0 text-sm xl:text-base no-underline;
+}
+
+.chimera-cta .wp-block-button__link::after {
+  content: "";
+  @apply inline-block w-[18px] h-[18px] ml-2 align-middle;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%231B1B1B' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3'/%3E%3C/svg%3E") no-repeat center/contain;
+}
+
+/* ================================================
+   Custom Inline CTA Block - Light Variant (Group Block)
+   ================================================ */
+.chimera-cta-light {
+  @apply bg-[#FFF6F0] border border-orange rounded-[10px] p-8 md:p-10 my-10 xl:my-12 grid gap-4 xl:gap-5;
+  grid-template-columns: 1fr;
+  grid-template-areas: "h" "p" "b";
+}
+
+.chimera-cta-light > .wp-block-group__inner-container {
+  display: contents;
+}
+
+.chimera-cta-light :is(h1, h2, h3, h4, .cta-title) {
+  grid-area: h;
+  @apply font-jost font-semibold leading-snug !m-0 self-end text-xl md:text-[32px] text-dark;
+  text-align: left;
+}
+
+.chimera-cta-light p {
+  grid-area: p;
+  @apply font-sans font-normal leading-relaxed !m-0 self-start text-left text-dark text-sm xl:text-base;
+}
+
+.chimera-cta-light .wp-block-buttons {
+  grid-area: b;
+  @apply !m-0 self-center justify-self-start mt-2 xl:mt-4;
+}
+
+.chimera-cta-light .wp-block-button__link {
+  @apply bg-orange text-white font-sans font-semibold px-6 py-3 rounded-[8px] flex items-center justify-center text-white !border-none !m-0 text-base;
+}
+
+.chimera-cta-light .wp-block-button__link::after {
+  content: "";
+  @apply inline-block w-[18px] h-[18px] ml-2 align-middle transition-transform;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23FFFFFF' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3'/%3E%3C/svg%3E") no-repeat center/contain;
+}
+
+.chimera-cta-light .wp-block-button__link:hover::after {
+  @apply translate-x-1;
+}
+
+/* ================================================
+   Industry Page Components
+   ================================================ */
+
+/* Challenges accordion smooth transitions */
+.ind-challenge-content {
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.ind-challenge-item.active .ind-challenge-toggle h5 {
+  @apply text-orange;
+}
+
+/* Engagement models accordion */
+.ind-engagement-content {
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+}
+
+/* Solution cards entrance animation */
+.ind-solution-card {
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.ind-solution-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Testimonial card styling */
+.ind-testimonial-card {
+  transition: background 0.5s ease, opacity 0.5s ease, border-color 0.5s ease;
+}

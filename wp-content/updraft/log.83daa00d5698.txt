@@ -1,0 +1,517 @@
+0000.001 (0) Opened log file at time: Mon, 20 Jul 2026 03:14:57 +0000 on http://localhost/chimerav2
+0000.003 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.26.5 WP: 7.0.1 PHP: 8.2.12 (apache2handler, Windows NT GOWTHAM 10.0 build 26200 (Windows 11) AMD64) MySQL: 10.4.32-MariaDB (max packet size=1048576) WPLANG: en Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 77.8M | 80M) multisite: N openssl: OpenSSL 3.0.11 19 Sep 2023 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: N
+0000.005 (0) Free space on disk containing Updraft's temporary directory: 39550.5 MB
+0000.012 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB: 1 (schedule: daily)
+0000.018 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.023 (0) Set semaphore last lock (fd) time to 2026-07-20 03:14:57
+0000.025 (0) Semaphore lock (fd) complete
+0000.030 (0) Backup run: resumption=0, nonce=83daa00d5698, file_nonce=83daa00d5698 begun at=1784517297 (0s ago), job type=backup
+0000.033 (0) Scheduling a resumption (1) after 300 seconds (1784517597) in case this run gets aborted
+0000.045 (0) Checking if we have a zip executable available
+0000.048 (0) Zip engine: ZipArchive (a.k.a. php-zip) is not available or is disabled (will use PclZip (much slower) if needed)
+0000.050 (0) Creation of backups of directories: beginning
+0000.057 (0) Beginning creation of dump of plugins (split every: 25 MB)
+0004.888 (0) Total entities for the zip file: 1672 directories, 8564 files (0 skipped as non-modified), 154.5 MB
+0004.983 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0029.186 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip.tmp: 100 files added (on-disk size: 294.7 KB)
+0029.230 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip.tmp: 200 files added (on-disk size: 294.7 KB)
+0029.285 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip.tmp: 300 files added (on-disk size: 294.7 KB)
+0029.339 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip.tmp: 400 files added (on-disk size: 294.7 KB)
+0029.382 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip.tmp: 500 files added (on-disk size: 294.7 KB)
+0029.433 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip.tmp: 600 files added (on-disk size: 294.7 KB)
+0029.469 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip.tmp: 700 files added (on-disk size: 294.7 KB)
+0029.480 (0) Adding batch to zip file (UpdraftPlus_PclZip): possibly approaching split limit (22.5 MB, 724 (725) files added so far); last ratio: 1; re-opening (prior size: 294.7 KB)
+0045.531 (0) Zip size is at/near split limit (6 MB / 25 MB) - bumping index (from: 0)
+0045.626 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip.list-temp.tmp)
+0045.634 (0) Successfully created zip file manifest (size: 52958)
+0045.641 (0) Created plugins zip (0) - 6107.2 KB in 45.5 s (134.3 KB/s) (checksums: sha1: 70196169fbc5f112624d8dcd1e28af9b92b345a3, sha256: a83fae366a602741ffa1f496844ccb5640099e17bd0c5a0a42773f8483ea5d4b)
+0045.657 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0045.658 (0) No remote despatch: user chose no remote backup service
+0045.660 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip
+0045.664 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip.list.tmp)
+0045.667 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0045.715 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 800 files added (on-disk size: 0 KB)
+0045.775 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 900 files added (on-disk size: 0 KB)
+0045.840 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1000 files added (on-disk size: 0 KB)
+0045.902 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 25 MB added on this batch (25 MB, 8564 files batched, 358 (1083) added so far); re-opening (prior size: 0 KB)
+0060.205 (0) A useful amount of data was added after this amount of zip processing: 15.1 s (normalised: 15.1 s, rate: 1699.8 KB/s)
+0060.225 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1100 files added (on-disk size: 6025.3 KB)
+0060.297 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1200 files added (on-disk size: 6025.3 KB)
+0060.353 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1300 files added (on-disk size: 6025.3 KB)
+0060.415 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1400 files added (on-disk size: 6025.3 KB)
+0060.475 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1500 files added (on-disk size: 6025.3 KB)
+0060.534 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1600 files added (on-disk size: 6025.3 KB)
+0060.585 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1700 files added (on-disk size: 6025.3 KB)
+0060.640 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1800 files added (on-disk size: 6025.3 KB)
+0060.696 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 1900 files added (on-disk size: 6025.3 KB)
+0060.752 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2000 files added (on-disk size: 6025.3 KB)
+0060.804 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 1000 files added on this batch (23.9 MB, 8564 files batched, 1001 (2084) added so far); re-opening (prior size: 6025.3 KB)
+0096.326 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2100 files added (on-disk size: 13889.6 KB)
+0096.364 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2200 files added (on-disk size: 13889.6 KB)
+0096.401 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2300 files added (on-disk size: 13889.6 KB)
+0096.437 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2400 files added (on-disk size: 13889.6 KB)
+0096.476 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2500 files added (on-disk size: 13889.6 KB)
+0096.514 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2600 files added (on-disk size: 13889.6 KB)
+0096.550 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2700 files added (on-disk size: 13889.6 KB)
+0096.595 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2800 files added (on-disk size: 13889.6 KB)
+0096.644 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 2900 files added (on-disk size: 13889.6 KB)
+0096.684 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3000 files added (on-disk size: 13889.6 KB)
+0096.718 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 1000 files added on this batch (7.6 MB, 8564 files batched, 1001 (3085) added so far); re-opening (prior size: 13889.6 KB)
+0130.495 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3100 files added (on-disk size: 17030.8 KB)
+0130.537 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3200 files added (on-disk size: 17030.8 KB)
+0130.573 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3300 files added (on-disk size: 17030.8 KB)
+0130.608 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3400 files added (on-disk size: 17030.8 KB)
+0130.647 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3500 files added (on-disk size: 17030.8 KB)
+0130.685 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3600 files added (on-disk size: 17030.8 KB)
+0130.718 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3700 files added (on-disk size: 17030.8 KB)
+0130.752 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3800 files added (on-disk size: 17030.8 KB)
+0130.783 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.tmp: 3900 files added (on-disk size: 17030.8 KB)
+0130.819 (0) Adding batch to zip file (UpdraftPlus_PclZip): possibly approaching split limit (18.8 MB, 906 (3991) files added so far); last ratio: 0.404; re-opening (prior size: 17030.8 KB)
+0152.804 (0) Zip size is at/near split limit (21.6 MB / 25 MB) - bumping index (from: 1)
+0153.006 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.list-temp.tmp)
+0153.019 (0) Successfully created zip file manifest (size: 279586)
+0153.025 (0) Created plugins zip (1) - 22163 KB in 107.2 s (206.8 KB/s) (checksums: sha1: 8084dd40867337254879de28803a466eedb333f2, sha256: b90c4257a56ebd143cfc3bde0882798aab34f27a172a79072ec88bbbcb0c3b43)
+0153.039 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0153.041 (0) No remote despatch: user chose no remote backup service
+0153.043 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip
+0153.046 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip.list.tmp)
+0153.049 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0153.058 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4000 files added (on-disk size: 0 KB)
+0153.098 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4100 files added (on-disk size: 0 KB)
+0153.143 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4200 files added (on-disk size: 0 KB)
+0153.186 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4300 files added (on-disk size: 0 KB)
+0153.229 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4400 files added (on-disk size: 0 KB)
+0153.275 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4500 files added (on-disk size: 0 KB)
+0153.319 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4600 files added (on-disk size: 0 KB)
+0153.350 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 25 MB added on this batch (25 MB, 8564 files batched, 676 (4667) added so far); re-opening (prior size: 0 KB)
+0165.880 (0) A useful amount of data was added after this amount of zip processing: 13.7 s (normalised: 13.7 s, rate: 1863.5 KB/s)
+0165.894 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4700 files added (on-disk size: 6893.6 KB)
+0165.930 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4800 files added (on-disk size: 6893.6 KB)
+0165.971 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 4900 files added (on-disk size: 6893.6 KB)
+0166.015 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5000 files added (on-disk size: 6893.6 KB)
+0166.058 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5100 files added (on-disk size: 6893.6 KB)
+0166.104 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5200 files added (on-disk size: 6893.6 KB)
+0166.148 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5300 files added (on-disk size: 6893.6 KB)
+0166.199 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5400 files added (on-disk size: 6893.6 KB)
+0166.242 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5500 files added (on-disk size: 6893.6 KB)
+0166.288 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5600 files added (on-disk size: 6893.6 KB)
+0166.319 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 1000 files added on this batch (7.3 MB, 8564 files batched, 1001 (5668) added so far); re-opening (prior size: 6893.6 KB)
+0195.930 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5700 files added (on-disk size: 9247.3 KB)
+0195.987 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5800 files added (on-disk size: 9247.3 KB)
+0196.036 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 5900 files added (on-disk size: 9247.3 KB)
+0196.076 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6000 files added (on-disk size: 9247.3 KB)
+0196.123 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6100 files added (on-disk size: 9247.3 KB)
+0196.162 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6200 files added (on-disk size: 9247.3 KB)
+0196.200 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6300 files added (on-disk size: 9247.3 KB)
+0196.237 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6400 files added (on-disk size: 9247.3 KB)
+0196.274 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6500 files added (on-disk size: 9247.3 KB)
+0196.306 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6600 files added (on-disk size: 9247.3 KB)
+0196.330 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 1000 files added on this batch (11.8 MB, 8564 files batched, 1001 (6669) added so far); re-opening (prior size: 9247.3 KB)
+0222.583 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6700 files added (on-disk size: 13028.6 KB)
+0222.631 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6800 files added (on-disk size: 13028.6 KB)
+0222.683 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 6900 files added (on-disk size: 13028.6 KB)
+0222.721 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7000 files added (on-disk size: 13028.6 KB)
+0222.771 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7100 files added (on-disk size: 13028.6 KB)
+0222.812 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7200 files added (on-disk size: 13028.6 KB)
+0222.888 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7300 files added (on-disk size: 13028.6 KB)
+0222.926 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7400 files added (on-disk size: 13028.6 KB)
+0222.965 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7500 files added (on-disk size: 13028.6 KB)
+0223.008 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7600 files added (on-disk size: 13028.6 KB)
+0223.035 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 1000 files added on this batch (4.1 MB, 8564 files batched, 1001 (7670) added so far); re-opening (prior size: 13028.6 KB)
+0250.257 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7700 files added (on-disk size: 14278.2 KB)
+0250.295 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7800 files added (on-disk size: 14278.2 KB)
+0250.333 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 7900 files added (on-disk size: 14278.2 KB)
+0250.369 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 8000 files added (on-disk size: 14278.2 KB)
+0250.401 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 8100 files added (on-disk size: 14278.2 KB)
+0250.436 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 8200 files added (on-disk size: 14278.2 KB)
+0250.474 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 8300 files added (on-disk size: 14278.2 KB)
+0250.515 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 8400 files added (on-disk size: 14278.2 KB)
+0250.553 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.tmp: 8500 files added (on-disk size: 14278.2 KB)
+0282.447 (0) The time we have been running (282.4) is approaching the resumption interval (300) - increasing resumption interval to 313
+0282.451 (0) The scheduled resumption is within 45 seconds - will reschedule
+0282.455 (0) Rescheduling resumption 1: moving to 358 seconds from now (1784517938)
+0282.460 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 313 + 45 = 358
+0282.492 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.list-temp.tmp)
+0282.517 (0) Successfully created zip file manifest (size: 409071)
+0282.681 (0) Created plugins zip (2) - 18079.1 KB in 129.7 s (139.4 KB/s) (sha1: bd0eb19271d3d7c71eb1e8a73106968369d7ff64, sha256: 6ff531a3db20692de03f43d88a9590c181f1e086abbb257ec7fa1c49f0f05f79)
+0282.693 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0282.695 (0) No remote despatch: user chose no remote backup service
+0282.697 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip
+0282.700 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip.list.tmp)
+0282.703 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0282.712 (0) Beginning creation of dump of themes (split every: 25 MB)
+0284.057 (0) Total entities for the zip file: 359 directories, 1962 files (0 skipped as non-modified), 26.5 MB
+0284.122 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0284.185 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0284.241 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0284.303 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0284.366 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0284.432 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 600 files added (on-disk size: 0 KB)
+0284.501 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 700 files added (on-disk size: 0 KB)
+0284.564 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 800 files added (on-disk size: 0 KB)
+0284.629 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 900 files added (on-disk size: 0 KB)
+0284.686 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1000 files added (on-disk size: 0 KB)
+0284.689 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 1000 files added on this batch (5.3 MB, 1962 files batched, 1001 (1001) added so far); re-opening (prior size: 0 KB)
+0314.494 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1100 files added (on-disk size: 1641.5 KB)
+0314.552 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1200 files added (on-disk size: 1641.5 KB)
+0314.603 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1300 files added (on-disk size: 1641.5 KB)
+0314.669 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1400 files added (on-disk size: 1641.5 KB)
+0314.736 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1500 files added (on-disk size: 1641.5 KB)
+0314.816 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1600 files added (on-disk size: 1641.5 KB)
+0314.887 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1700 files added (on-disk size: 1641.5 KB)
+0314.952 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1800 files added (on-disk size: 1641.5 KB)
+0315.028 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.tmp: 1900 files added (on-disk size: 1641.5 KB)
+0353.711 (0) The time we have been running (353.7) is approaching the resumption interval (358) - increasing resumption interval to 384
+0353.742 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.list-temp.tmp)
+0353.757 (0) Successfully created zip file manifest (size: 144564)
+0353.963 (0) Created themes zip (0) - 16587.2 KB in 71.2 s (232.9 KB/s) (sha1: 778e99c01b29809cddc2a618ea1a635552dec8be, sha256: 97f54d98815ec2d79a284b6a35ea3de38595c9f6a56eef9c32555b20d609a2c7)
+0353.984 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0353.987 (0) No remote despatch: user chose no remote backup service
+0353.991 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip
+0353.998 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip.list.tmp)
+0354.003 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0354.022 (0) Exclusion option setting (uploads): 
+0354.026 (0) Looking for candidates to backup in: C:\xampp\htdocs\chimerav2/wp-content/uploads
+0354.030 (0) finding files: 2026: adding to list (1)
+0354.034 (0) finding files: elementor: adding to list (2)
+0354.038 (0) finding files: wpcf7_uploads: adding to list (3)
+0354.041 (0) finding files: wpforms: adding to list (4)
+0354.045 (0) Beginning creation of dump of uploads (split every: 25 MB)
+0354.737 (0) Total entities for the zip file: 10 directories, 864 files (0 skipped as non-modified), 109 MB
+0354.791 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 25 MB added on this batch (25.6 MB, 864 files batched, 61 (61) added so far); re-opening (prior size: 0 KB)
+0356.215 (0) The time we have been running (356.2) is approaching the resumption interval (384) - increasing resumption interval to 387
+0356.222 (0) A useful amount of data was added after this amount of zip processing: 3.1 s (normalised: 3 s, rate: 8478.4 KB/s)
+0356.225 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=3.0897700786591, normalised_time=3.0194323387474, max_time=356.22469496727, data points known=1, max_bytes=26214400)
+0356.236 (0) Adding batch to zip file (UpdraftPlus_PclZip): possibly approaching split limit (0.9 MB, 1 (62) files added so far); last ratio: 0.9636; re-opening (prior size: 25241.6 KB)
+0356.461 (0) Zip size is at/near split limit (25.5 MB / 25 MB) - bumping index (from: 0)
+0356.793 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads.zip.list-temp.tmp)
+0356.799 (0) Successfully created zip file manifest (size: 2828)
+0356.808 (0) Created uploads zip (0) - 26150.1 KB in 2.4 s (10911.6 KB/s) (checksums: sha1: 3ae84b779b8e19e4a52c77c84017c5593e9676c4, sha256: 5bbf875bf37553980b6e269f16804c04564bcb14ac0f9ea178ed8ea16ce95d45)
+0356.835 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0356.838 (0) No remote despatch: user chose no remote backup service
+0356.842 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-uploads.zip
+0356.852 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads.zip.list.tmp)
+0356.856 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0356.895 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-uploads2.zip.tmp: 100 files added (on-disk size: 0 KB)
+0356.962 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-uploads2.zip.tmp: 200 files added (on-disk size: 0 KB)
+0356.978 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 25 MB added on this batch (25.5 MB, 864 files batched, 152 (214) added so far); re-opening (prior size: 0 KB)
+0358.713 (0) The time we have been running (358.7) is approaching the resumption interval (387) - increasing resumption interval to 389
+0358.723 (0) A useful amount of data was added after this amount of zip processing: 2.6 s (normalised: 2.5 s, rate: 10064.2 KB/s)
+0358.727 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=2.5908100605011, normalised_time=2.5436590610422, max_time=358.7262160778, data points known=1, max_bytes=26214400)
+0358.743 (0) Adding batch to zip file (UpdraftPlus_PclZip): possibly approaching split limit (0.4 MB, 4 (218) files added so far); last ratio: 0.9694; re-opening (prior size: 25276.6 KB)
+0358.971 (0) Zip size is at/near split limit (25.1 MB / 25 MB) - bumping index (from: 1)
+0359.288 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads2.zip.list-temp.tmp)
+0359.293 (0) Successfully created zip file manifest (size: 9620)
+0359.310 (0) The time we have been running (359.3) is approaching the resumption interval (389) - increasing resumption interval to 390
+0359.318 (0) Created uploads zip (1) - 25697.4 KB in 2.2 s (11879.8 KB/s) (checksums: sha1: 0ce38fac35d6d86dc92ecaeaf610b6ae4e1641e1, sha256: 81245a68f13f650a81df43f7ca16c0fad228cfde543b71aa72e9bda269491d89)
+0359.344 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0359.347 (0) No remote despatch: user chose no remote backup service
+0359.351 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-uploads2.zip
+0359.358 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads2.zip.list.tmp)
+0359.362 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0359.413 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-uploads3.zip.tmp: 300 files added (on-disk size: 0 KB)
+0359.454 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 25 MB added on this batch (25.1 MB, 864 files batched, 144 (362) added so far); re-opening (prior size: 0 KB)
+0361.545 (0) The time we have been running (361.5) is approaching the resumption interval (390) - increasing resumption interval to 392
+0361.551 (0) A useful amount of data was added after this amount of zip processing: 3.4 s (normalised: 3.4 s, rate: 7508.6 KB/s)
+0361.554 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=3.4183878898621, normalised_time=3.409412274936, max_time=361.55279707909, data points known=1, max_bytes=26214400)
+0361.562 (0) Adding batch to zip file (UpdraftPlus_PclZip): possibly approaching split limit (0.2 MB, 2 (364) files added so far); last ratio: 0.9948; re-opening (prior size: 25534.4 KB)
+0361.928 (0) Zip size is at/near split limit (25.1 MB / 25 MB) - bumping index (from: 2)
+0362.377 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads3.zip.list-temp.tmp)
+0362.385 (0) Successfully created zip file manifest (size: 7664)
+0362.400 (0) The time we have been running (362.4) is approaching the resumption interval (392) - increasing resumption interval to 393
+0362.408 (0) Created uploads zip (2) - 25708.4 KB in 2.6 s (9851.4 KB/s) (checksums: sha1: df548d9db118854ecc745a956bdf0a16db1561b0, sha256: d5b57abf308860559435461583a174c5767500f827c8eb068c554477d0af2ca3)
+0362.434 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0362.438 (0) No remote despatch: user chose no remote backup service
+0362.441 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-uploads3.zip
+0362.447 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads3.zip.list.tmp)
+0362.450 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0362.498 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-uploads4.zip.tmp: 400 files added (on-disk size: 0 KB)
+0362.601 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-uploads4.zip.tmp: 500 files added (on-disk size: 0 KB)
+0362.696 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-uploads4.zip.tmp: 600 files added (on-disk size: 0 KB)
+0362.786 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-uploads4.zip.tmp: 700 files added (on-disk size: 0 KB)
+0362.807 (0) Adding batch to zip file (UpdraftPlus_PclZip): over 25 MB added on this batch (25 MB, 864 files batched, 370 (734) added so far); re-opening (prior size: 0 KB)
+0364.951 (0) The time we have been running (364.9) is approaching the resumption interval (393) - increasing resumption interval to 395
+0364.956 (0) A useful amount of data was added after this amount of zip processing: 3.8 s (normalised: 3.8 s, rate: 6705.6 KB/s)
+0364.959 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=3.8242859840393, normalised_time=3.8176794924737, max_time=364.95837402344, data points known=1, max_bytes=26214400)
+0364.966 (0) Adding batch to zip file (UpdraftPlus_PclZip): possibly approaching split limit (0.3 MB, 1 (735) files added so far); last ratio: 0.9876; re-opening (prior size: 25326.2 KB)
+0365.196 (0) The time we have been running (365.2) is approaching the resumption interval (395) - increasing resumption interval to 396
+0365.200 (0) Zip size is at/near split limit (25 MB / 25 MB) - bumping index (from: 3)
+0365.501 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads4.zip.list-temp.tmp)
+0365.506 (0) Successfully created zip file manifest (size: 26640)
+0365.513 (0) Created uploads zip (3) - 25581.8 KB in 2.8 s (9163.8 KB/s) (checksums: sha1: cf4b2e2f8f26d0ba1943537564f1d57bd989a76e, sha256: 7810b422f6a39011fc35a82c60cb50e727bc4e17ba9e1726432f7b668de049fb)
+0365.532 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0365.534 (0) No remote despatch: user chose no remote backup service
+0365.537 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-uploads4.zip
+0365.541 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads4.zip.list.tmp)
+0365.544 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0365.598 (0) Zip: backup_2026-07-20-0314_chimera_83daa00d5698-uploads5.zip.tmp: 800 files added (on-disk size: 0 KB)
+0366.530 (0) The time we have been running (366.5) is approaching the resumption interval (396) - increasing resumption interval to 397
+0366.540 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads5.zip.list-temp.tmp)
+0366.546 (0) Successfully created zip file manifest (size: 8891)
+0366.682 (0) Created uploads zip (4) - 6036.1 KB in 1.2 s (5186.9 KB/s) (sha1: 2bcac69f1f601da9f7e988c1caf964f2c4600805, sha256: 461221d99a8cd87176f841be6941cafbfbb9df5d4f2a52fdd583137274c0e388)
+0366.695 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0366.698 (0) No remote despatch: user chose no remote backup service
+0366.700 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-uploads5.zip
+0366.705 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-uploads5.zip.list.tmp)
+0366.708 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0366.725 (0) Beginning creation of dump of mu-plugins (split every: 25 MB)
+0366.756 (0) Total entities for the zip file: 1 directories, 1 files (0 skipped as non-modified), 0 MB
+0366.759 (0) Only one archive required (UpdraftPlus_PclZip) - will attempt to do in single operation (data: 1 KB, split: 25600 KB)
+0366.804 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-mu-plugins.zip.list-temp.tmp)
+0366.808 (0) Successfully created zip file manifest (size: 77)
+0366.823 (0) Created mu-plugins zip (0) - 0.7 KB in 0.1 s (9.9 KB/s) (sha1: 9f27b8e4b14d693da3b97727b61e306697047b16, sha256: 3d843ce07ed1f1465982a1078be184895ba2872cfc3a7bcfea6ea43b781670ab)
+0366.836 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0366.838 (0) No remote despatch: user chose no remote backup service
+0366.840 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-mu-plugins.zip
+0366.845 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-mu-plugins.zip.list.tmp)
+0366.848 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0366.867 (0) Beginning backup of other directories found in the content directory (index: 0)
+0366.870 (0) Exclusion option setting (others): 
+0366.872 (0) Looking for candidates to backup in: C:\xampp\htdocs\chimerav2/wp-content
+0366.875 (0) finding files: index.php: adding to list (1)
+0366.877 (0) finding files: index.php-old: adding to list (2)
+0366.879 (0) finding files: index.php-old-old: adding to list (3)
+0366.881 (0) finding files: index.php-old-old-old: adding to list (4)
+0366.883 (0) finding files: languages: adding to list (5)
+0366.886 (0) finding files: languages-old: adding to list (6)
+0366.888 (0) finding files: languages-old-old: adding to list (7)
+0366.890 (0) finding files: languages-old-old-old: adding to list (8)
+0366.892 (0) finding files: mu-plugins: skipping: this is the mu-plugins directory
+0366.894 (0) finding files: mu-plugins-old: adding to list (9)
+0366.897 (0) finding files: mu-plugins-old-old: adding to list (10)
+0366.900 (0) finding files: mu-plugins-old-old-old: adding to list (11)
+0366.902 (0) finding files: plugins: skipping: this is the plugins directory
+0366.904 (0) finding files: plugins-old: adding to list (12)
+0366.906 (0) finding files: plugins-old-old: adding to list (13)
+0366.908 (0) finding files: plugins-old-old-old: adding to list (14)
+0366.910 (0) finding files: themes: skipping: this is the themes directory
+0366.911 (0) finding files: themes-old: adding to list (15)
+0366.914 (0) finding files: themes-old-old: adding to list (16)
+0366.915 (0) finding files: themes-old-old-old: adding to list (17)
+0366.917 (0) finding files: updraft: skipping: this is the updraft directory
+0366.920 (0) finding files: upgrade: adding to list (18)
+0366.922 (0) finding files: upgrade-temp-backup: adding to list (19)
+0366.925 (0) finding files: upgrade-temp-backup-old: adding to list (20)
+0366.926 (0) finding files: upgrade-temp-backup-old-old: adding to list (21)
+0366.928 (0) finding files: upgrade-temp-backup-old-old-old: adding to list (22)
+0366.930 (0) finding files: uploads: skipping: this is the uploads directory
+0366.933 (0) finding files: uploads-old: adding to list (23)
+0366.934 (0) finding files: uploads-old-old: adding to list (24)
+0366.937 (0) finding files: uploads-old-old-old: adding to list (25)
+0366.997 (0) Total entities for the zip file: 31 directories, 4 files (0 skipped as non-modified), 0 MB
+0366.999 (0) Only one archive required (UpdraftPlus_PclZip) - will attempt to do in single operation (data: 0.1 KB, split: 25600 KB)
+0367.596 (0) The time we have been running (367.6) is approaching the resumption interval (397) - increasing resumption interval to 398
+0367.604 (0) Creating zip file manifest (backup_2026-07-20-0314_chimera_83daa00d5698-others.zip.list-temp.tmp)
+0367.607 (0) Successfully created zip file manifest (size: 118)
+0367.622 (0) Created others zip (0) - 4.3 KB in 0.7 s (6.5 KB/s) (sha1: ef2573b145cb881d0741dd8c0758965389ffcd1a, sha256: e4d80c04f7bcbf0df26deba352e69067445800992271de7063f4507427e4e91e)
+0367.640 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0367.643 (0) No remote despatch: user chose no remote backup service
+0367.645 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-others.zip
+0367.649 (0) Deleting zip manifest (backup_2026-07-20-0314_chimera_83daa00d5698-others.zip.list.tmp)
+0367.651 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0367.686 (0) Saving backup status to database (elements: 16)
+0367.698 (0) Beginning creation of database dump (WordPress DB)
+0367.701 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0367.791 (0) Table wp_options: Total expected rows (via COUNT): 557
+0367.887 (0) Table wp_options: Rows added in this batch (next record: 16682): 553 (uncompressed bytes in this segment=1767806) in 0.15 seconds
+0367.904 (0) Table wp_options: finishing file(s) (2, 301.5 KB)
+0367.923 (0) Table wp_users: Total expected rows (via COUNT): 6
+0367.926 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0367.932 (0) Table wp_users: Rows added in this batch (next record: 6): 6 (uncompressed bytes in this segment=2176) in 0.02 seconds
+0367.950 (0) Table wp_users: finishing file(s) (2, 1.1 KB)
+0368.006 (0) Table wp_usermeta: Total expected rows (via COUNT): 122
+0368.008 (0) Table is relatively small; fetch_rows will thus be: 200 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0368.016 (0) Table wp_usermeta: Rows added in this batch (next record: 123): 122 (uncompressed bytes in this segment=9975) in 0.04 seconds
+0368.027 (0) The time we have been running (368) is approaching the resumption interval (398) - increasing resumption interval to 399
+0368.039 (0) Table wp_usermeta: finishing file(s) (2, 3 KB)
+0368.086 (0) Table wp_actionscheduler_actions: Total expected rows (via COUNT): 15
+0368.087 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0368.094 (0) Table wp_actionscheduler_actions: Rows added in this batch (next record: 2113): 15 (uncompressed bytes in this segment=8845) in 0.05 seconds
+0368.112 (0) Table wp_actionscheduler_actions: finishing file(s) (2, 1.4 KB)
+0368.131 (0) Table wp_actionscheduler_claims: Total expected rows (via COUNT): 0
+0368.136 (0) Table wp_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=625) in 0.02 seconds
+0368.150 (0) Table wp_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0368.179 (0) Table wp_actionscheduler_groups: Total expected rows (via COUNT): 4
+0368.183 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0368.190 (0) Table wp_actionscheduler_groups: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=722) in 0.03 seconds
+0368.203 (0) Table wp_actionscheduler_groups: finishing file(s) (2, 0.4 KB)
+0368.222 (0) Table wp_actionscheduler_logs: Total expected rows (via COUNT): 37
+0368.227 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0368.235 (0) Table wp_actionscheduler_logs: Rows added in this batch (next record: 47): 37 (uncompressed bytes in this segment=4069) in 0.02 seconds
+0368.251 (0) Table wp_actionscheduler_logs: finishing file(s) (2, 0.9 KB)
+0368.274 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0368.280 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=634) in 0.02 seconds
+0368.296 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0368.314 (0) Table wp_comments: Total expected rows (via COUNT): 1
+0368.323 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0368.331 (0) Table wp_comments: Rows added in this batch (next record: 2): 1 (uncompressed bytes in this segment=1912) in 0.03 seconds
+0368.346 (0) Table wp_comments: finishing file(s) (2, 0.8 KB)
+0368.365 (0) Table wp_links: Total expected rows (via COUNT): 0
+0368.371 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1027) in 0.02 seconds
+0368.387 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0368.686 (0) Table wp_postmeta: Total expected rows (approximate): 127030
+0370.256 (0) Table wp_postmeta: Rows added in this batch (next record: 135042): 129645 (uncompressed bytes in this segment=11458043) in 1.86 seconds
+0370.295 (0) The time we have been running (370.3) is approaching the resumption interval (399) - increasing resumption interval to 401
+0370.309 (0) Table wp_postmeta: finishing file(s) (2, 1505.6 KB)
+0370.428 (0) Table wp_posts: Total expected rows (approximate): 1567
+0370.552 (0) Table wp_posts: Rows added in this batch (next record: 2139): 1598 (uncompressed bytes in this segment=1419896) in 0.23 seconds
+0370.573 (0) Table wp_posts: finishing file(s) (2, 143.5 KB)
+0370.588 (0) Table wp_term_relationships: Total expected rows (approximate): 190
+0370.603 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 190 (uncompressed bytes in this segment=3398) in 0.02 seconds
+0370.615 (0) Table wp_term_relationships: finishing file(s) (2, 0.9 KB)
+0370.664 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 35
+0370.666 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0370.672 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 37): 35 (uncompressed bytes in this segment=2264) in 0.05 seconds
+0370.689 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.7 KB)
+0370.712 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0370.719 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=607) in 0.02 seconds
+0370.737 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0370.753 (0) Table wp_terms: Total expected rows (via COUNT): 35
+0370.755 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0370.762 (0) Table wp_terms: Rows added in this batch (next record: 37): 35 (uncompressed bytes in this segment=1952) in 0.02 seconds
+0370.777 (0) Table wp_terms: finishing file(s) (2, 0.8 KB)
+0370.795 (0) Table wp_e_events: Total expected rows (via COUNT): 0
+0370.810 (0) Table wp_e_events: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=511) in 0.03 seconds
+0370.828 (0) Table wp_e_events: finishing file(s) (2, 0.3 KB)
+0370.847 (0) Table wp_wpfm_backup: Total expected rows (via COUNT): 0
+0370.851 (0) Table wp_wpfm_backup: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=478) in 0.02 seconds
+0370.867 (0) Table wp_wpfm_backup: finishing file(s) (2, 0.3 KB)
+0370.883 (0) Table wp_wpforms_analytics_forms: Total expected rows (approximate): 0
+0370.888 (0) Table wp_wpforms_analytics_forms: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=689) in 0.01 seconds
+0370.919 (0) Table wp_wpforms_analytics_forms: finishing file(s) (2, 0.4 KB)
+0370.941 (0) Table wp_wpforms_analytics_snapshots: Total expected rows (via COUNT): 0
+0370.944 (0) Table wp_wpforms_analytics_snapshots: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1059) in 0.02 seconds
+0370.961 (0) Table wp_wpforms_analytics_snapshots: finishing file(s) (2, 0.5 KB)
+0371.062 (0) Table wp_wpforms_logs: Total expected rows (via COUNT): 0
+0371.065 (0) Table wp_wpforms_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=659) in 0.06 seconds
+0371.095 (0) The time we have been running (371.1) is approaching the resumption interval (401) - increasing resumption interval to 402
+0371.109 (0) Table wp_wpforms_logs: finishing file(s) (2, 0.4 KB)
+0371.140 (0) Table wp_wpforms_payment_meta: Total expected rows (via COUNT): 0
+0371.145 (0) Table wp_wpforms_payment_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=690) in 0.03 seconds
+0371.167 (0) Table wp_wpforms_payment_meta: finishing file(s) (2, 0.4 KB)
+0371.205 (0) Table wp_wpforms_payments: Total expected rows (via COUNT): 0
+0371.221 (0) Table wp_wpforms_payments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1650) in 0.04 seconds
+0371.236 (0) Table wp_wpforms_payments: finishing file(s) (2, 0.6 KB)
+0371.299 (0) Table wp_wpforms_tasks_meta: Total expected rows (via COUNT): 4
+0371.302 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0371.307 (0) Table wp_wpforms_tasks_meta: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=888) in 0.06 seconds
+0371.339 (0) Table wp_wpforms_tasks_meta: finishing file(s) (2, 0.5 KB)
+0371.358 (0) Table wp_wpmailsmtp_debug_events: Total expected rows (via COUNT): 10
+0371.361 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0371.365 (0) Table wp_wpmailsmtp_debug_events: Rows added in this batch (next record: 10): 10 (uncompressed bytes in this segment=4349) in 0.02 seconds
+0371.383 (0) Table wp_wpmailsmtp_debug_events: finishing file(s) (2, 0.7 KB)
+0371.441 (0) Table wp_wpmailsmtp_tasks_meta: Total expected rows (via COUNT): 0
+0371.447 (0) Table wp_wpmailsmtp_tasks_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=561) in 0.05 seconds
+0371.478 (0) Table wp_wpmailsmtp_tasks_meta: finishing file(s) (2, 0.3 KB)
+0371.494 (0) Table wp_yoast_expiring_store: Total expected rows (approximate): 0
+0371.505 (0) Table wp_yoast_expiring_store: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=533) in 0.02 seconds
+0371.552 (0) Table wp_yoast_expiring_store: finishing file(s) (2, 0.3 KB)
+0371.580 (0) Table wp_yoast_indexable: Total expected rows (via COUNT): 240
+0371.582 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0371.602 (0) Table wp_yoast_indexable: Rows added in this batch (next record: 242): 240 (uncompressed bytes in this segment=199215) in 0.04 seconds
+0371.619 (0) Table wp_yoast_indexable: finishing file(s) (2, 20.2 KB)
+0371.637 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 233
+0371.691 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 233 (uncompressed bytes in this segment=4663) in 0.06 seconds
+0371.738 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 1 KB)
+0371.755 (0) Table wp_yoast_migrations: Total expected rows (via COUNT): 26
+0371.758 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0371.766 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 26): 26 (uncompressed bytes in this segment=1245) in 0.02 seconds
+0371.783 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0371.801 (0) Table wp_yoast_primary_term: Total expected rows (via COUNT): 3
+0371.803 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0371.810 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=1117) in 0.02 seconds
+0371.824 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.5 KB)
+0371.841 (0) Table wp_yoast_seo_links: Total expected rows (via COUNT): 22
+0371.869 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0371.875 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: 42): 22 (uncompressed bytes in this segment=4135) in 0.04 seconds
+0371.929 (0) Table wp_yoast_seo_links: finishing file(s) (2, 1.2 KB)
+0371.934 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_options.table.tmpr16683.gz (1/32/fopen): adding to final database dump
+0371.947 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_options.table.gz (2/32/fopen): adding to final database dump
+0371.951 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_users.table.tmpr7.gz (3/32/fopen): adding to final database dump
+0371.953 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_users.table.gz (4/32/fopen): adding to final database dump
+0371.955 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_usermeta.table.tmpr124.gz (5/32/fopen): adding to final database dump
+0371.957 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_usermeta.table.gz (6/32/fopen): adding to final database dump
+0371.960 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_actionscheduler_actions.table.tmpr2114.gz (7/32/fopen): adding to final database dump
+0371.962 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_actionscheduler_actions.table.gz (8/32/fopen): adding to final database dump
+0371.964 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_actionscheduler_claims.table.tmpr0.gz (9/32/fopen): adding to final database dump
+0371.966 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_actionscheduler_claims.table.gz (10/32/fopen): adding to final database dump
+0371.968 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_actionscheduler_groups.table.tmpr5.gz (11/32/fopen): adding to final database dump
+0371.971 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_actionscheduler_groups.table.gz (12/32/fopen): adding to final database dump
+0371.973 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_actionscheduler_logs.table.tmpr48.gz (13/32/fopen): adding to final database dump
+0371.975 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_actionscheduler_logs.table.gz (14/32/fopen): adding to final database dump
+0371.977 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_commentmeta.table.tmpr0.gz (15/32/fopen): adding to final database dump
+0371.979 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_commentmeta.table.gz (16/32/fopen): adding to final database dump
+0371.996 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_comments.table.tmpr3.gz (17/32/fopen): adding to final database dump
+0371.998 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_comments.table.gz (18/32/fopen): adding to final database dump
+0372.000 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_links.table.tmpr0.gz (19/32/fopen): adding to final database dump
+0372.003 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_links.table.gz (20/32/fopen): adding to final database dump
+0372.006 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_postmeta.table.tmpr135043.gz (21/32/fopen): adding to final database dump
+0372.057 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_postmeta.table.gz (22/32/fopen): adding to final database dump
+0372.074 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_posts.table.tmpr2140.gz (23/32/fopen): adding to final database dump
+0372.081 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_posts.table.gz (24/32/fopen): adding to final database dump
+0372.083 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_term_relationships.table.tmpr100001.gz (25/32/fopen): adding to final database dump
+0372.085 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_term_relationships.table.gz (26/32/fopen): adding to final database dump
+0372.087 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_term_taxonomy.table.tmpr38.gz (27/32/fopen): adding to final database dump
+0372.089 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_term_taxonomy.table.gz (28/32/fopen): adding to final database dump
+0372.090 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_termmeta.table.tmpr0.gz (29/32/fopen): adding to final database dump
+0372.092 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_termmeta.table.gz (30/32/fopen): adding to final database dump
+0372.094 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_terms.table.tmpr38.gz (31/32/fopen): adding to final database dump
+0372.097 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_terms.table.gz (32/32/fopen): adding to final database dump
+0372.099 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_e_events.table.tmpr0.gz (33/32/fopen): adding to final database dump
+0372.106 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_e_events.table.gz (34/32/fopen): adding to final database dump
+0372.109 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpfm_backup.table.tmpr0.gz (35/32/fopen): adding to final database dump
+0372.111 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpfm_backup.table.gz (36/32/fopen): adding to final database dump
+0372.113 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_analytics_forms.table.tmpr1.gz (37/32/fopen): adding to final database dump
+0372.116 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_analytics_forms.table.gz (38/32/fopen): adding to final database dump
+0372.118 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_analytics_snapshots.table.tmpr0.gz (39/32/fopen): adding to final database dump
+0372.121 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_analytics_snapshots.table.gz (40/32/fopen): adding to final database dump
+0372.123 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_logs.table.tmpr0.gz (41/32/fopen): adding to final database dump
+0372.125 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_logs.table.gz (42/32/fopen): adding to final database dump
+0372.127 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_payment_meta.table.tmpr0.gz (43/32/fopen): adding to final database dump
+0372.155 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_payment_meta.table.gz (44/32/fopen): adding to final database dump
+0372.157 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_payments.table.tmpr0.gz (45/32/fopen): adding to final database dump
+0372.159 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_payments.table.gz (46/32/fopen): adding to final database dump
+0372.162 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_tasks_meta.table.tmpr5.gz (47/32/fopen): adding to final database dump
+0372.164 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpforms_tasks_meta.table.gz (48/32/fopen): adding to final database dump
+0372.166 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpmailsmtp_debug_events.table.tmpr11.gz (49/32/fopen): adding to final database dump
+0372.168 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpmailsmtp_debug_events.table.gz (50/32/fopen): adding to final database dump
+0372.170 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpmailsmtp_tasks_meta.table.tmpr0.gz (51/32/fopen): adding to final database dump
+0372.186 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_wpmailsmtp_tasks_meta.table.gz (52/32/fopen): adding to final database dump
+0372.188 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_expiring_store.table.tmpr1.gz (53/32/fopen): adding to final database dump
+0372.190 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_expiring_store.table.gz (54/32/fopen): adding to final database dump
+0372.192 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_indexable.table.tmpr243.gz (55/32/fopen): adding to final database dump
+0372.197 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_indexable.table.gz (56/32/fopen): adding to final database dump
+0372.199 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_indexable_hierarchy.table.tmpr1001.gz (57/32/fopen): adding to final database dump
+0372.202 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_indexable_hierarchy.table.gz (58/32/fopen): adding to final database dump
+0372.218 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_migrations.table.tmpr27.gz (59/32/fopen): adding to final database dump
+0372.220 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_migrations.table.gz (60/32/fopen): adding to final database dump
+0372.223 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_primary_term.table.tmpr4.gz (61/32/fopen): adding to final database dump
+0372.226 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_primary_term.table.gz (62/32/fopen): adding to final database dump
+0372.228 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_seo_links.table.tmpr43.gz (63/32/fopen): adding to final database dump
+0372.230 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db-table-wp_yoast_seo_links.table.gz (64/32/fopen): adding to final database dump
+0372.286 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db.gz: finished writing out complete database file (1990.4 KB)
+0372.424 (0) Total database tables backed up: 32 (backup_2026-07-20-0314_chimera_83daa00d5698-db.gz, size: 2038282, sha1: d31899c6cbc6c8d6e4609bc9733e90e96c3e1194, sha256: 1fcd21c1300b5184791a493ede5c1c648a8312db3599becc6dd53dfe9a6a2b4e)
+0372.446 (0) backup_2026-07-20-0314_chimera_83daa00d5698-plugins.zip: plugins: This file has already been successfully processed
+0372.448 (0) backup_2026-07-20-0314_chimera_83daa00d5698-plugins2.zip: plugins: This file has already been successfully processed
+0372.450 (0) backup_2026-07-20-0314_chimera_83daa00d5698-plugins3.zip: plugins: This file has already been successfully processed
+0372.451 (0) backup_2026-07-20-0314_chimera_83daa00d5698-themes.zip: themes: This file has already been successfully processed
+0372.453 (0) backup_2026-07-20-0314_chimera_83daa00d5698-uploads.zip: uploads: This file has already been successfully processed
+0372.455 (0) backup_2026-07-20-0314_chimera_83daa00d5698-uploads2.zip: uploads: This file has already been successfully processed
+0372.457 (0) backup_2026-07-20-0314_chimera_83daa00d5698-uploads3.zip: uploads: This file has already been successfully processed
+0372.459 (0) backup_2026-07-20-0314_chimera_83daa00d5698-uploads4.zip: uploads: This file has already been successfully processed
+0372.460 (0) backup_2026-07-20-0314_chimera_83daa00d5698-uploads5.zip: uploads: This file has already been successfully processed
+0372.462 (0) backup_2026-07-20-0314_chimera_83daa00d5698-mu-plugins.zip: mu-plugins: This file has already been successfully processed
+0372.464 (0) backup_2026-07-20-0314_chimera_83daa00d5698-others.zip: others: This file has already been successfully processed
+0372.466 (0) backup_2026-07-20-0314_chimera_83daa00d5698-db.gz: db: This file has not yet been successfully uploaded: will queue
+0372.468 (0) Saving backup history. Total backup size: 170 MB
+0372.504 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0372.512 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0372.514 (0) No remote despatch: user chose no remote backup service
+0372.516 (0) Recording as successfully uploaded: backup_2026-07-20-0314_chimera_83daa00d5698-db.gz
+0372.520 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0372.522 (0) Resume backup (83daa00d5698, 0): finish run
+0372.529 (0) Decremented the semaphore (fd) by 1
+0372.532 (0) Semaphore (fd) unlocked
+0372.534 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0372.555 (0) No email will/can be sent - the user has not configured an email address.
+0372.557 (0) The backup succeeded and is now complete

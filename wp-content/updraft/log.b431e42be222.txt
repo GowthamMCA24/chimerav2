@@ -1,0 +1,210 @@
+0000.002 (0) Opened log file at time: Mon, 20 Jul 2026 10:50:36 +0000 on http://localhost/chimerav2
+0000.008 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.26.5 WP: 7.0.1 PHP: 8.2.12 (apache2handler, Windows NT GOWTHAM 10.0 build 26200 (Windows 11) AMD64) MySQL: 10.4.32-MariaDB (max packet size=1048576) WPLANG: en Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 68.3M | 70M) multisite: N openssl: OpenSSL 3.0.11 19 Sep 2023 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: N
+0000.010 (0) Free space on disk containing Updraft's temporary directory: 37268.4 MB
+0000.034 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.035 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.042 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1784517297, seconds_ago=27339)
+0000.048 (0) Set semaphore last lock (fd) time to 2026-07-20 10:50:36
+0000.050 (0) Semaphore lock (fd) complete
+0000.062 (0) Backup run: resumption=0, nonce=b431e42be222, file_nonce=b431e42be222 begun at=1784544636 (0s ago), job type=backup
+0000.065 (0) Scheduling a resumption (1) after 402 seconds (1784545038) in case this run gets aborted
+0000.084 (0) Checking if we have a zip executable available
+0000.094 (0) Zip engine: ZipArchive (a.k.a. php-zip) is not available or is disabled (will use PclZip (much slower) if needed)
+0000.096 (0) Creation of backups of directories: beginning
+0000.104 (0) No backup of plugins: excluded by user's options
+0000.106 (0) No backup of themes: excluded by user's options
+0000.109 (0) No backup of uploads: excluded by user's options
+0000.111 (0) No backup of mu-plugins: excluded by user's options
+0000.113 (0) No backup of others: excluded by user's options
+0000.120 (0) Saving backup status to database (elements: 0)
+0000.131 (0) Beginning creation of database dump (WordPress DB)
+0000.134 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0000.259 (0) Table wp_options: Total expected rows (via COUNT): 555
+0000.341 (0) Table wp_options: Rows added in this batch (next record: 16715): 539 (uncompressed bytes in this segment=1771189) in 0.11 seconds
+0000.355 (0) Table wp_options: finishing file(s) (2, 302.4 KB)
+0000.372 (0) Table wp_users: Total expected rows (via COUNT): 6
+0000.374 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.378 (0) Table wp_users: Rows added in this batch (next record: 6): 6 (uncompressed bytes in this segment=2176) in 0.01 seconds
+0000.389 (0) Table wp_users: finishing file(s) (2, 1.1 KB)
+0000.405 (0) Table wp_usermeta: Total expected rows (via COUNT): 122
+0000.407 (0) Table is relatively small; fetch_rows will thus be: 200 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.412 (0) Table wp_usermeta: Rows added in this batch (next record: 123): 122 (uncompressed bytes in this segment=9975) in 0.02 seconds
+0000.425 (0) Table wp_usermeta: finishing file(s) (2, 3 KB)
+0000.438 (0) Table wp_actionscheduler_actions: Total expected rows (via COUNT): 15
+0000.440 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.445 (0) Table wp_actionscheduler_actions: Rows added in this batch (next record: 2113): 15 (uncompressed bytes in this segment=8845) in 0.01 seconds
+0000.457 (0) Table wp_actionscheduler_actions: finishing file(s) (2, 1.4 KB)
+0000.469 (0) Table wp_actionscheduler_claims: Total expected rows (via COUNT): 0
+0000.474 (0) Table wp_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=625) in 0.01 seconds
+0000.483 (0) Table wp_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0000.495 (0) Table wp_actionscheduler_groups: Total expected rows (via COUNT): 4
+0000.496 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.500 (0) Table wp_actionscheduler_groups: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=722) in 0.01 seconds
+0000.510 (0) Table wp_actionscheduler_groups: finishing file(s) (2, 0.4 KB)
+0000.526 (0) Table wp_actionscheduler_logs: Total expected rows (via COUNT): 37
+0000.528 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.533 (0) Table wp_actionscheduler_logs: Rows added in this batch (next record: 47): 37 (uncompressed bytes in this segment=4069) in 0.01 seconds
+0000.543 (0) Table wp_actionscheduler_logs: finishing file(s) (2, 0.9 KB)
+0000.557 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0000.561 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=634) in 0.01 seconds
+0000.572 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0000.587 (0) Table wp_comments: Total expected rows (via COUNT): 1
+0000.589 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.593 (0) Table wp_comments: Rows added in this batch (next record: 2): 1 (uncompressed bytes in this segment=1912) in 0.01 seconds
+0000.604 (0) Table wp_comments: finishing file(s) (2, 0.8 KB)
+0000.620 (0) Table wp_links: Total expected rows (via COUNT): 0
+0000.623 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1027) in 0.01 seconds
+0000.633 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0000.832 (0) Table wp_postmeta: Total expected rows (approximate): 127030
+0002.048 (0) Table wp_postmeta: Rows added in this batch (next record: 135042): 129645 (uncompressed bytes in this segment=11458043) in 1.41 seconds
+0002.064 (0) Table wp_postmeta: finishing file(s) (2, 1505.6 KB)
+0002.111 (0) Table wp_posts: Total expected rows (approximate): 1567
+0002.204 (0) Table wp_posts: Rows added in this batch (next record: 2139): 1598 (uncompressed bytes in this segment=1419896) in 0.13 seconds
+0002.219 (0) Table wp_posts: finishing file(s) (2, 143.5 KB)
+0002.236 (0) Table wp_term_relationships: Total expected rows (approximate): 190
+0002.243 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 190 (uncompressed bytes in this segment=3398) in 0.01 seconds
+0002.257 (0) Table wp_term_relationships: finishing file(s) (2, 0.9 KB)
+0002.275 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 35
+0002.277 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0002.282 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 37): 35 (uncompressed bytes in this segment=2264) in 0.02 seconds
+0002.295 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.7 KB)
+0002.312 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0002.315 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=607) in 0.01 seconds
+0002.327 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0002.341 (0) Table wp_terms: Total expected rows (via COUNT): 35
+0002.343 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0002.347 (0) Table wp_terms: Rows added in this batch (next record: 37): 35 (uncompressed bytes in this segment=1952) in 0.01 seconds
+0002.357 (0) Table wp_terms: finishing file(s) (2, 0.8 KB)
+0002.371 (0) Table wp_e_events: Total expected rows (via COUNT): 0
+0002.375 (0) Table wp_e_events: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=511) in 0.01 seconds
+0002.386 (0) Table wp_e_events: finishing file(s) (2, 0.3 KB)
+0002.401 (0) Table wp_wpfm_backup: Total expected rows (via COUNT): 0
+0002.403 (0) Table wp_wpfm_backup: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=478) in 0.01 seconds
+0002.413 (0) Table wp_wpfm_backup: finishing file(s) (2, 0.3 KB)
+0002.426 (0) Table wp_wpforms_analytics_forms: Total expected rows (approximate): 0
+0002.428 (0) Table wp_wpforms_analytics_forms: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=689) in 0.01 seconds
+0002.438 (0) Table wp_wpforms_analytics_forms: finishing file(s) (2, 0.4 KB)
+0002.454 (0) Table wp_wpforms_analytics_snapshots: Total expected rows (via COUNT): 0
+0002.457 (0) Table wp_wpforms_analytics_snapshots: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1059) in 0.01 seconds
+0002.467 (0) Table wp_wpforms_analytics_snapshots: finishing file(s) (2, 0.5 KB)
+0002.482 (0) Table wp_wpforms_logs: Total expected rows (via COUNT): 0
+0002.484 (0) Table wp_wpforms_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=659) in 0.01 seconds
+0002.496 (0) Table wp_wpforms_logs: finishing file(s) (2, 0.4 KB)
+0002.514 (0) Table wp_wpforms_payment_meta: Total expected rows (via COUNT): 0
+0002.518 (0) Table wp_wpforms_payment_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=690) in 0.01 seconds
+0002.529 (0) Table wp_wpforms_payment_meta: finishing file(s) (2, 0.4 KB)
+0002.545 (0) Table wp_wpforms_payments: Total expected rows (via COUNT): 0
+0002.548 (0) Table wp_wpforms_payments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1650) in 0.01 seconds
+0002.558 (0) Table wp_wpforms_payments: finishing file(s) (2, 0.6 KB)
+0002.574 (0) Table wp_wpforms_tasks_meta: Total expected rows (via COUNT): 4
+0002.576 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0002.580 (0) Table wp_wpforms_tasks_meta: Rows added in this batch (next record: 4): 4 (uncompressed bytes in this segment=888) in 0.01 seconds
+0002.591 (0) Table wp_wpforms_tasks_meta: finishing file(s) (2, 0.5 KB)
+0002.606 (0) Table wp_wpmailsmtp_debug_events: Total expected rows (via COUNT): 10
+0002.608 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0002.611 (0) Table wp_wpmailsmtp_debug_events: Rows added in this batch (next record: 10): 10 (uncompressed bytes in this segment=4349) in 0.01 seconds
+0002.620 (0) Table wp_wpmailsmtp_debug_events: finishing file(s) (2, 0.7 KB)
+0002.636 (0) Table wp_wpmailsmtp_tasks_meta: Total expected rows (via COUNT): 0
+0002.640 (0) Table wp_wpmailsmtp_tasks_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=561) in 0.01 seconds
+0002.650 (0) Table wp_wpmailsmtp_tasks_meta: finishing file(s) (2, 0.3 KB)
+0002.664 (0) Table wp_yoast_expiring_store: Total expected rows (approximate): 0
+0002.667 (0) Table wp_yoast_expiring_store: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=533) in 0.01 seconds
+0002.676 (0) Table wp_yoast_expiring_store: finishing file(s) (2, 0.3 KB)
+0002.697 (0) Table wp_yoast_indexable: Total expected rows (via COUNT): 240
+0002.698 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0002.714 (0) Table wp_yoast_indexable: Rows added in this batch (next record: 242): 240 (uncompressed bytes in this segment=199215) in 0.03 seconds
+0002.724 (0) Table wp_yoast_indexable: finishing file(s) (2, 20.2 KB)
+0002.739 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 233
+0002.744 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 233 (uncompressed bytes in this segment=4663) in 0.01 seconds
+0002.754 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 1 KB)
+0002.768 (0) Table wp_yoast_migrations: Total expected rows (via COUNT): 26
+0002.769 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0002.773 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 26): 26 (uncompressed bytes in this segment=1245) in 0.01 seconds
+0002.783 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0002.799 (0) Table wp_yoast_primary_term: Total expected rows (via COUNT): 3
+0002.802 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0002.808 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=1117) in 0.02 seconds
+0002.818 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.5 KB)
+0002.846 (0) Table wp_yoast_seo_links: Total expected rows (via COUNT): 22
+0002.848 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0002.852 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: 42): 22 (uncompressed bytes in this segment=4135) in 0.02 seconds
+0002.861 (0) Table wp_yoast_seo_links: finishing file(s) (2, 1.2 KB)
+0002.866 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_options.table.tmpr16716.gz (1/32/fopen): adding to final database dump
+0002.877 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_options.table.gz (2/32/fopen): adding to final database dump
+0002.879 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_users.table.tmpr7.gz (3/32/fopen): adding to final database dump
+0002.881 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_users.table.gz (4/32/fopen): adding to final database dump
+0002.882 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_usermeta.table.tmpr124.gz (5/32/fopen): adding to final database dump
+0002.884 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_usermeta.table.gz (6/32/fopen): adding to final database dump
+0002.886 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_actionscheduler_actions.table.tmpr2114.gz (7/32/fopen): adding to final database dump
+0002.888 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_actionscheduler_actions.table.gz (8/32/fopen): adding to final database dump
+0002.890 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_actionscheduler_claims.table.tmpr0.gz (9/32/fopen): adding to final database dump
+0002.892 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_actionscheduler_claims.table.gz (10/32/fopen): adding to final database dump
+0002.894 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_actionscheduler_groups.table.tmpr5.gz (11/32/fopen): adding to final database dump
+0002.896 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_actionscheduler_groups.table.gz (12/32/fopen): adding to final database dump
+0002.898 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_actionscheduler_logs.table.tmpr48.gz (13/32/fopen): adding to final database dump
+0002.900 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_actionscheduler_logs.table.gz (14/32/fopen): adding to final database dump
+0002.902 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_commentmeta.table.tmpr0.gz (15/32/fopen): adding to final database dump
+0002.904 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_commentmeta.table.gz (16/32/fopen): adding to final database dump
+0002.906 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_comments.table.tmpr3.gz (17/32/fopen): adding to final database dump
+0002.908 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_comments.table.gz (18/32/fopen): adding to final database dump
+0002.909 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_links.table.tmpr0.gz (19/32/fopen): adding to final database dump
+0002.911 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_links.table.gz (20/32/fopen): adding to final database dump
+0002.912 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_postmeta.table.tmpr135043.gz (21/32/fopen): adding to final database dump
+0002.959 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_postmeta.table.gz (22/32/fopen): adding to final database dump
+0002.962 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_posts.table.tmpr2140.gz (23/32/fopen): adding to final database dump
+0002.967 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_posts.table.gz (24/32/fopen): adding to final database dump
+0002.968 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_term_relationships.table.tmpr100001.gz (25/32/fopen): adding to final database dump
+0002.970 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_term_relationships.table.gz (26/32/fopen): adding to final database dump
+0002.972 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_term_taxonomy.table.tmpr38.gz (27/32/fopen): adding to final database dump
+0002.974 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_term_taxonomy.table.gz (28/32/fopen): adding to final database dump
+0002.975 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_termmeta.table.tmpr0.gz (29/32/fopen): adding to final database dump
+0002.976 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_termmeta.table.gz (30/32/fopen): adding to final database dump
+0002.978 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_terms.table.tmpr38.gz (31/32/fopen): adding to final database dump
+0002.980 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_terms.table.gz (32/32/fopen): adding to final database dump
+0002.982 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_e_events.table.tmpr0.gz (33/32/fopen): adding to final database dump
+0002.984 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_e_events.table.gz (34/32/fopen): adding to final database dump
+0002.985 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpfm_backup.table.tmpr0.gz (35/32/fopen): adding to final database dump
+0002.987 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpfm_backup.table.gz (36/32/fopen): adding to final database dump
+0002.989 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_analytics_forms.table.tmpr1.gz (37/32/fopen): adding to final database dump
+0002.991 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_analytics_forms.table.gz (38/32/fopen): adding to final database dump
+0002.992 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_analytics_snapshots.table.tmpr0.gz (39/32/fopen): adding to final database dump
+0002.994 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_analytics_snapshots.table.gz (40/32/fopen): adding to final database dump
+0002.996 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_logs.table.tmpr0.gz (41/32/fopen): adding to final database dump
+0002.998 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_logs.table.gz (42/32/fopen): adding to final database dump
+0003.000 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_payment_meta.table.tmpr0.gz (43/32/fopen): adding to final database dump
+0003.002 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_payment_meta.table.gz (44/32/fopen): adding to final database dump
+0003.004 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_payments.table.tmpr0.gz (45/32/fopen): adding to final database dump
+0003.005 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_payments.table.gz (46/32/fopen): adding to final database dump
+0003.007 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_tasks_meta.table.tmpr5.gz (47/32/fopen): adding to final database dump
+0003.009 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpforms_tasks_meta.table.gz (48/32/fopen): adding to final database dump
+0003.010 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpmailsmtp_debug_events.table.tmpr11.gz (49/32/fopen): adding to final database dump
+0003.013 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpmailsmtp_debug_events.table.gz (50/32/fopen): adding to final database dump
+0003.014 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpmailsmtp_tasks_meta.table.tmpr0.gz (51/32/fopen): adding to final database dump
+0003.016 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_wpmailsmtp_tasks_meta.table.gz (52/32/fopen): adding to final database dump
+0003.018 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_expiring_store.table.tmpr1.gz (53/32/fopen): adding to final database dump
+0003.019 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_expiring_store.table.gz (54/32/fopen): adding to final database dump
+0003.021 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_indexable.table.tmpr243.gz (55/32/fopen): adding to final database dump
+0003.023 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_indexable.table.gz (56/32/fopen): adding to final database dump
+0003.025 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_indexable_hierarchy.table.tmpr1001.gz (57/32/fopen): adding to final database dump
+0003.027 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_indexable_hierarchy.table.gz (58/32/fopen): adding to final database dump
+0003.029 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_migrations.table.tmpr27.gz (59/32/fopen): adding to final database dump
+0003.031 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_migrations.table.gz (60/32/fopen): adding to final database dump
+0003.033 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_primary_term.table.tmpr4.gz (61/32/fopen): adding to final database dump
+0003.035 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_primary_term.table.gz (62/32/fopen): adding to final database dump
+0003.037 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_seo_links.table.tmpr43.gz (63/32/fopen): adding to final database dump
+0003.039 (0) backup_2026-07-20-1050_chimera_b431e42be222-db-table-wp_yoast_seo_links.table.gz (64/32/fopen): adding to final database dump
+0003.100 (0) backup_2026-07-20-1050_chimera_b431e42be222-db.gz: finished writing out complete database file (1991.2 KB)
+0003.147 (0) Total database tables backed up: 32 (backup_2026-07-20-1050_chimera_b431e42be222-db.gz, size: 2039162, sha1: 5234d67be26efd235ed7c29b8ac3c92c61b16fed, sha256: aedde1dc2fe3e60728fab97dd62af1d3fd598953f17cf26205718162f35facd9)
+0003.165 (0) backup_2026-07-20-1050_chimera_b431e42be222-db.gz: db: This file has not yet been successfully uploaded: will queue
+0003.167 (0) Saving backup history. Total backup size: 1.9 MB
+0003.174 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0003.179 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0003.180 (0) No remote despatch: user chose no remote backup service
+0003.183 (0) Recording as successfully uploaded: backup_2026-07-20-1050_chimera_b431e42be222-db.gz
+0003.187 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0003.189 (0) Resume backup (b431e42be222, 0): finish run
+0003.193 (0) Decremented the semaphore (fd) by 1
+0003.196 (0) Semaphore (fd) unlocked
+0003.198 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0003.204 (0) No email will/can be sent - the user has not configured an email address.
+0003.206 (0) The backup succeeded and is now complete

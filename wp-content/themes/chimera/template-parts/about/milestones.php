@@ -16,7 +16,7 @@ $items = $milestones_content['items'] ?? [];
 <section class="w-full relative pb-[50px] overflow-hidden bg-offwhite">
     <div class="container">
 
-        <div class="flex flex-col gap-[80px] w-full">
+        <div class="flex flex-col gap-[50px] w-full">
 
             <!-- Header Area -->
             <div class="flex flex-col items-start max-w-[450px]">
@@ -51,11 +51,29 @@ $items = $milestones_content['items'] ?? [];
             <!-- Timeline Area -->
             <?php if (!empty($items) && is_array($items)): ?>
                 
-                <!-- Responsive Wrapper: Allows horizontal swiping on mobile/tablet, fully contained on desktop -->
+                <!-- Responsive Wrapper: Allows horizontal swiping -->
                 <div class="relative w-full mt-8 md:mt-12 mb-8 overflow-x-auto scrollbar-hide pb-4">
                     
-                    <!-- min-w-[1024px] ensures that on iPad (768px) the grid is still wide enough to fit 5 items on 2 lines, allowing the user to swipe -->
-                    <div class="min-w-[1024px] lg:min-w-full w-full relative">
+                    <?php 
+                    $total = count($items);
+                    ?>
+                    <style>
+                        /* Dynamically calculate width so exactly N items show in the viewport */
+                        .milestones-grid-container {
+                            width: <?php echo max(100, ($total / 1.5) * 100); ?>%; /* 1.5 items on mobile */
+                        }
+                        @media (min-width: 768px) {
+                            .milestones-grid-container {
+                                width: <?php echo max(100, ($total / 3) * 100); ?>%; /* 3 items on tablet */
+                            }
+                        }
+                        @media (min-width: 1024px) {
+                            .milestones-grid-container {
+                                width: <?php echo max(100, ($total / 5) * 100); ?>%; /* exactly 5 items visible on desktop */
+                            }
+                        }
+                    </style>
+                    <div class="milestones-grid-container relative max-w-none">
                         
                         <!-- 
                             3-row CSS Grid to perfectly align everything! 
@@ -63,7 +81,7 @@ $items = $milestones_content['items'] ?? [];
                             Row 2: Connecting dashed line
                             Row 3: Dots and pills 
                         -->
-                        <div class="grid items-start w-full relative z-10" style="grid-template-columns: repeat(<?php echo count($items); ?>, minmax(0, 1fr));">
+                        <div class="grid items-start w-full relative z-10" style="grid-template-columns: repeat(<?php echo $total; ?>, minmax(0, 1fr));">
                             
                             <!-- ROW 1: Texts (Grows to fit tallest text) -->
                             <?php foreach ($items as $index => $item): 
@@ -71,7 +89,7 @@ $items = $milestones_content['items'] ?? [];
                             ?>
                                 <div class="flex items-end justify-center w-full px-1 md:px-4 pb-[27px] h-full">
                                     <?php if ($title): ?>
-                                        <p class="break-words max-w-[150px] font-jost font-semibold text-dark text-[14px] md:text-[18px] text-center leading-[1.2]">
+                                        <p class="break-words max-w-[240px] w-full font-jost font-semibold text-dark text-[13px] md:text-[16px] text-center leading-tight">
                                             <?php echo esc_html($title); ?>
                                         </p>
                                     <?php endif; ?>

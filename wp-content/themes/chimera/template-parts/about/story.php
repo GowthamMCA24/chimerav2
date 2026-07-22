@@ -28,7 +28,7 @@ $cta_link = $story_content['cta_link'] ?? '';
 
         <!-- Story Rows -->
         <?php if ( ! empty($rows) && is_array($rows) ) : ?>
-            <div class="w-full flex flex-col gap-10 lg:gap-[84px] mb-[52px]">
+            <div class="w-full flex flex-col gap-10 lg:gap-[84px]">
                 <?php 
                 $index = 0;
                 foreach ( $rows as $row ) : 

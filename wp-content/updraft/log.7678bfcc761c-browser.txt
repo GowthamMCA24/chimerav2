@@ -1,0 +1,272 @@
+0000.073 (R) [notice] Looking for db archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-db.gz
+0000.074 (R) [notice] Archive is expected to be size: 1955.7 KB: OK
+0000.078 (R) [notice] Looking for mu-plugins archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-mu-plugins.zip
+0000.079 (R) [notice] Archive is expected to be size: 0.8 KB: OK
+0000.082 (R) [notice] Looking for plugins archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-plugins.zip
+0000.083 (R) [notice] Archive is expected to be size: 25954.7 KB: OK
+0000.083 (R) [notice] Looking for plugins archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-plugins2.zip
+0000.084 (R) [notice] Archive is expected to be size: 22083.6 KB: OK
+0000.088 (R) [notice] Looking for themes archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-themes.zip
+0000.089 (R) [notice] Archive is expected to be size: 16728.1 KB: OK
+0000.092 (R) [notice] Looking for uploads archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads5.zip
+0000.093 (R) [notice] Archive is expected to be size: 11396.3 KB: OK
+0000.093 (R) [notice] Looking for uploads archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads4.zip
+0000.093 (R) [notice] Archive is expected to be size: 26132.7 KB: OK
+0000.094 (R) [notice] Looking for uploads archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads3.zip
+0000.094 (R) [notice] Archive is expected to be size: 25841.6 KB: OK
+0000.094 (R) [notice] Looking for uploads archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads2.zip
+0000.094 (R) [notice] Archive is expected to be size: 25720.7 KB: OK
+0000.095 (R) [notice] Looking for uploads archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads.zip
+0000.095 (R) [notice] Archive is expected to be size: 25607.4 KB: OK
+0000.098 (R) [notice] Looking for others archive: file name: backup_2026-07-22-0725_chimera_7b61ea3a0dba-others.zip
+0000.099 (R) [notice] Archive is expected to be size: 2.9 KB: OK
+0000.108 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-db.gz, 1.9 Mb)
+0000.115 (R) [notice] Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.189 (R) [notice] Enabling Maintenance mode&#8230;
+0000.216 (R) [notice] Backup of: https://beta.chimeratechnologies.com
+0000.217 (R) [notice] Content URL: https://beta.chimeratechnologies.com/wp-content
+0000.217 (R) [notice] Uploads URL: https://beta.chimeratechnologies.com/wp-content/uploads
+0000.218 (R) [notice] Old table prefix: slaz_
+0000.218 (R) [notice] Old ABSPATH: /home/adminchimera/public_html/beta.chimeratechnologies.com/
+0000.218 (R) [notice] UpdraftPlus plugin slug: updraftplus/updraftplus.php
+0000.218 (R) [notice] Site information: multisite = 0
+0000.218 (R) [notice] Site information: sql_mode = NO_ENGINE_SUBSTITUTION
+0000.220 (R) [notice] New table prefix: ag_
+0000.226 (R) [notice] Processing table (InnoDB):  slaz_options - will restore as: ag_options
+0000.342 (R) [notice] Atomic restore: dropping original table (wp_options)
+0000.347 (R) [notice] Atomic restore: renaming new table (ag_options) to final table name (wp_options)
+0000.696 (R) [notice] Table prefix has changed: changing option table field(s) accordingly: OK
+0000.706 (R) [notice] Search and replacing table: wp_options: rows: 546
+0000.816 (R) [notice] Processing table (InnoDB):  slaz_users - will restore as: ag_users
+0000.846 (R) [notice] Atomic restore: dropping original table (wp_users)
+0000.852 (R) [notice] Atomic restore: renaming new table (ag_users) to final table name (wp_users)
+0000.865 (R) [notice] Search and replacing table: wp_users: rows: 6
+0000.868 (R) [notice] Processing table (InnoDB):  slaz_usermeta - will restore as: ag_usermeta
+0000.900 (R) [notice] Atomic restore: dropping original table (wp_usermeta)
+0000.905 (R) [notice] Atomic restore: renaming new table (ag_usermeta) to final table name (wp_usermeta)
+0000.913 (R) [notice] Table prefix has changed: changing usermeta table field(s) accordingly: OK
+0000.920 (R) [notice] Search and replacing table: wp_usermeta: rows: 122
+0000.923 (R) [notice] Processing table (InnoDB):  slaz_actionscheduler_actions - will restore as: ag_actionscheduler_actions
+0000.964 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_actions)
+0000.969 (R) [notice] Atomic restore: renaming new table (ag_actionscheduler_actions) to final table name (wp_actionscheduler_actions)
+0000.994 (R) [notice] Search and replacing table: wp_actionscheduler_actions: rows: 22
+0000.996 (R) [notice] Processing table (InnoDB):  slaz_actionscheduler_claims - will restore as: ag_actionscheduler_claims
+0001.048 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_claims)
+0001.056 (R) [notice] Atomic restore: renaming new table (ag_actionscheduler_claims) to final table name (wp_actionscheduler_claims)
+0001.071 (R) [notice] Search and replacing table: wp_actionscheduler_claims: rows: 0
+0001.072 (R) [notice] Processing table (InnoDB):  slaz_actionscheduler_groups - will restore as: ag_actionscheduler_groups
+0001.105 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_groups)
+0001.111 (R) [notice] Atomic restore: renaming new table (ag_actionscheduler_groups) to final table name (wp_actionscheduler_groups)
+0001.124 (R) [notice] Search and replacing table: wp_actionscheduler_groups: rows: 4
+0001.125 (R) [notice] Processing table (InnoDB):  slaz_actionscheduler_logs - will restore as: ag_actionscheduler_logs
+0001.160 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_logs)
+0001.166 (R) [notice] Atomic restore: renaming new table (ag_actionscheduler_logs) to final table name (wp_actionscheduler_logs)
+0001.179 (R) [notice] Search and replacing table: wp_actionscheduler_logs: rows: 58
+0001.182 (R) [notice] Processing table (InnoDB):  slaz_commentmeta - will restore as: ag_commentmeta
+0001.211 (R) [notice] Atomic restore: dropping original table (wp_commentmeta)
+0001.216 (R) [notice] Atomic restore: renaming new table (ag_commentmeta) to final table name (wp_commentmeta)
+0001.231 (R) [notice] Search and replacing table: wp_commentmeta: rows: 0
+0001.231 (R) [notice] Processing table (InnoDB):  slaz_comments - will restore as: ag_comments
+0001.265 (R) [notice] Atomic restore: dropping original table (wp_comments)
+0001.273 (R) [notice] Atomic restore: renaming new table (ag_comments) to final table name (wp_comments)
+0001.292 (R) [notice] Search and replacing table: wp_comments: rows: 1
+0001.293 (R) [notice] Processing table (InnoDB):  slaz_links - will restore as: ag_links
+0001.328 (R) [notice] Atomic restore: dropping original table (wp_links)
+0001.334 (R) [notice] Atomic restore: renaming new table (ag_links) to final table name (wp_links)
+0001.347 (R) [notice] Search and replacing table: wp_links: rows: 0
+0001.348 (R) [notice] Processing table (InnoDB):  slaz_postmeta - will restore as: ag_postmeta
+0001.958 (R) [notice] Database queries processed: 50 in 1.83 seconds
+0007.603 (R) [notice] Atomic restore: dropping original table (wp_postmeta)
+0007.611 (R) [notice] Atomic restore: renaming new table (ag_postmeta) to final table name (wp_postmeta)
+0007.815 (R) [notice] Search and replacing table: wp_postmeta: rows: 29
+0008.017 (R) [notice] Processing table (InnoDB):  slaz_posts - will restore as: ag_posts
+0008.202 (R) [notice] Atomic restore: dropping original table (wp_posts)
+0008.209 (R) [notice] Atomic restore: renaming new table (ag_posts) to final table name (wp_posts)
+0008.231 (R) [notice] Search and replacing table: wp_posts: rows: 1746
+0008.326 (R) [notice] Processing table (InnoDB):  slaz_term_relationships - will restore as: ag_term_relationships
+0008.352 (R) [notice] Atomic restore: dropping original table (wp_term_relationships)
+0008.358 (R) [notice] Atomic restore: renaming new table (ag_term_relationships) to final table name (wp_term_relationships)
+0008.364 (R) [notice] Skipping this table: data in this table (wp_term_relationships) should not be search/replaced
+0008.364 (R) [notice] Processing table (InnoDB):  slaz_term_taxonomy - will restore as: ag_term_taxonomy
+0008.401 (R) [notice] Atomic restore: dropping original table (wp_term_taxonomy)
+0008.407 (R) [notice] Atomic restore: renaming new table (ag_term_taxonomy) to final table name (wp_term_taxonomy)
+0008.425 (R) [notice] Search and replacing table: wp_term_taxonomy: rows: 35
+0008.426 (R) [notice] Processing table (InnoDB):  slaz_termmeta - will restore as: ag_termmeta
+0008.456 (R) [notice] Atomic restore: dropping original table (wp_termmeta)
+0008.461 (R) [notice] Atomic restore: renaming new table (ag_termmeta) to final table name (wp_termmeta)
+0008.474 (R) [notice] Search and replacing table: wp_termmeta: rows: 0
+0008.474 (R) [notice] Processing table (InnoDB):  slaz_terms - will restore as: ag_terms
+0008.510 (R) [notice] Atomic restore: dropping original table (wp_terms)
+0008.516 (R) [notice] Atomic restore: renaming new table (ag_terms) to final table name (wp_terms)
+0008.529 (R) [notice] Search and replacing table: wp_terms: rows: 35
+0008.531 (R) [notice] Processing table (InnoDB):  slaz_e_events - will restore as: ag_e_events
+0008.555 (R) [notice] Atomic restore: dropping original table (wp_e_events)
+0008.560 (R) [notice] Atomic restore: renaming new table (ag_e_events) to final table name (wp_e_events)
+0008.572 (R) [notice] Search and replacing table: wp_e_events: rows: 0
+0008.573 (R) [notice] Processing table (InnoDB):  slaz_wpfm_backup - will restore as: ag_wpfm_backup
+0008.584 (R) [notice] Atomic restore: dropping original table (wp_wpfm_backup)
+0008.588 (R) [notice] Atomic restore: renaming new table (ag_wpfm_backup) to final table name (wp_wpfm_backup)
+0008.601 (R) [notice] Search and replacing table: wp_wpfm_backup: rows: 0
+0008.602 (R) [notice] Processing table (InnoDB):  slaz_wpforms_analytics_forms - will restore as: ag_wpforms_analytics_forms
+0008.613 (R) [notice] Atomic restore: dropping original table (wp_wpforms_analytics_forms)
+0008.618 (R) [notice] Atomic restore: renaming new table (ag_wpforms_analytics_forms) to final table name (wp_wpforms_analytics_forms)
+0008.631 (R) [notice] Search and replacing table: wp_wpforms_analytics_forms: rows: 0
+0008.632 (R) [notice] Processing table (InnoDB):  slaz_wpforms_analytics_snapshots - will restore as: ag_wpforms_analytics_snapshots
+0008.662 (R) [notice] Atomic restore: dropping original table (wp_wpforms_analytics_snapshots)
+0008.667 (R) [notice] Atomic restore: renaming new table (ag_wpforms_analytics_snapshots) to final table name (wp_wpforms_analytics_snapshots)
+0008.681 (R) [notice] Search and replacing table: wp_wpforms_analytics_snapshots: rows: 0
+0008.681 (R) [notice] Processing table (InnoDB):  slaz_wpforms_logs - will restore as: ag_wpforms_logs
+0008.693 (R) [notice] Atomic restore: dropping original table (wp_wpforms_logs)
+0008.699 (R) [notice] Atomic restore: renaming new table (ag_wpforms_logs) to final table name (wp_wpforms_logs)
+0008.711 (R) [notice] Search and replacing table: wp_wpforms_logs: rows: 0
+0008.712 (R) [notice] Processing table (InnoDB):  slaz_wpforms_payment_meta - will restore as: ag_wpforms_payment_meta
+0008.734 (R) [notice] Atomic restore: dropping original table (wp_wpforms_payment_meta)
+0008.739 (R) [notice] Atomic restore: renaming new table (ag_wpforms_payment_meta) to final table name (wp_wpforms_payment_meta)
+0008.754 (R) [notice] Search and replacing table: wp_wpforms_payment_meta: rows: 0
+0008.754 (R) [notice] Processing table (InnoDB):  slaz_wpforms_payments - will restore as: ag_wpforms_payments
+0008.785 (R) [notice] Atomic restore: dropping original table (wp_wpforms_payments)
+0008.790 (R) [notice] Database queries processed: 100 in 8.66 seconds
+0008.790 (R) [notice] Atomic restore: renaming new table (ag_wpforms_payments) to final table name (wp_wpforms_payments)
+0008.803 (R) [notice] Search and replacing table: wp_wpforms_payments: rows: 0
+0008.803 (R) [notice] Processing table (InnoDB):  slaz_wpforms_tasks_meta - will restore as: ag_wpforms_tasks_meta
+0008.817 (R) [notice] Atomic restore: dropping original table (wp_wpforms_tasks_meta)
+0008.821 (R) [notice] Atomic restore: renaming new table (ag_wpforms_tasks_meta) to final table name (wp_wpforms_tasks_meta)
+0008.833 (R) [notice] Search and replacing table: wp_wpforms_tasks_meta: rows: 4
+0008.834 (R) [notice] Processing table (InnoDB):  slaz_wpmailsmtp_debug_events - will restore as: ag_wpmailsmtp_debug_events
+0008.848 (R) [notice] Atomic restore: dropping original table (wp_wpmailsmtp_debug_events)
+0008.853 (R) [notice] Atomic restore: renaming new table (ag_wpmailsmtp_debug_events) to final table name (wp_wpmailsmtp_debug_events)
+0008.865 (R) [notice] Search and replacing table: wp_wpmailsmtp_debug_events: rows: 16
+0008.883 (R) [notice] Processing table (InnoDB):  slaz_wpmailsmtp_tasks_meta - will restore as: ag_wpmailsmtp_tasks_meta
+0008.893 (R) [notice] Atomic restore: dropping original table (wp_wpmailsmtp_tasks_meta)
+0008.897 (R) [notice] Atomic restore: renaming new table (ag_wpmailsmtp_tasks_meta) to final table name (wp_wpmailsmtp_tasks_meta)
+0008.910 (R) [notice] Search and replacing table: wp_wpmailsmtp_tasks_meta: rows: 0
+0008.910 (R) [notice] Processing table (InnoDB):  slaz_yoast_expiring_store - will restore as: ag_yoast_expiring_store
+0008.910 (R) [notice] Requested character set (utf8mb3) is not present - changing to utf8.
+0008.936 (R) [notice] Atomic restore: dropping original table (wp_yoast_expiring_store)
+0008.940 (R) [notice] Atomic restore: renaming new table (ag_yoast_expiring_store) to final table name (wp_yoast_expiring_store)
+0008.952 (R) [notice] Search and replacing table: wp_yoast_expiring_store: rows: 0
+0008.953 (R) [notice] Processing table (InnoDB):  slaz_yoast_indexable - will restore as: ag_yoast_indexable
+0009.006 (R) [notice] Atomic restore: dropping original table (wp_yoast_indexable)
+0009.012 (R) [notice] Atomic restore: renaming new table (ag_yoast_indexable) to final table name (wp_yoast_indexable)
+0009.033 (R) [notice] Search and replacing table: wp_yoast_indexable: rows: 240
+0009.285 (R) [notice] Processing table (InnoDB):  slaz_yoast_indexable_hierarchy - will restore as: ag_yoast_indexable_hierarchy
+0009.319 (R) [notice] Atomic restore: dropping original table (wp_yoast_indexable_hierarchy)
+0009.323 (R) [notice] Atomic restore: renaming new table (ag_yoast_indexable_hierarchy) to final table name (wp_yoast_indexable_hierarchy)
+0009.335 (R) [notice] Search and replacing table: wp_yoast_indexable_hierarchy: rows: 233
+0009.339 (R) [notice] Processing table (InnoDB):  slaz_yoast_migrations - will restore as: ag_yoast_migrations
+0009.392 (R) [notice] Atomic restore: dropping original table (wp_yoast_migrations)
+0009.401 (R) [notice] Atomic restore: renaming new table (ag_yoast_migrations) to final table name (wp_yoast_migrations)
+0009.424 (R) [notice] Search and replacing table: wp_yoast_migrations: rows: 26
+0009.427 (R) [notice] Processing table (InnoDB):  slaz_yoast_primary_term - will restore as: ag_yoast_primary_term
+0009.489 (R) [notice] Atomic restore: dropping original table (wp_yoast_primary_term)
+0009.494 (R) [notice] Atomic restore: renaming new table (ag_yoast_primary_term) to final table name (wp_yoast_primary_term)
+0009.507 (R) [notice] Search and replacing table: wp_yoast_primary_term: rows: 3
+0009.508 (R) [notice] Processing table (InnoDB):  slaz_yoast_seo_links - will restore as: ag_yoast_seo_links
+0009.508 (R) [notice] Requested character set (utf8mb3) is not present - changing to utf8.
+0009.554 (R) [notice] Disabling Maintenance mode&#8230;
+0009.555 (R) [notice] Atomic restore: dropping original table (wp_yoast_seo_links)
+0009.560 (R) [notice] Atomic restore: renaming new table (ag_yoast_seo_links) to final table name (wp_yoast_seo_links)
+0009.575 (R) [notice] Search and replacing table: wp_yoast_seo_links: rows: 22
+0009.582 (R) [notice] Finished: lines processed: 128 in 9.46 seconds
+0009.584 (R) [notice] Cleaning up rubbish...
+0009.586 (R) [notice] Database search and replace: replace https://beta.chimeratechnologies.com in backup dump with http://localhost/chimerav2
+0009.586 (R) [notice] Database search and replace: replace http://www.beta.chimeratechnologies.com in backup dump with http://localhost/chimerav2
+0009.586 (R) [notice] Database search and replace: replace http://beta.chimeratechnologies.com in backup dump with http://localhost/chimerav2
+0009.587 (R) [notice] Database search and replace: replace https://www.beta.chimeratechnologies.com in backup dump with http://localhost/chimerav2
+0009.587 (R) [notice] Database search and replace: replace /home/adminchimera/public_html/beta.chimeratechnologies.com in backup dump with C:\xampp\htdocs\chimerav2
+0009.588 (R) [notice] Search and replacing table: wp_actionscheduler_actions: already done
+0009.588 (R) [notice] Search and replacing table: wp_actionscheduler_claims: already done
+0009.588 (R) [notice] Search and replacing table: wp_actionscheduler_groups: already done
+0009.588 (R) [notice] Search and replacing table: wp_actionscheduler_logs: already done
+0009.589 (R) [notice] Search and replacing table: wp_commentmeta: already done
+0009.589 (R) [notice] Search and replacing table: wp_comments: already done
+0009.589 (R) [notice] Search and replacing table: wp_e_events: already done
+0009.589 (R) [notice] Search and replacing table: wp_links: already done
+0009.589 (R) [notice] Search and replacing table: wp_options: already done
+0009.589 (R) [notice] Search and replacing table: wp_postmeta: already done
+0009.589 (R) [notice] Search and replacing table: wp_posts: already done
+0009.589 (R) [notice] Search and replacing table: wp_term_relationships: already done
+0009.589 (R) [notice] Search and replacing table: wp_term_taxonomy: already done
+0009.590 (R) [notice] Search and replacing table: wp_termmeta: already done
+0009.590 (R) [notice] Search and replacing table: wp_terms: already done
+0009.590 (R) [notice] Search and replacing table: wp_usermeta: already done
+0009.590 (R) [notice] Search and replacing table: wp_users: already done
+0009.590 (R) [notice] Search and replacing table: wp_wpfm_backup: already done
+0009.590 (R) [notice] Search and replacing table: wp_wpforms_analytics_forms: already done
+0009.590 (R) [notice] Search and replacing table: wp_wpforms_analytics_snapshots: already done
+0009.590 (R) [notice] Search and replacing table: wp_wpforms_logs: already done
+0009.590 (R) [notice] Search and replacing table: wp_wpforms_payment_meta: already done
+0009.590 (R) [notice] Search and replacing table: wp_wpforms_payments: already done
+0009.591 (R) [notice] Search and replacing table: wp_wpforms_tasks_meta: already done
+0009.591 (R) [notice] Search and replacing table: wp_wpmailsmtp_debug_events: already done
+0009.591 (R) [notice] Search and replacing table: wp_wpmailsmtp_tasks_meta: already done
+0009.591 (R) [notice] Search and replacing table: wp_yoast_expiring_store: already done
+0009.591 (R) [notice] Search and replacing table: wp_yoast_indexable: already done
+0009.591 (R) [notice] Search and replacing table: wp_yoast_indexable_hierarchy: already done
+0009.591 (R) [notice] Search and replacing table: wp_yoast_migrations: already done
+0009.591 (R) [notice] Search and replacing table: wp_yoast_primary_term: already done
+0009.591 (R) [notice] Search and replacing table: wp_yoast_seo_links: already done
+0009.591 (R) [notice] Tables examined: 31
+0009.592 (R) [notice] Rows examined: 3148
+0009.592 (R) [notice] Changes made: 769
+0009.592 (R) [notice] SQL update commands run: 298
+0009.592 (R) [notice] Errors: 0
+0009.592 (R) [notice] Time taken (seconds): 1.143
+0009.626 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-mu-plugins.zip, 0 MB)
+0009.730 (R) [notice] Unzip progress: 2 out of 2 files (983 B, mu-plugins/automation-by-installatron.php)
+0009.732 (R) [notice] Moving old data out of the way...
+0009.734 (R) [notice] Moving unpacked backup into place...
+0009.737 (R) [notice] Cleaning up rubbish...
+0009.750 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-plugins.zip, 25.3 MB)
+0011.311 (R) [notice] Unzip progress: 1705 out of 7203 files (4.2 KB, plugins/updraftplus/vendor/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php)
+0014.847 (R) [notice] Unzip progress: 2706 out of 7203 files (8.2 MB, plugins/wordpress-seo/src/editors/framework/cornerstone-content.php)
+0019.663 (R) [notice] Unzip progress: 3707 out of 7203 files (29.8 MB, plugins/wordpress-seo/js/dist/dynamic-blocks.js)
+0024.787 (R) [notice] Unzip progress: 4708 out of 7203 files (38.1 MB, plugins/secure-custom-fields/vendor/justinrainbow/json-schema/src/JsonSchema/SchemaStorageInterface.php)
+0029.860 (R) [notice] Unzip progress: 5709 out of 7203 files (53.5 MB, plugins/wp-mail-smtp/vendor_prefixed/google/apiclient-services/src/Gmail/HistoryLabelRemoved.php)
+0034.814 (R) [notice] Unzip progress: 6710 out of 7203 files (73.7 MB, plugins/elementor/assets/lib/font-awesome/json/solid.json)
+0037.488 (R) [notice] Unzip progress: 7203 out of 7203 files (79.6 MB, plugins/wp-mail-smtp/vendor_prefixed/google/apiclient-services/src/Gmail/Delegate.php)
+0037.504 (R) [notice] Moving old data out of the way...
+0044.210 (R) [notice] Moving unpacked backup into place...
+0046.017 (R) [notice] Cleaning up rubbish...
+0046.052 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-plugins2.zip, 21.6 MB)
+0053.181 (R) [notice] Unzip progress: 1002 out of 3180 files (51.9 MB, plugins/elementor/core/upgrade/upgrade-utils.php)
+0057.431 (R) [notice] Unzip progress: 2003 out of 3180 files (72.8 MB, plugins/elementor/modules/global-classes/import-export-utils/import-utils.php)
+0063.455 (R) [notice] Unzip progress: 3004 out of 3180 files (83 MB, plugins/elementor/modules/promotions/admin-menu-items/editor-one-custom-code-menu.php)
+0064.483 (R) [notice] Unzip progress: 3180 out of 3180 files (83.6 MB, plugins/elementor/modules/apps/module.php)
+0064.501 (R) [notice] Moving unpacked backup into place...
+0075.435 (R) [notice] Cleaning up rubbish...
+0075.463 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-themes.zip, 16.3 MB)
+0079.276 (R) [notice] Unzip progress: 1002 out of 2331 files (3.9 MB, themes/twentytwentyfive/parts/footer-columns.html)
+0084.236 (R) [notice] Unzip progress: 2003 out of 2331 files (25.3 MB, themes/chimera/node_modules/sucrase/dist/esm/NameManager.js)
+0085.439 (R) [notice] Unzip progress: 2331 out of 2331 files (26.5 MB, themes/chimera/node_modules/fast-glob/out/utils/index.d.ts)
+0085.451 (R) [notice] Moving old data out of the way...
+0086.291 (R) [notice] Moving unpacked backup into place...
+0086.831 (R) [notice] Cleaning up rubbish...
+0086.849 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads.zip, 25 MB)
+0087.939 (R) [notice] Unzip progress: 421 out of 421 files (25.1 MB, uploads/2026/07/LegalTech-Consulting-150x150.png)
+0087.943 (R) [notice] Moving old data out of the way...
+0088.317 (R) [notice] Moving unpacked backup into place...
+0088.410 (R) [notice] Cleaning up rubbish...
+0088.420 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads2.zip, 25.1 MB)
+0088.876 (R) [notice] Unzip progress: 153 out of 153 files (25.1 MB, uploads/2026/07/pharma-hero.png)
+0088.879 (R) [notice] Moving unpacked backup into place...
+0089.227 (R) [notice] Cleaning up rubbish...
+0089.238 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads3.zip, 25.2 MB)
+0089.761 (R) [notice] Unzip progress: 157 out of 157 files (25.2 MB, uploads/2026/06/4-150x150.png)
+0089.763 (R) [notice] Moving unpacked backup into place...
+0090.059 (R) [notice] Cleaning up rubbish...
+0090.070 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads4.zip, 25.5 MB)
+0090.419 (R) [notice] Unzip progress: 101 out of 101 files (25.6 MB, uploads/2026/06/how-we-work-i.svg)
+0090.422 (R) [notice] Moving unpacked backup into place...
+0090.632 (R) [notice] Cleaning up rubbish...
+0090.646 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-uploads5.zip, 11.1 MB)
+0090.840 (R) [notice] Unzip progress: 65 out of 65 files (11.1 MB, uploads/2026/06/knap-finanace-logo.png)
+0090.842 (R) [notice] Moving unpacked backup into place...
+0090.955 (R) [notice] Cleaning up rubbish...
+0090.971 (R) [notice] Unpacking backup... (backup_2026-07-22-0725_chimera_7b61ea3a0dba-others.zip, 0 MB)
+0091.002 (R) [notice] Unzip progress: 18 out of 18 files (56 B, index.php-old)
+0091.090 (R) [notice] Cleaning up rubbish...
+0091.091 (R) [notice] Error: Failed to delete working directory after restoring. (C:/xampp/htdocs/chimerav2/wp-content/upgrade/5b0d80d5)
+0091.093 (R) [notice] Files found:
+0091.093 (R) [notice] * upgrade
+0091.183 (R) [notice] Restore successful!

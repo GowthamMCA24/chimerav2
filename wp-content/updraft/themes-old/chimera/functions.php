@@ -70,6 +70,13 @@ function chimera_scripts() {
         $industry_js_version = file_exists($industry_js_file) ? filemtime($industry_js_file) : '1.0.0';
         wp_enqueue_script( 'chimera-industry', get_template_directory_uri() . '/assets/js/industry.js', array(), $industry_js_version, true );
     }
+
+    // Enqueue about page scripts
+    if ( is_page_template( 'page-templates/template-about.php' ) ) {
+        $about_js_file = get_template_directory() . '/assets/js/about.js';
+        $about_js_version = file_exists($about_js_file) ? filemtime($about_js_file) : '1.0.0';
+        wp_enqueue_script( 'chimera-about', get_template_directory_uri() . '/assets/js/about.js', array(), $about_js_version, true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'chimera_scripts' );
 

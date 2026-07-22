@@ -6,11 +6,16 @@
  */
 ?>
 
-<section class="bg-orange-gradient relative overflow-hidden">
+<section class="relative overflow-hidden <?php echo empty($args['cta_bg_image']) ? 'bg-orange-gradient' : 'bg-orange'; ?>">
+    <?php if ( ! empty($args['cta_bg_image']) ) : ?>
+        <div class="absolute inset-0 pointer-events-none z-0">
+            <img src="<?php echo esc_url($args['cta_bg_image']); ?>" alt="Background" class="w-full h-full object-cover mix-blend-multiply">
+        </div>
+    <?php endif; ?>
     <div class="relative z-10">
         
         <!-- Gradient Callout Card -->
-        <div class="container text-white py-12 md:py-[80px] flex flex-col items-center text-center relative overflow-hidden">
+        <div class="container text-white py-[50px] flex flex-col items-center text-center relative overflow-hidden">
             
             <?php
             $cta_badge = $args['cta_badge'] ?? "";

@@ -38,8 +38,8 @@ get_header();
     <!-- Global Presence Section (Reused from Home) -->
     <?php get_template_part( 'template-parts/home/presence' ); ?>
 
-    <!-- Compliance Section (Reused from Home) -->
-    <?php get_template_part( 'template-parts/home/compliance' ); ?>
+    <!-- Compliance Section (Specific to About) -->
+    <?php get_template_part( 'template-parts/about/compliance' ); ?>
 
     <!-- CTA Section (Reused from Home) -->
     <?php 

@@ -5,8 +5,8 @@
  * @package Chimera
  */
 
-// Get hero fields from SCF
-$hero = get_field('industry_hero');
+// Get hero fields from args or SCF
+$hero = $args['hero_data'] ?? get_field('industry_hero');
 $badge_text       = $hero['badge_text'] ?? 'INDUSTRY';
 $heading_line1    = $hero['heading_line1'] ?? 'AI-Led Technology Solutions,';
 $heading_highlight = $hero['heading_highlight'] ?? 'Built for Your Industry';
@@ -88,6 +88,13 @@ $bg_shape_image   = $hero['bg_image'] ?? null;
                 <?php endif; ?>
             </div>
         </div>
+
+        <!-- Optional Injection (e.g. Logo Marquee) -->
+        <?php if ( !empty($args['inject_before_stats']) ) : ?>
+        <div class="w-full mt-12 md:mt-20 z-20 relative">
+            <?php get_template_part( $args['inject_before_stats'] ); ?>
+        </div>
+        <?php endif; ?>
 
         <!-- Stats Row -->
         <?php if ( $stats ) : ?>

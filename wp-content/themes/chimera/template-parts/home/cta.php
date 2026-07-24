@@ -20,7 +20,7 @@
             <?php
             $cta_badge = $args['cta_badge'] ?? "";
             $cta_title = $args['cta_title'] ?? "Let's build what's next.";
-            $cta_desc  = $args['cta_desc'] ?? "Whether you are modernizing legacy systems, building AI-native products, or scaling global operations, our team is ready to architect the solution.";
+            $cta_desc  = $args['cta_desc'] ?? "";
             $cta_btn_text = $args['cta_btn_text'] ?? "Build with us";
             $cta_btn_link = $args['cta_btn_link'] ?? "#";
             $cta_title_class = $args['cta_title_class'] ?? "max-w-[200px] sm:max-w-3xl";
@@ -40,9 +40,11 @@
             </h2>
 
             <!-- Description -->
+             <?php if( $cta_desc ) : ?>
             <p class="text-white text-sm sm:text-[16px] md:text-md font-normal leading-[1.6] mb-10 sm:mb-14 font-sans  <?php echo esc_attr( $cta_desc_class ); ?>">
                 <?php echo wp_kses_post( $cta_desc ); ?>
             </p>
+            <?php endif; ?>
 
             <!-- CTA Button -->
             <div class="w-full flex justify-center">

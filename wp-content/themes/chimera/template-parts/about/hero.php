@@ -33,7 +33,7 @@ $bg_image = $hero_content['bg_image'] ?? '';
     <div class="container mx-auto relative z-10 flex flex-col items-start w-full">
 
         <!-- Content wrapper aligned left, constrained width for readability -->
-        <div class="flex flex-col gap-[20px] items-start justify-center w-full lg:max-w-[80%] xl:max-w-[70%]">
+        <div class="flex flex-col gap-[20px] items-start justify-center w-full lg:max-w-[80%] xl:max-w-4xl">
 
             <!-- Badge -->
             <?php if ($badge_text): ?>
@@ -58,7 +58,7 @@ $bg_image = $hero_content['bg_image'] ?? '';
 
             <!-- Description -->
             <?php if ($description): ?>
-                <div class="font-sans font-normal text-gray text-base md:text-lg w-full mt-5">
+                <div class="font-sans font-normal text-gray text-base md:text-lg w-full">
                     <p class="font-normal leading-[1.5] m-0"><?php echo wp_kses_post($description); ?></p>
                 </div>
             <?php endif; ?>

@@ -100,7 +100,7 @@ if (!function_exists('render_acf_image_url')) {
 
                             <!-- Right Card (With Chimera) -->
                             <div class="comp-right bg-[#fff5f0] border border-[#ebebeb] flex flex-col md:flex-row items-center px-[12px] py-[16px] md:px-[25px] md:py-[21px] rounded-[12px] md:rounded-[16px] w-[calc(50%-16px)] md:flex-1 shadow-sm opacity-0 translate-x-[30px] transition-all duration-300 ease-out hover:shadow-[0_10px_30px_-5px_rgba(255,74,3,0.1)] text-center md:text-left gap-[8px] md:gap-[16px]">
-                                <div class="bg-[#fff5f0] rounded-[10px] md:rounded-[14px] w-[32px] h-[32px] md:w-[40px] md:h-[40px] flex items-center justify-center flex-shrink-0 border border-orange transition-colors group-hover:bg-orange group-hover:text-orange">
+                                <div class="bg-[#fff5f0] rounded-[10px] md:rounded-[14px] w-[32px] h-[32px] md:w-[40px] md:h-[40px] flex items-center justify-center flex-shrink-0 border border-orange transition-colors group-hover:text-orange">
                                     <?php if (!empty($row['with_chimera_icon'])): ?>
                                         <img src="<?php echo esc_url(render_acf_image_url($row['with_chimera_icon'])); ?>" class="w-[14px] h-[14px] md:w-[18px] md:h-[18px] object-contain transition-all" alt="">
                                     <?php else: ?>

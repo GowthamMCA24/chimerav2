@@ -34,7 +34,7 @@ $bg_shape_image   = $hero['bg_image'] ?? null;
             <div class="w-full lg:w-[58%] flex flex-col items-center md:items-start text-center md:text-left">
                 
                 <!-- Badge -->
-                <div class="inline-flex font-jost items-center justify-center px-3 py-1.5 h-[32px] bg-white border border-[rgba(255,74,3,0.2)] rounded-[8px] text-xs font-semibold uppercase text-orange mb-5">
+                <div class="inline-flex font-jost items-center justify-center px-3 py-1.5 bg-white border border-[rgba(255,74,3,0.2)] rounded-[8px] text-xs font-semibold uppercase text-orange mb-5">
                     <?php echo esc_html( $badge_text ); ?>
                 </div>
 

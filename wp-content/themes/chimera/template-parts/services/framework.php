@@ -6,7 +6,11 @@
  */
 
 $framework = get_field('services_framework');
-if (!$framework) return;
+
+// array_filter removes empty values. If the result is empty, it means all fields were empty.
+if (empty($framework) || (is_array($framework) && empty(array_filter($framework)))) {
+    return;
+}
 
 $badge_text = $framework['badge_text'] ?? 'Engineering Framework';
 $title_line1 = $framework['title_line1'] ?? 'Intelligent Test<br>Delivery Model (ITDM)';
@@ -65,7 +69,7 @@ if (!function_exists('render_framework_card')) {
 }
 ?>
 
-<section class="bg-white w-full py-[60px] md:py-[100px] relative overflow-visible">
+<section class="bg-white w-full py-[50px] relative overflow-visible">
     <div class="container">
         
         <!-- Main Layout: Stacked on <xl, Side-by-side on xl+ -->

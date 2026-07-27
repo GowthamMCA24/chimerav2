@@ -23,6 +23,9 @@ get_header();
     ] ); 
     ?>
 
+    <!-- Comparison Section -->
+    <?php get_template_part( 'template-parts/services/comparison' ); ?>
+
     <!-- Engineering Framework Section -->
     <?php get_template_part( 'template-parts/services/framework' ); ?>
 

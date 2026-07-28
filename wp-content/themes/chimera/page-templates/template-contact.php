@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: white;color: black;max-width: 600px;'>
                                 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                                 <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'>
-                                <form id='webform1293549000027498002' action='https://crm.zoho.in/crm/WebToLeadForm' name=WebToLeads1293549000027498002 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory1293549000027498002()' accept-charset='UTF-8'>
+                                <form id='webform1293549000027498002' action='https://crm.zoho.in/crm/WebToLeadForm' name=WebToLeads1293549000027498002 method='POST' onSubmit='javascript:document.charset="UTF-8"; var isValid = checkMandatory1293549000027498002(); if(isValid) { window.zohoFormSubmitted = true; } return isValid;' accept-charset='UTF-8' target='zoho_hidden_iframe'>
                                     <input type='text' style='display:none;' name='xnQsjsdp' value='b36ece8a12db00fd62eb8a99abbf4353a69fe28c39353ce4c3b85429c71abf65'> </input>
                                     <input type='hidden' name='zc_gad' id='zc_gad' value=''> </input>
                                     <input type='text' style='display:none;' name='xmIwtLD' value='3c4a1ca4bf8c0a3f4418da236d7625223130663ce4beddaf22518879a3bd207d5e6835ed56bda4b85482d218da9e722d'> </input>
@@ -629,6 +629,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <script id='wf_anal' src='https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=f41644e43be40749ac2870965170b724b683af31c3bae5037b199c4f0db7b503561cead046836002e900237403dcb0ecgid30e8e1e7b4d9320e6606e5719f858fe185cdd57acb95aa9bac4b2f96cbf1aceagidbf6305fb1711fdd89364f1022671ac80f87f1cfc8ea510b44750257c9e7138fbgidef9b151a89b150272e093bc6f66921d210d6ce4dc4618d42073eeada5cab18dc&tw=11d42ae7478168eed4ecf01a7a580405b09d3eb87c8ea44b99c79c3d9dc6876a&version=v2'> </script>
                                     <!-- Do not remove this --- Analytics Tracking code ends. -->
                                 </form>
+                                <iframe name="zoho_hidden_iframe" id="zoho_hidden_iframe" style="display:none;" onload="if(window.zohoFormSubmitted) { window.top.location.href = '<?php echo esc_url( home_url( '/thank-you/' ) ); ?>'; }"></iframe>
                             </div>
                         </div>
                     </div>

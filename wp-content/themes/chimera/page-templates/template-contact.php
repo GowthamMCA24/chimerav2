@@ -17,14 +17,289 @@ $contact_form_shortcode = $Herosection['contact_form_shortcode'] ?? [];
 
 ?>
 
+<style>
+    /* ── Contact Form 7 — Figma-accurate styles (Overriding Zoho) ── */
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap');
+
+    /* The CF7 form itself -> Zoho form wrapper */
+    .contact-form-wrapper .crmWebToEntityForm {
+        width: 100% !important;
+        max-width: 100% !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .contact-form-wrapper .crmWebToEntityForm form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Remove Zoho's internal title */
+    /* .contact-form-wrapper .zcwf_title {
+        display: none !important;
+    } */
+
+    /* .zcwf_row */
+    .contact-form-wrapper .zcwf_row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+        width: 100% !important;
+        margin: 0 !important;
+        float: none !important;
+    }
+
+    /* Label rows — stacked above input -> .zcwf_col_lab */
+    .contact-form-wrapper .zcwf_col_lab {
+        width: 100% !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-family: 'IBM Plex Sans', sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 16px !important;
+        color: #6f7482 !important;
+        line-height: 1.5 !important;
+    }
+    
+    .contact-form-wrapper .zcwf_col_lab label {
+        font-family: inherit !important;
+        font-size: inherit !important;
+        color: inherit !important;
+    }
+
+    /* .zcwf_col_fld where inputs live */
+    .contact-form-wrapper .zcwf_col_fld {
+        width: 100% !important;
+        float: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Inputs, Select & Textarea */
+    .contact-form-wrapper .zcwf_col_fld input[type="text"],
+    .contact-form-wrapper .zcwf_col_fld input[type="password"],
+    .contact-form-wrapper .zcwf_col_fld input[type="email"],
+    .contact-form-wrapper .zcwf_col_fld input[type="tel"],
+    .contact-form-wrapper .zcwf_col_fld select,
+    .contact-form-wrapper .zcwf_col_fld textarea {
+        display: block !important;
+        width: 100% !important;
+        background-color: #f8fafc !important;
+        border: 1px solid #c0c6cc !important;
+        border-radius: 4px !important;
+        padding: 12px !important;
+        color: #3b4256 !important;
+        font-family: 'IBM Plex Sans', sans-serif !important;
+        font-size: 16px !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        letter-spacing: 0.01em !important;
+        transition: border-color 0.2s ease !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+
+    .contact-form-wrapper .zcwf_col_fld input::placeholder,
+    .contact-form-wrapper .zcwf_col_fld textarea::placeholder {
+        color: #b8bcca !important;
+        font-weight: 400 !important;
+    }
+
+    .contact-form-wrapper .zcwf_col_fld input:focus,
+    .contact-form-wrapper .zcwf_col_fld select:focus,
+    .contact-form-wrapper .zcwf_col_fld textarea:focus {
+        border-color: #ff4a03 !important;
+        background-color: #fff !important;
+        box-shadow: 0 0 0 3px rgba(255, 74, 3, 0.08) !important;
+    }
+
+    /* Select styling (custom arrow) */
+    .contact-form-wrapper .zcwf_col_fld select {
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236f7482%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 12px center !important;
+        background-size: 10px auto !important;
+        padding-right: 32px !important;
+        padding-left: 12px !important;
+        text-align: left !important;
+        cursor: pointer !important;
+    }
+
+    /* Textarea height */
+    .contact-form-wrapper .zcwf_col_fld textarea {
+        min-height: unset !important;
+        height: 80px !important;
+        resize: vertical !important;
+    }
+
+    /* Acceptance (checkbox) row -> .zcwf_privacy */
+    .contact-form-wrapper .zcwf_privacy {
+        margin: 4px 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+    
+    .contact-form-wrapper .zcwf_privacy > div {
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .contact-form-wrapper .zcwf_privacy > div:first-child {
+        flex-shrink: 0 !important;
+    }
+
+    .contact-form-wrapper .zcwf_privacy input[type="checkbox"] {
+        width: 20px !important;
+        height: 20px !important;
+        margin-top: 2px !important;
+        accent-color: #ff4a03 !important;
+        cursor: pointer !important;
+        border-radius: 4px !important;
+    }
+
+    .contact-form-wrapper .zcwf_privacy_txt {
+        font-family: 'IBM Plex Sans', sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        color: #b8bcca !important;
+        line-height: 1.5 !important;
+        padding-top: 0 !important;
+        width: 100% !important;
+        flex: 1 !important;
+    }
+    
+    .contact-form-wrapper .zcwf_privacy_txt div,
+    .contact-form-wrapper .zcwf_privacy_txt font,
+    .contact-form-wrapper .zcwf_privacy_txt span {
+        font-family: inherit !important;
+        font-size: inherit !important;
+        color: inherit !important;
+    }
+    
+    /* Orange link inside acceptance text */
+    .contact-form-wrapper .zcwf_privacy_txt a {
+        color: #ff4a03 !important;
+        text-decoration: none !important;
+    }
+    .contact-form-wrapper .zcwf_privacy_txt a:hover {
+        text-decoration: underline !important;
+    }
+    
+    /* Submit button — full width, orange, 48px */
+    .contact-form-wrapper .formsubmit {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 48px !important;
+        background: #ff4a03 !important; /* override gradient */
+        color: #ffffff !important;
+        font-family: 'IBM Plex Sans', sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 18px !important;
+        text-align: center !important;
+        border: none !important;
+        border-radius: 6px !important;
+        cursor: pointer !important;
+        transition: background-color 0.2s ease !important;
+        margin-top: 4px !important;
+        letter-spacing: 0.01em !important;
+        padding: 0 !important;
+    }
+    .contact-form-wrapper .formsubmit:hover {
+        background: #e03f00 !important;
+    }
+    
+    /* Hide reset button if present */
+    .contact-form-wrapper input[type="reset"] {
+        display: none !important;
+    }
+
+    /* Validation error messages */
+    .contact-form-wrapper #privacyErr1293549000027498002 {
+        font-family: 'IBM Plex Sans', sans-serif !important;
+        font-size: 13px !important;
+        color: #e03f00 !important;
+        margin-top: 4px !important;
+        padding-left: 0 !important;
+        display: none !important; /* Hide by default to remove empty space */
+        width: 100% !important;
+        margin-left: 30px !important;
+    }
+    
+    .contact-form-wrapper #privacyErr1293549000027498002[style*="visible"] {
+        display: block !important;
+    }
+
+    /* ── Intl Tel Input Overrides ── */
+    .iti {
+        width: 100%;
+        display: block;
+    }
+    .contact-form-wrapper .iti input[type="tel"],
+    .contact-form-wrapper .iti input[type="text"] {
+        width: 100% !important;
+        margin-bottom: 0 !important;
+        padding-left: 76px !important;
+    }
+    .iti__country-list {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 14px;
+        border: 1px solid #f2ecff;
+        border-radius: 6px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        color: #3b4256;
+    }
+    .iti__selected-flag {
+        background-color: transparent !important;
+    }
+</style>
+
+<!-- Intl Tel Input JS/CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var phoneInput = document.querySelector('#Phone');
+    if (phoneInput) {
+        var iti = window.intlTelInput(phoneInput, {
+            separateDialCode: true,
+            initialCountry: "in",
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+
+        // Update the input to send the full E.164 phone number on form submit
+        var form = phoneInput.closest('form');
+        if (form) {
+            form.addEventListener('submit', function() {
+                var fullNumber = iti.getNumber();
+                if (fullNumber) {
+                    phoneInput.value = fullNumber;
+                }
+            });
+        }
+    }
+});
+</script>
+
 <main id="primary" class="site-main bg-[#f9f7f6] min-h-screen overflow-hidden -mt-[80px] pt-[80px]">
 
     <section class="relative pb-[50px] pt-[50px]">
         <div class="container">
-            <div class="flex flex-col lg:flex-row gap-[62px] items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-[62px]">
 
                 <!-- Left Content -->
-                <div class="w-full lg:w-1/2 flex flex-col gap-[40px]">
+                <div class="w-full flex flex-col gap-[40px]">
 
                     <div class="flex flex-col gap-[8px]">
                         <div class="w-max">
@@ -71,13 +346,13 @@ $contact_form_shortcode = $Herosection['contact_form_shortcode'] ?? [];
                 </div>
 
                 <!-- Right Form Container -->
-                <div class="w-full lg:w-1/2 relative mt-10 lg:mt-0">
+                <div class="w-full relative mt-10 lg:mt-0">
                     <!-- Orange outer card matching Figma -->
-                    <div class="relative w-full rounded-[24px] overflow-hidden min-h-[600px] bg-orange-gradient lg:min-h-[820px] flex flex-col justify-center px-[24px] py-[24px] bg-[linear-gradient(0deg,rgba(255,255,255,0.2),rgba(255,255,255,0.2)),linear-gradient(180deg,rgba(255,74,3,0.1)_66.83%,rgba(255,255,255,0)_100%)]"
+                    <div class="relative w-full rounded-[24px] overflow-hidden bg-orange-gradient flex flex-col justify-center px-[24px] py-[24px] bg-[linear-gradient(0deg,rgba(255,255,255,0.2),rgba(255,255,255,0.2)),linear-gradient(180deg,rgba(255,74,3,0.1)_66.83%,rgba(255,255,255,0)_100%)]"
                         >
 
                         <!-- White Form Card -->
-                        <div class="relative z-10 bg-white rounded-[12px] w-full contact-form-wrapper p-[20px] md:p-[40px]"
+                        <div class="relative z-10 bg-white rounded-[12px] w-full contact-form-wrapper p-[20px] md:px-[30px] md:pt-[30px] md:pb-[20px]"
                             style="border: 1px solid #f2ecff;">
                             <!-- Note : - You can modify the font style and form style to suit your website. - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. - The Mandatory check script can modified as to suit your business needs. - It is important that you test the modified form before going live.-->
                             <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: white;color: black;max-width: 600px;'>
@@ -88,72 +363,78 @@ $contact_form_shortcode = $Herosection['contact_form_shortcode'] ?? [];
                                     <input type='hidden' name='zc_gad' id='zc_gad' value=''> </input>
                                     <input type='text' style='display:none;' name='xmIwtLD' value='3c4a1ca4bf8c0a3f4418da236d7625223130663ce4beddaf22518879a3bd207d5e6835ed56bda4b85482d218da9e722d'> </input>
                                     <input type='text' style='display:none;' name='actionType' value='TGVhZHM='> </input>
-                                    <input type='text' style='display:none;' name='returnURL' value='/thank-you/'> </input>
+                                    <input type='text' style='display:none;' name='returnURL' value='<?php echo esc_url( home_url( '/thank-you/' ) ); ?>'> </input>
                                     <!-- Do not remove this code. -->
-                                    <style> html,body{ margin: 0px; } .formsubmit.zcwf_button{ color: white !important; background: transparent linear-gradient(0deg, #0279FF 0%, #00A3F3 100%); } #crmWebToEntityForm.zcwf_lblLeft{ width: 100%; padding: 25px; margin: 0 auto; box-sizing: border-box; } #crmWebToEntityForm.zcwf_lblLeft *{ box-sizing: border-box; } #crmWebToEntityForm{ text-align: left; } #crmWebToEntityForm *{ direction: ltr; } .zcwf_lblLeft .zcwf_title{ word-wrap: break-word; padding: 0px 6px 10px; font-weight: bold } .zcwf_lblLeft.cpT_primaryBtn:hover{ background: linear-gradient(#02acff 0,#006be4 100%)no-repeat padding-box !important; box-shadow: 0 -2px 0 0 #0159b9 inset !important; border: 0 !important; color: #fff !important; outline: 0 !important; } .zcwf_lblLeft .zcwf_col_fld input[ type = text], input[ type = password], .zcwf_lblLeft .zcwf_col_fld textarea{ width: 60%; border: 1px solid #c0c6cc !important; resize: vertical; border-radius: 2px; float: left; } .zcwf_lblLeft .zcwf_col_lab{ width: 30%; word-break: break-word; padding: 0px 6px 0px; margin-right: 10px; margin-top: 5px; float: left; min-height: 1px; } .zcwf_lblLeft .zcwf_col_fld{ float: left; width: 68%; padding: 0px 6px 0px; position: relative; margin-top: 5px; } .zcwf_lblLeft .zcwf_privacy{ padding: 6px; } .zcwf_lblLeft .wfrm_fld_dpNn{ display: none; } .dIB{ display: inline-block; } .zcwf_lblLeft .zcwf_col_fld_slt{ width: 60%; border: 1px solid #ccc; background: #fff; border-radius: 4px; font-size: 12px; float: left; resize: vertical; padding: 2px 5px; } .zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after{ content: ''; display: table; clear: both; } .zcwf_lblLeft .zcwf_col_help{ float: left; margin-left: 7px; font-size: 12px; max-width: 35%; word-break: break-word; } .zcwf_lblLeft .zcwf_help_icon{ cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #c0c6cc; color: #c1c1c1; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%; } .zcwf_lblLeft .zcwf_row{ margin: 15px 0px; } .zcwf_lblLeft .formsubmit{ margin-right: 5px; cursor: pointer; color: #313949; font-size: 12px; } .zcwf_lblLeft .zcwf_privacy_txt{ width: 90%; color: rgb(0, 0, 0); font-size: 12px; font-family: Arial; display: inline-block; vertical-align: top; color: #313949; padding-top: 2px; margin-left: 6px; } .zcwf_lblLeft .zcwf_button{ font-size: 12px; color: #313949; border: 1px solid #c0c6cc; padding: 3px 9px; border-radius: 4px; cursor: pointer; max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .zcwf_lblLeft .zcwf_tooltip_over{ position: relative; } .zcwf_lblLeft .zcwf_tooltip_ctn{ position: absolute; background: #dedede; padding: 3px 6px; top: 3px; border-radius: 4px; word-break: break-word; min-width: 100px; max-width: 150px; color: #313949; z-index: 100; } .zcwf_lblLeft .zcwf_ckbox{ float: left; } .zcwf_lblLeft .zcwf_file{ width: 55%; box-sizing: border-box; float: left; } .cBoth:after{ content: ''; display: block; clear: both; } @media all and (max-width: 600px){ .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld{ width: auto; float: none !important; } .zcwf_lblLeft .zcwf_col_help{ width: 40%; } } </style>
-                                    <div class='zcwf_title text-center' style='max-width: 600px;color: black; font-family:Arial;'>Chimera Website Form - Contact us</div>
-                                    <div class='zcwf_row'>
-                                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                                            <label for='First_Name'>First Name <span style='color:red;'>*</span> </label>
+                                    <style> html,body{ margin: 0px; } .formsubmit.zcwf_button{ color: white !important; background: transparent linear-gradient(0deg, #0279FF 0%, #00A3F3 100%); } #crmWebToEntityForm.zcwf_lblLeft{ width: 100%; padding: 25px; margin: 0 auto; box-sizing: border-box; } #crmWebToEntityForm.zcwf_lblLeft *{ box-sizing: border-box; } #crmWebToEntityForm{ text-align: left; } #crmWebToEntityForm *{ direction: ltr; } .zcwf_lblLeft .zcwf_title{ word-wrap: break-word; padding: 0px 6px 10px; font-weight: bold } .zcwf_lblLeft.cpT_primaryBtn:hover{ background: linear-gradient(#02acff 0,#006be4 100%)no-repeat padding-box !important; box-shadow: 0 -2px 0 0 #0159b9 inset !important; border: 0 !important; color: #fff !important; outline: 0 !important; } .zcwf_lblLeft .zcwf_col_fld input[ type = text], input[ type = password], .zcwf_lblLeft .zcwf_col_fld textarea { width: 60%; border: 1px solid #c0c6cc !important; resize: vertical; border-radius: 2px; float: left; } .zcwf_lblLeft .zcwf_col_lab{ width: 30%; word-break: break-word; padding: 0px 6px 0px; margin-right: 10px; margin-top: 5px; float: left; min-height: 1px; } .zcwf_lblLeft .zcwf_col_fld{ float: left; width: 68%; padding: 0px 6px 0px; position: relative; margin-top: 5px; } .zcwf_lblLeft .zcwf_privacy{ padding: 6px; } .zcwf_lblLeft .wfrm_fld_dpNn{ display: none; } .dIB{ display: inline-block; } .zcwf_lblLeft .zcwf_col_fld_slt{ width: 60%; border: 1px solid #ccc; background: #fff; border-radius: 4px; font-size: 12px; float: left; resize: vertical; padding: 2px 5px; } .zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after{ content: ''; display: table; clear: both; } .zcwf_lblLeft .zcwf_col_help{ float: left; margin-left: 7px; font-size: 12px; max-width: 35%; word-break: break-word; } .zcwf_lblLeft .zcwf_help_icon{ cursor: pointer; width: 16px; height: 16px; display: inline-block; background: #fff; border: 1px solid #c0c6cc; color: #c1c1c1; text-align: center; font-size: 11px; line-height: 16px; font-weight: bold; border-radius: 50%; } .zcwf_lblLeft .zcwf_row{ margin: 15px 0px; } .zcwf_lblLeft .formsubmit{ margin-right: 5px; cursor: pointer; color: #313949; font-size: 12px; } .zcwf_lblLeft .zcwf_privacy_txt{ width: 90%; color: rgb(0, 0, 0); font-size: 12px; font-family: Arial; display: inline-block; vertical-align: top; color: #313949; padding-top: 2px; margin-left: 6px; } .zcwf_lblLeft .zcwf_button{ font-size: 12px; color: #313949; border: 1px solid #c0c6cc; padding: 3px 9px; border-radius: 4px; cursor: pointer; max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .zcwf_lblLeft .zcwf_tooltip_over{ position: relative; } .zcwf_lblLeft .zcwf_tooltip_ctn{ position: absolute; background: #dedede; padding: 3px 6px; top: 3px; border-radius: 4px; word-break: break-word; min-width: 100px; max-width: 150px; color: #313949; z-index: 100; } .zcwf_lblLeft .zcwf_ckbox{ float: left; } .zcwf_lblLeft .zcwf_file{ width: 55%; box-sizing: border-box; float: left; } .cBoth:after{ content: ''; display: block; clear: both; } @media all and (max-width: 600px){ .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld{ width: auto; float: none !important; } .zcwf_lblLeft .zcwf_col_help{ width: 40%; } } </style>
+                                    <h2 class='zcwf_title text-center text-[20px] font-medium text-dark mb-4' style='max-width: 600px;'>Chimera Website Form - Contact us</h2>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-[12px] w-full">
+                                        <div class='zcwf_row'>
+                                            <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                                                <label for='First_Name'>First Name <span style='color:red;'>*</span> </label>
+                                            </div>
+                                            <div class='zcwf_col_fld'>
+                                                <input type='text' id='First_Name' aria-required='true' aria-label='First Name' name='First Name' aria-valuemax='40' maxlength='40'> </input>
+                                                <div class='zcwf_col_help'> </div>
+                                            </div>
                                         </div>
-                                        <div class='zcwf_col_fld'>
-                                            <input type='text' id='First_Name' aria-required='true' aria-label='First Name' name='First Name' aria-valuemax='40' maxlength='40'> </input>
-                                            <div class='zcwf_col_help'> </div>
-                                        </div>
-                                    </div>
-                                    <div class='zcwf_row'>
-                                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                                            <label for='Last_Name'>Last Name <span style='color:red;'>*</span> </label>
-                                        </div>
-                                        <div class='zcwf_col_fld'>
-                                            <input type='text' id='Last_Name' aria-required='true' aria-label='Last Name' name='Last Name' aria-valuemax='80' maxlength='80'> </input>
-                                            <div class='zcwf_col_help'> </div>
-                                        </div>
-                                    </div>
-                                    <div class='zcwf_row'>
-                                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                                            <label for='Email'>Work Email <span style='color:red;'>*</span> </label>
-                                        </div>
-                                        <div class='zcwf_col_fld'>
-                                            <input type='text' ftype='email' autocomplete='false' id='Email' aria-required='true' aria-label='Email' name='Email' aria-valuemax='100' crmlabel='' maxlength='100'> </input>
-                                            <div class='zcwf_col_help'> </div>
+                                        <div class='zcwf_row'>
+                                            <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                                                <label for='Last_Name'>Last Name <span style='color:red;'>*</span> </label>
+                                            </div>
+                                            <div class='zcwf_col_fld'>
+                                                <input type='text' id='Last_Name' aria-required='true' aria-label='Last Name' name='Last Name' aria-valuemax='80' maxlength='80'> </input>
+                                                <div class='zcwf_col_help'> </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class='zcwf_row'>
-                                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                                            <label for='Phone'>Phone Number</label>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-[12px] w-full">
+                                        <div class='zcwf_row'>
+                                            <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                                                <label for='Email'>Work Email <span style='color:red;'>*</span> </label>
+                                            </div>
+                                            <div class='zcwf_col_fld'>
+                                                <input type='text' ftype='email' autocomplete='false' id='Email' aria-required='true' aria-label='Email' name='Email' aria-valuemax='100' crmlabel='' maxlength='100'> </input>
+                                                <div class='zcwf_col_help'> </div>
+                                            </div>
                                         </div>
-                                        <div class='zcwf_col_fld'>
-                                            <input type='text' id='Phone' aria-required='false' aria-label='Phone' name='Phone' aria-valuemax='30' maxlength='30'> </input>
-                                            <div class='zcwf_col_help'> </div>
+                                        <div class='zcwf_row'>
+                                            <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                                                <label for='Phone'>Phone Number</label>
+                                            </div>
+                                            <div class='zcwf_col_fld'>
+                                                <input type='text' id='Phone' aria-required='false' aria-label='Phone' name='Phone' aria-valuemax='30' maxlength='30'> </input>
+                                                <div class='zcwf_col_help'> </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class='zcwf_row'>
-                                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                                            <label for='Company'>Company</label>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-[12px] w-full">
+                                        <div class='zcwf_row'>
+                                            <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                                                <label for='Company'>Company</label>
+                                            </div>
+                                            <div class='zcwf_col_fld'>
+                                                <input type='text' id='Company' aria-required='false' aria-label='Company' name='Company' aria-valuemax='200' maxlength='200'> </input>
+                                                <div class='zcwf_col_help'> </div>
+                                            </div>
                                         </div>
-                                        <div class='zcwf_col_fld'>
-                                            <input type='text' id='Company' aria-required='false' aria-label='Company' name='Company' aria-valuemax='200' maxlength='200'> </input>
-                                            <div class='zcwf_col_help'> </div>
-                                        </div>
-                                    </div>
-                                    <div class='zcwf_row'>
-                                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
-                                            <label for='Industry'>Industry</label>
-                                        </div>
-                                        <div class='zcwf_col_fld'>
-                                            <select class='zcwf_col_fld_slt' role='combobox' aria-expanded='false' aria-haspopup='listbox' id='Industry' onChange='addAriaSelected1293549000027498002()' aria-required='false' aria-label='Industry' name='Industry'>
-                                                <option value='-None-'>-None-</option>
-                                                <option value='Edu Tech'>Edu Tech</option>
-                                                <option value='Fintech'>Fintech</option>
-                                                <option value='Insurtech'>Insurtech</option>
-                                                <option value='LendTech'>LendTech</option>
-                                                <option value='PropTech'>PropTech</option>
-                                                <option value='Others'>Others</option>
-                                                <option value='Retail'>Retail</option>
-                                                <option value='Enterprise'>Enterprise</option>
-                                            </select>
-                                            <div class='zcwf_col_help'> </div>
+                                        <div class='zcwf_row'>
+                                            <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                                                <label for='Industry'>Industry</label>
+                                            </div>
+                                            <div class='zcwf_col_fld'>
+                                                <select class='zcwf_col_fld_slt' role='combobox' aria-expanded='false' aria-haspopup='listbox' id='Industry' onChange='addAriaSelected1293549000027498002()' aria-required='false' aria-label='Industry' name='Industry'>
+                                                    <option value='-None-'>-None-</option>
+                                                    <option value='Edu Tech'>Edu Tech</option>
+                                                    <option value='Fintech'>Fintech</option>
+                                                    <option value='Insurtech'>Insurtech</option>
+                                                    <option value='LendTech'>LendTech</option>
+                                                    <option value='PropTech'>PropTech</option>
+                                                    <option value='Others'>Others</option>
+                                                    <option value='Retail'>Retail</option>
+                                                    <option value='Enterprise'>Enterprise</option>
+                                                </select>
+                                                <div class='zcwf_col_help'> </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class='zcwf_row'>
@@ -177,7 +458,7 @@ $contact_form_shortcode = $Herosection['contact_form_shortcode'] ?? [];
                                             <div class='dIB zcwf_privacy_txt' style='font-size: 12px;font-family:Arial;color: black;'>
                                                 <div>
                                                     <font color='#1b1b1b' face='Jost, sans-serif'>
-                                                        <span style='font-size:32px'>I agree to the <a href='https://beta.chimeratechnologies.com/terms-conditions/' title='https://beta.chimeratechnologies.com/terms-conditions/' target='_blank'>terms and conditions</a> </span>
+                                                        <span style='font-size:32px'>I agree to the <a href='<?php echo esc_url( home_url( '/terms-conditions/' ) ); ?>' title='Terms and Conditions' target='_blank'>terms and conditions</a> </span>
                                                     </font>
                                                 </div>
                                             </div>
@@ -186,9 +467,9 @@ $contact_form_shortcode = $Herosection['contact_form_shortcode'] ?? [];
                                     </div>
                                     <input type='text' type='hidden' style='display: none;' name='aG9uZXlwb3Q' value='' />
                                     <div class='zcwf_row'>
-                                        <div class='zcwf_col_lab'> </div>
+
                                         <div class='zcwf_col_fld'>
-                                            <input type='submit' id='formsubmit' role='button' class='formsubmit zcwf_button' value='Submit' aria-label='Submit' title='Submit'>
+                                            <input type='submit' id='formsubmit' role='button' class='formsubmit zcwf_button' value='Build With Us' aria-label='Build With Us' title='Build With Us'>
                                             <input type='reset' class='zcwf_button' role='button' name='reset' value='Reset' aria-label='Reset' title='Reset'>
                                         </div>
                                     </div>
@@ -362,276 +643,7 @@ $contact_form_shortcode = $Herosection['contact_form_shortcode'] ?? [];
 
 </main>
 
-<style>
-    /* ── Contact Form 7 — Figma-accurate styles (Overriding Zoho) ── */
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap');
 
-    /* The CF7 form itself -> Zoho form wrapper */
-    .contact-form-wrapper .crmWebToEntityForm {
-        width: 100% !important;
-        max-width: 100% !important;
-        background-color: transparent !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    
-    .contact-form-wrapper .crmWebToEntityForm form {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    /* Remove Zoho's internal title */
-    /* .contact-form-wrapper .zcwf_title {
-        display: none !important;
-    } */
-
-    /* .zcwf_row */
-    .contact-form-wrapper .zcwf_row {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 4px !important;
-        width: 100% !important;
-        margin: 0 !important;
-        float: none !important;
-    }
-
-    /* Label rows — stacked above input -> .zcwf_col_lab */
-    .contact-form-wrapper .zcwf_col_lab {
-        width: 100% !important;
-        float: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        font-family: 'IBM Plex Sans', sans-serif !important;
-        font-weight: 500 !important;
-        font-size: 16px !important;
-        color: #6f7482 !important;
-        line-height: 1.5 !important;
-    }
-    
-    .contact-form-wrapper .zcwf_col_lab label {
-        font-family: inherit !important;
-        font-size: inherit !important;
-        color: inherit !important;
-    }
-
-    /* .zcwf_col_fld where inputs live */
-    .contact-form-wrapper .zcwf_col_fld {
-        width: 100% !important;
-        float: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Inputs, Select & Textarea */
-    .contact-form-wrapper .zcwf_col_fld input[type="text"],
-    .contact-form-wrapper .zcwf_col_fld input[type="password"],
-    .contact-form-wrapper .zcwf_col_fld input[type="email"],
-    .contact-form-wrapper .zcwf_col_fld input[type="tel"],
-    .contact-form-wrapper .zcwf_col_fld select,
-    .contact-form-wrapper .zcwf_col_fld textarea {
-        display: block !important;
-        width: 100% !important;
-        background-color: #f8fafc !important;
-        border: 1.5px solid #f8fafc !important;
-        border-radius: 4px !important;
-        padding: 12px !important;
-        color: #3b4256 !important;
-        font-family: 'IBM Plex Sans', sans-serif !important;
-        font-size: 16px !important;
-        font-weight: 400 !important;
-        line-height: 1.5 !important;
-        letter-spacing: 0.01em !important;
-        transition: border-color 0.2s ease !important;
-        outline: none !important;
-        box-sizing: border-box !important;
-        margin: 0 !important;
-    }
-
-    .contact-form-wrapper .zcwf_col_fld input::placeholder,
-    .contact-form-wrapper .zcwf_col_fld textarea::placeholder {
-        color: #b8bcca !important;
-        font-weight: 400 !important;
-    }
-
-    .contact-form-wrapper .zcwf_col_fld input:focus,
-    .contact-form-wrapper .zcwf_col_fld select:focus,
-    .contact-form-wrapper .zcwf_col_fld textarea:focus {
-        border-color: #ff4a03 !important;
-        background-color: #fff !important;
-        box-shadow: 0 0 0 3px rgba(255, 74, 3, 0.08) !important;
-    }
-
-    /* Select styling (custom arrow) */
-    .contact-form-wrapper .zcwf_col_fld select {
-        appearance: none !important;
-        -webkit-appearance: none !important;
-        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236f7482%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E") !important;
-        background-repeat: no-repeat !important;
-        background-position: right 12px center !important;
-        background-size: 10px auto !important;
-        padding-right: 32px !important;
-        padding-left: 12px !important;
-        text-align: left !important;
-        cursor: pointer !important;
-    }
-
-    /* Textarea height */
-    .contact-form-wrapper .zcwf_col_fld textarea {
-        min-height: unset !important;
-        height: 120px !important;
-        resize: vertical !important;
-    }
-
-    /* Acceptance (checkbox) row -> .zcwf_privacy */
-    .contact-form-wrapper .zcwf_privacy {
-        margin: 4px 0 !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        align-items: flex-start !important;
-        gap: 10px !important;
-    }
-    
-    .contact-form-wrapper .zcwf_privacy > div {
-        float: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    
-    .contact-form-wrapper .zcwf_privacy > div:first-child {
-        flex-shrink: 0 !important;
-    }
-
-    .contact-form-wrapper .zcwf_privacy input[type="checkbox"] {
-        width: 20px !important;
-        height: 20px !important;
-        margin-top: 2px !important;
-        accent-color: #ff4a03 !important;
-        cursor: pointer !important;
-        border-radius: 4px !important;
-    }
-
-    .contact-form-wrapper .zcwf_privacy_txt {
-        font-family: 'IBM Plex Sans', sans-serif !important;
-        font-size: 14px !important;
-        font-weight: 400 !important;
-        color: #b8bcca !important;
-        line-height: 1.5 !important;
-        padding-top: 0 !important;
-        width: 100% !important;
-        flex: 1 !important;
-    }
-    
-    .contact-form-wrapper .zcwf_privacy_txt div,
-    .contact-form-wrapper .zcwf_privacy_txt font,
-    .contact-form-wrapper .zcwf_privacy_txt span {
-        font-family: inherit !important;
-        font-size: inherit !important;
-        color: inherit !important;
-    }
-    
-    /* Orange link inside acceptance text */
-    .contact-form-wrapper .zcwf_privacy_txt a {
-        color: #ff4a03 !important;
-        text-decoration: none !important;
-    }
-    .contact-form-wrapper .zcwf_privacy_txt a:hover {
-        text-decoration: underline !important;
-    }
-    
-    /* Submit button — full width, orange, 48px */
-    .contact-form-wrapper .formsubmit {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: 48px !important;
-        background: #ff4a03 !important; /* override gradient */
-        color: #ffffff !important;
-        font-family: 'IBM Plex Sans', sans-serif !important;
-        font-weight: 500 !important;
-        font-size: 18px !important;
-        text-align: center !important;
-        border: none !important;
-        border-radius: 6px !important;
-        cursor: pointer !important;
-        transition: background-color 0.2s ease !important;
-        margin-top: 4px !important;
-        letter-spacing: 0.01em !important;
-        padding: 0 !important;
-    }
-    .contact-form-wrapper .formsubmit:hover {
-        background: #e03f00 !important;
-    }
-    
-    /* Hide reset button if present */
-    .contact-form-wrapper input[type="reset"] {
-        display: none !important;
-    }
-
-    /* Validation error messages */
-    .contact-form-wrapper #privacyErr1293549000027498002 {
-        font-family: 'IBM Plex Sans', sans-serif !important;
-        font-size: 13px !important;
-        color: #e03f00 !important;
-        margin-top: 4px !important;
-        padding-left: 0 !important;
-        display: block !important;
-        width: 100% !important;
-        margin-left: 30px !important;
-    }
-
-    /* ── Intl Tel Input Overrides ── */
-    .iti {
-        width: 100%;
-        display: block;
-    }
-    .contact-form-wrapper .iti input[type="tel"],
-    .contact-form-wrapper .iti input[type="text"] {
-        width: 100% !important;
-        margin-bottom: 0 !important;
-        padding-left: 82px !important;
-    }
-    .iti__country-list {
-        font-family: 'IBM Plex Sans', sans-serif;
-        font-size: 14px;
-        border: 1px solid #f2ecff;
-        border-radius: 6px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        color: #3b4256;
-    }
-    .iti__selected-flag {
-        background-color: transparent !important;
-    }
-</style>
-
-<!-- Intl Tel Input JS/CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var phoneInput = document.querySelector('#Phone');
-    if (phoneInput) {
-        var iti = window.intlTelInput(phoneInput, {
-            separateDialCode: true,
-            initialCountry: "in",
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-        });
-
-        // Update the input to send the full E.164 phone number on form submit
-        var form = phoneInput.closest('form');
-        if (form) {
-            form.addEventListener('submit', function() {
-                var fullNumber = iti.getNumber();
-                if (fullNumber) {
-                    phoneInput.value = fullNumber;
-                }
-            });
-        }
-    }
-});
-</script>
 
 <?php
 get_footer();

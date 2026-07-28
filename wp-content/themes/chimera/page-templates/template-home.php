@@ -76,6 +76,7 @@ get_header();
         $c_args['cta_title'] = $industry_cta['title'] ?? null;
         $c_args['cta_desc']  = $industry_cta['desc'] ?? null;
         $c_args['cta_title_class']  = $industry_cta['cta_title_class'] ?? null;
+        $c_args['cta_desc_class']  = $industry_cta['cta_desc_class'] ?? null;
         
         // Handle if 'btn' is an ACF Link Array or custom group
         $c_args['cta_btn_text'] = $industry_cta['btn']['title'] ?? $industry_cta['btn']['text'] ?? null;

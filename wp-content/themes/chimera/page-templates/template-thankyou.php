@@ -10,44 +10,82 @@
 get_header();
 ?>
 
-<main id="thank-you-page" class="site-main bg-white min-h-[60vh] flex items-center justify-center">
+<main id="thank-you-page" class="site-main -mt-20 bg-[#f9f7f6] content-stretch flex flex-col items-center relative size-full">
     
-    <section class="py-[60px] md:py-[100px] w-full">
-        <div class="container text-center max-w-[800px] mx-auto px-4 flex flex-col items-center">
+    <section class="content-stretch flex flex-col items-center pb-[60px] pt-[130px] relative shrink-0 w-full">
+        <div class="container content-stretch flex items-start px-4 md:px-0 relative shrink-0 w-full max-w-[1200px] mx-auto justify-center">
             
-            <!-- Checkmark Icon in an Orange Gradient Ring -->
-            <div class="bg-[linear-gradient(135deg,#ff4a03_0%,#ffa07a_100%)] p-[2px] rounded-full inline-block mb-8">
-                <div class="bg-white rounded-full w-[80px] h-[80px] flex items-center justify-center">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="#ff4a03" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-            </div>
-
-            <h1 class="font-jost font-semibold text-[36px] md:text-[56px] text-dark mb-6">Thank You!</h1>
-            
-            <div class="font-sans font-normal text-[16px] md:text-[18px] text-gray leading-[1.6] mb-10 max-w-[500px]">
-                <?php 
-                if ( have_posts() ) {
-                    while ( have_posts() ) {
-                        the_post();
-                        the_content();
-                    }
-                } 
+            <div class="content-stretch flex flex-col gap-[40px] items-center justify-center relative">
                 
-                // Fallback text if the WordPress page content is empty
-                if ( empty( get_the_content() ) ) {
-                    echo 'We have received your message. One of our team members will get back to you shortly.';
-                }
+                <?php
+                // Fetch group field from ACF
+                $thankyou_data = get_field('thank_you_content') ?: (get_field('thankyou_content') ?: []);
+                
+                // Extract fields with fallbacks
+                $heading = $thankyou_data['heading'] ?? '';
+                $highlight_text = $thankyou_data['highlight_text'] ?? '';
+                $description = $thankyou_data['description'] ?? '';
+                $social_label = $thankyou_data['social_label'] ?? '';
+                $page_social_icons = $thankyou_data['social_icons'] ?? ($thankyou_data['social_icon'] ?? []);
                 ?>
-            </div>
 
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="bg-orange-gradient hover:opacity-95 text-white px-6 py-3 rounded-[8px] text-base font-semibold tracking-normal inline-flex items-center gap-2">
-                Back to Home
-            </a>
-            
+                <div class="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full text-center">
+                    <div class="[word-break:break-word] flex flex-col font-jost font-semibold items-center justify-center leading-[1.1] relative shrink-0 text-[48px] md:text-[60px] tracking-[-0.12px] w-full">
+                        <div class="text-[#1b1b1b]">
+                            <span><?php echo wp_kses_post( $heading ); ?></span>
+                        </div>
+                        <?php if ( $highlight_text ) : ?>
+                        <div class="text-[#ff4a03]">
+                            <span><?php echo wp_kses_post( $highlight_text ); ?></span>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                    
+                    <?php if ( $description ) : ?>
+                    <div class="content-stretch flex items-center justify-center relative shrink-0 w-full">
+                        <p class="[word-break:break-word] font-sans font-normal leading-[1.5] relative text-[#666] text-[16px] text-center max-w-[500px]">
+                            <?php echo wp_kses_post( $description ); ?>
+                        </p>
+                    </div>
+                    <?php endif; ?>
+                </div>
+
+                <!-- Social Icons from Page ACF -->
+                <?php 
+                if ( ! empty( $page_social_icons ) ) : 
+                ?>
+                <div class="content-stretch flex flex-wrap justify-center gap-[10px] items-center relative shrink-0">
+                    <p class="[word-break:break-word] font-sans font-normal leading-[1.5] relative shrink-0 text-[#666] text-[16px] text-center whitespace-nowrap">
+                        <?php echo esc_html( $social_label ); ?>
+                    </p>
+                    <div class="flex items-center gap-[10px]">
+                        <?php foreach ( $page_social_icons as $social ) : 
+                            $social_icon  = $social['icon'] ?? null;
+                            $link_url     = $social['link'] ?? '';
+                            $target_blank = ! empty( $social['target_blank'] );
+                            $link_target  = $target_blank ? '_blank' : '_self';
+                            
+                            if ( ! empty( $social_icon ) && ! empty( $link_url ) ) : ?>
+                                <a href="<?php echo esc_url( $link_url ); ?>" 
+                                   target="<?php echo esc_attr( $link_target ); ?>" 
+                                   aria-label="<?php echo esc_attr( is_array($social_icon) && !empty($social_icon['alt']) ? $social_icon['alt'] : 'Social Link' ); ?>"
+                                   class="h-10 w-10 rounded-full bg-[#6666661A] text-gray hover:text-white flex items-center justify-center transition-colors duration-200">
+                                    <img src="<?php echo esc_url( is_array($social_icon) ? $social_icon['url'] : $social_icon ); ?>" 
+                                         alt="<?php echo esc_attr( is_array($social_icon) ? $social_icon['alt'] : '' ); ?>" 
+                                         class="h-[18px] w-[18px]">
+                                </a>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+                
+            </div>
         </div>
     </section>
+
+    <!-- Trusted By Logos -->
+    <?php get_template_part('template-parts/components/logo-marquee'); ?>
 
 </main>
 

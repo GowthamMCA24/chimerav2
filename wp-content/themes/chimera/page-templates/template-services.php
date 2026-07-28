@@ -34,7 +34,7 @@ get_header();
 
     <!-- Testimonials Section -->
     <?php 
-    $services_testimonials = get_field('services_testimonials');
+    $services_testimonials = get_field('industry_testimonials');
     $t_args = [];
     if ( $services_testimonials ) {
         $t_args['badge'] = $services_testimonials['badge_text'] ?? null;

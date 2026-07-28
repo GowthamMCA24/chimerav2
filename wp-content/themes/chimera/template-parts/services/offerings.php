@@ -10,7 +10,8 @@ if (!$offerings_data)
     return;
 
 $badge_text = $offerings_data['badge_text'] ?? '';
-$title = $offerings_data['title'] ?? 'AI-Powered Testing';
+$title = $offerings_data['title'] ?? '';
+$highlight_text = $offerings_data['highlight_text'] ?? '';
 $description = $offerings_data['description'] ?? '';
 $services = $offerings_data['services'] ?? [];
 $bg_image = $offerings_data['bg_image'] ?? null;
@@ -28,13 +29,16 @@ $bg_image = $offerings_data['bg_image'] ?? null;
                             class="font-jost font-semibold text-orange text-xs uppercase tracking-wider"><?php echo esc_html($badge_text); ?></span>
                     </div>
                 <?php endif; ?>
-                <?php if ($title): ?>
+                <?php if ($title || $highlight_text): ?>
                     <h2 class="font-jost font-semibold text-[32px] md:text-[40px] leading-tight text-dark mb-4">
-                        <?php echo esc_html($title); ?>
+                        <?php echo wp_kses_post($title); ?>
+                        <?php if ($highlight_text): ?>
+                            <span class="text-orange"><?php echo wp_kses_post($highlight_text); ?></span>
+                        <?php endif; ?>
                     </h2>
                 <?php endif; ?>
                 <?php if ($description): ?>
-                    <p class="font-sans text-gray text-base max-w-2xl mx-auto">
+                    <p class="font-sans font-normal text-gray text-base max-w-3xl mx-auto">
                         <?php echo esc_html($description); ?>
                     </p>
                 <?php endif; ?>

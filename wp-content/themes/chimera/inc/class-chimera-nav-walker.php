@@ -167,7 +167,7 @@ if ( ! class_exists( 'Chimera_Nav_Walker' ) ) {
                 
                 $output .= '<div class="flex flex-col">';
                 $title_color = 'text-dark'; // Keep dark initially to match screenshot
-                $output .= '<div class="font-semibold font-sans text-[15px] mb-1 ' . esc_attr($title_color) . ' group-hover/sub:text-dark transition-colors">' . esc_html( $item->title ) . '</div>';
+                $output .= '<div class="font-semibold font-sans text-[15px] leading-tight mb-1 ' . esc_attr($title_color) . ' group-hover/sub:text-dark transition-colors">' . esc_html( $item->title ) . '</div>';
                 if ( $description ) {
                     $output .= '<div class="text-xs text-gray font-normal leading-tight">' . esc_html( $description ) . '</div>';
                 }

@@ -124,7 +124,7 @@ $bg_shape_image   = $hero['bg_image'] ?? null;
                     <?php else : ?>
                     <h3 class="text-dark text-[32px] md:text-[44px] font-jost font-semibold leading-none tracking-[-0.12px]"><?php echo esc_html( $stat_value ); ?></h3>
                     <?php endif; ?>
-                    <p class="text-xs md:text-[14px] font-normal text-gray leading-tight mt-3 font-sans whitespace-nowrap tracking-tight"><?php echo esc_html( $stat_label ); ?></p>
+                    <p class="text-xs md:text-[14px] font-normal text-gray leading-tight mt-3 font-sans tracking-tight"><?php echo esc_html( $stat_label ); ?></p>
                 </div>
             </div>
             <?php endforeach; ?>

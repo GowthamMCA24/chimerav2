@@ -51,11 +51,12 @@ $bg_image = $offerings_data['bg_image'] ?? null;
                     $service_title = $service['title'] ?? '';
                     $service_desc = $service['description'] ?? '';
                     $service_features = $service['features'] ?? [];
+                    $service_icon = $service['icon'] ?? null;
                     $btn_text = $service['btn_text'] ?? 'Inquire Details';
                     $btn_link = $service['btn_link'] ?? '#';
                     ?>
                     <div
-                        class="bg-white flex flex-col justify-between overflow-hidden p-[40px] lg:p-[60px] relative rounded-[10px] min-h-[400px]">
+                        class="bg-white flex flex-col justify-between overflow-hidden p-[40px] lg:p-[60px] relative rounded-[10px] min-h-[400px] border border-transparent hover:border-orange transition-all duration-300">
 
                         <!-- Background Vector Image -->
                         <?php if ($bg_image): ?>
@@ -68,9 +69,16 @@ $bg_image = $offerings_data['bg_image'] ?? null;
                         <!-- Content Container -->
                         <div class="relative z-10 flex flex-col h-full">
                             <div class="flex flex-col gap-[20px] items-start w-full">
+                                <div class="flex items-center gap-2 w-full">
+                                    <?php if ($service_icon): ?>
+                                        <div class="w-[38px] h-[38px] rounded-[10px] bg-orange-gradient flex items-center justify-center shrink-0">
+                                            <img src="<?php echo esc_url(is_array($service_icon) ? $service_icon['url'] : $service_icon); ?>" alt="" class="w-[20px] h-[20px] object-contain">
+                                        </div>
+                                    <?php endif; ?>
                                 <h3 class="font-jost font-semibold text-dark text-[24px] leading-none tracking-[-0.12px]">
-                                    <?php echo esc_html($service_title); ?>
-                                </h3>
+                                        <?php echo esc_html($service_title); ?>
+                                    </h3>
+                                </div>
 
                                 <?php if ($service_desc): ?>
                                     <div class="flex flex-col gap-4">
@@ -87,10 +95,23 @@ $bg_image = $offerings_data['bg_image'] ?? null;
                                 <?php endif; ?>
 
                                 <?php if (!empty($service_features)): ?>
-                                    <ul class="list-disc font-sans font-medium text-dark text-[16px] leading-[1.5] ml-[24px] mb-8">
-                                        <?php foreach ($service_features as $feature): ?>
-                                            <li>
-                                                <?php echo esc_html($feature['text'] ?? $feature['title']); ?>
+                                    <ul class="flex flex-col gap-[12px] font-sans font-medium text-dark text-[16px] leading-[1.5] mb-8 w-full">
+                                        <?php foreach ($service_features as $feature): 
+                                            $feature_icon = $feature['icon'] ?? ($service['list_icon'] ?? ($offerings_data['list_icon'] ?? null));
+                                        ?>
+                                            <li class="flex items-start gap-[12px]">
+                                                <?php if ($feature_icon): ?>
+                                                    <div class="w-[24px] h-[24px] flex items-center justify-center shrink-0 mt-[2px]">
+                                                        <img src="<?php echo esc_url(is_array($feature_icon) ? $feature_icon['url'] : $feature_icon); ?>" alt="" class="w-full h-full object-contain">
+                                                    </div>
+                                                <?php else: ?>
+                                                    <div class="w-[24px] h-[24px] rounded-full bg-[rgba(255,74,3,0.1)] flex items-center justify-center shrink-0 mt-[2px]">
+                                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10 3L4.5 8.5L2 6" stroke="#FF4A03" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </div>
+                                                <?php endif; ?>
+                                                <span class="flex-1"><?php echo esc_html($feature['text'] ?? $feature['title']); ?></span>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>

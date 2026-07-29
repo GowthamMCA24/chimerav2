@@ -28,13 +28,13 @@ $items             = $challenges['items'] ?? [];
 
                 <!-- Heading -->
                 <h2 class="text-center md:text-left leading-[1.2]">
-                    <span><?php echo esc_html( $heading ); ?> </span>
-                    <span class="text-orange"><?php echo esc_html( $heading_highlight ); ?></span>
+                    <?php echo wp_kses_post( $heading ); ?>
+                    <span class="text-orange"><?php echo wp_kses_post( $heading_highlight ); ?></span>
                 </h2>
 
                 <?php if ( $description ) : ?>
                 <p class="font-sans font-normal text-gray text-base leading-[1.5]">
-                    <?php echo esc_html( $description ); ?>
+                    <?php echo wp_kses_post( $description ); ?>
                 </p>
                 <?php endif; ?>
             </div>

@@ -40,12 +40,12 @@ $card_count = count($cards);
 
                 <!-- Heading -->
                 <h2 class="leading-[1.2]">
-                    <span class="text-dark block"><?php echo esc_html($heading); ?></span>
-                    <span class="text-orange block"><?php echo esc_html($heading_highlight); ?></span>
+                    <span class="text-dark"><?php echo wp_kses_post($heading); ?></span>
+                    <span class="text-orange"><?php echo wp_kses_post($heading_highlight); ?></span>
                 </h2>
 
                 <?php if ($description): ?>
-                    <p class="font-sans font-normal text-gray text-base leading-[1.5] max-w-[1100px] mx-auto md:px-10">
+                    <p class="font-sans font-normal text-gray text-base leading-[1.5] max-w-[850px] mx-auto">
                         <?php echo esc_html($description); ?>
                     </p>
                 <?php endif; ?>

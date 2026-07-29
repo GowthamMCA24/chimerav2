@@ -41,7 +41,7 @@
 
             <!-- Description -->
              <?php if( $cta_desc ) : ?>
-            <p class="text-white text-sm sm:text-[16px] md:text-md font-normal leading-[1.6] mb-10 sm:mb-14 font-sans  <?php echo esc_attr( $cta_desc_class ); ?>">
+            <p class="text-white text-sm sm:text-[16px] md:text-md font-normal max-w-[800px] leading-[1.6] mb-10 sm:mb-14 font-sans  <?php echo esc_attr( $cta_desc_class ); ?>">
                 <?php echo wp_kses_post( $cta_desc ); ?>
             </p>
             <?php endif; ?>

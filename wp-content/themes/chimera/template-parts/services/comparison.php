@@ -42,13 +42,13 @@ if (!function_exists('render_acf_image_url')) {
             <?php endif; ?>
 
             <h2 class="font-jost font-semibold text-[32px] md:text-[44px] leading-[1.1] tracking-[-0.12px] m-0">
-                <span class="text-[#1b1b1b] block"><?php echo esc_html($title_line1); ?></span>
-                <span class="text-orange block"><?php echo esc_html($title_line2); ?></span>
+                <span class="text-[#1b1b1b] block"><?php echo wp_kses_post($title_line1); ?></span>
+                <span class="text-orange block"><?php echo wp_kses_post($title_line2); ?></span>
             </h2>
 
             <?php if ($description): ?>
             <p class="font-sans font-normal text-[#666] text-[16px] leading-[1.5] max-w-[900px] m-0">
-                <?php echo esc_html($description); ?>
+                <?php echo wp_kses_post($description); ?>
             </p>
             <?php endif; ?>
         </div>

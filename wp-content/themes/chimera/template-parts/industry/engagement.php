@@ -14,7 +14,7 @@ $description       = $engagement['description'] ?? '';
 $models            = $engagement['models'] ?? [];
 ?>
 
-<section class="ind-engagement w-full bg-white py-[60px] md:py-[80px] relative overflow-hidden">
+<section class="ind-engagement w-full bg-white py-[60px] md:py-[80px] relative">
     <div class="container">
         <div class="flex flex-col lg:flex-row gap-10 lg:gap-[80px]">
             

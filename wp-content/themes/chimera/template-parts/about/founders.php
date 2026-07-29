@@ -10,7 +10,7 @@ $heading = $founders_content['heading'] ?? '';
 $founders = $founders_content['founders'] ?? [];
 ?>
 
-<section class="w-full relative overflow-hidden">
+<section class="w-full relative pt-[50px] overflow-hidden">
 
     <!-- Bottom Gradient Background -->
     <div

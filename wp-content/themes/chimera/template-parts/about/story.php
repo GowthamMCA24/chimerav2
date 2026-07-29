@@ -21,7 +21,7 @@ $cta_link = $story_content['cta_link'] ?? '';
         
         <!-- Heading -->
         <?php if ( $heading ) : ?>
-            <h2 class="text-dark tracking-[-0.12px] text-[44px] text-center mb-10 sm:mb-14">
+            <h2 class="text-dark text-center mb-10 sm:mb-14">
                 <?php echo esc_html( $heading ); ?>
             </h2>
         <?php endif; ?>

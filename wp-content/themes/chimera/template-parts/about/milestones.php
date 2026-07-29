@@ -13,13 +13,13 @@ $description = $milestones_content['description'] ?? '';
 $items = $milestones_content['items'] ?? [];
 ?>
 
-<section class="w-full relative pb-[50px] overflow-hidden bg-offwhite">
+<section class="w-full relative overflow-hidden bg-offwhite">
     <div class="container">
 
         <div class="flex flex-col gap-[10px] w-full">
 
             <!-- Header Area -->
-            <div class="flex flex-col items-start max-w-[450px]">
+            <div class="flex flex-col items-center mx-auto text-center max-w-3xl">
 
                 <?php if ($badge_text): ?>
                     <div
@@ -33,9 +33,8 @@ $items = $milestones_content['items'] ?? [];
                 <?php if ($heading || $heading_highlight): ?>
                     <h2
                         class="text-dark tracking-[-0.12px] text-[36px] md:text-[44px] mb-4 font-jost font-semibold leading-[1.1]">
-                        <?php echo esc_html($heading); ?>     <?php if ($heading && $heading_highlight)
-                                    echo "\n"; ?><br class="hidden lg:block"><span
-                            class="text-orange"><?php echo esc_html($heading_highlight); ?></span>
+                        <?php echo esc_html($heading); ?>
+                        <span class="text-orange"><?php echo esc_html($heading_highlight); ?></span>
                     </h2>
                 <?php endif; ?>
 
@@ -69,6 +68,8 @@ $items = $milestones_content['items'] ?? [];
                 </style>
 
                 <div class="relative w-full">
+                    <!-- Fixed continuous timeline line -->
+                    <div class="absolute top-1/2 left-4 right-4 md:left-8 md:right-8 h-[2px] bg-orange -translate-y-1/2 z-0 pointer-events-none"></div>
 
                     <?php
                     $original_count = count($items);
@@ -79,13 +80,9 @@ $items = $milestones_content['items'] ?? [];
                     ?>
 
                     <div id="milestones-slider" data-jump-count="<?php echo $jump_count; ?>"
-                        class="overflow-x-auto w-full select-none scrollbar-hide" style="scroll-behavior: auto;">
+                        class="overflow-x-auto w-full select-none scrollbar-hide relative z-10" style="scroll-behavior: auto;">
 
-                        <div class="flex w-max relative gap-6 px-4 md:px-8">
-                            <!-- Continuous horizontal line -->
-                            <div class="absolute top-0 bottom-0 left-0 right-0 z-0 pointer-events-none">
-                                <div class="absolute top-1/2 left-0 right-0 h-[2px] bg-orange -translate-y-1/2"></div>
-                            </div>
+                        <div class="flex w-max relative gap-2 px-4 md:px-8">
 
                             <?php foreach ($slider_items as $index => $item):
                                 $title = $item['title'] ?? '';
@@ -95,9 +92,9 @@ $items = $milestones_content['items'] ?? [];
                                 $is_even = ($index % 2 === 0);
                                 ?>
                                 <!-- Item Column -->
-                                <div class="flex-none w-[260px] sm:w-[320px] shrink-0 relative z-10">
+                                <div class="flex-none w-[260px] sm:w-[260px] md:w-[220px] lg:w-[200px] xl:w-[220px] shrink-0 relative z-10">
 
-                                    <div class="grid grid-rows-[1fr_auto_1fr] h-[600px] md:h-[550px] w-full">
+                                    <div class="grid grid-rows-[1fr_auto_1fr] h-full min-h-[300px] w-full py-4">
 
                                         <!-- Top Card Area -->
                                         <div class="relative w-full flex items-end justify-center pb-[30px]">
@@ -108,7 +105,7 @@ $items = $milestones_content['items'] ?? [];
                                                 </div>
 
                                                 <!-- Card -->
-                                                <div class="w-full bg-white border border-[#ebebeb] rounded-[12px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow relative z-20 group cursor-pointer">
+                                                <div class="w-full bg-white border border-[#ebebeb] rounded-[12px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow relative z-20">
                                                     <div class="flex items-center gap-2 mb-2 pointer-events-none">
                                                         <span
                                                             class="text-orange font-bold text-[22px] leading-none"><?php echo esc_html($year); ?></span>
@@ -120,15 +117,6 @@ $items = $milestones_content['items'] ?? [];
                                                         <p class="text-[#666] text-[13px] leading-[1.4] m-0 pointer-events-none">
                                                             <?php echo esc_html($item_desc); ?></p>
                                                     <?php endif; ?>
-                                                    
-                                                    <!-- Tooltip Popup -->
-                                                    <div class="absolute bottom-[calc(100%+12px)] left-1/2 -translate-x-1/2 w-[220px] bg-white border border-[#ebebeb] rounded-[8px] p-4 shadow-[0_10px_30px_rgba(0,0,0,0.15)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] pointer-events-none translate-y-2 group-hover:translate-y-0">
-                                                        <div class="absolute -bottom-[5px] left-1/2 -translate-x-1/2 w-[10px] h-[10px] bg-white border-b border-r border-[#ebebeb] rotate-45"></div>
-                                                        <h4 class="text-dark font-bold text-[14px] mb-1 leading-tight"><?php echo esc_html($title); ?></h4>
-                                                        <?php if ($item_desc): ?>
-                                                            <p class="text-[#666] text-[12px] leading-[1.4] m-0"><?php echo esc_html($item_desc); ?></p>
-                                                        <?php endif; ?>
-                                                    </div>
                                                 </div>
                                             <?php endif; ?>
                                         </div>
@@ -156,7 +144,7 @@ $items = $milestones_content['items'] ?? [];
                                                 </div>
 
                                                 <!-- Card -->
-                                                <div class="w-full bg-white border border-[#ebebeb] rounded-[12px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow relative z-20 group cursor-pointer">
+                                                <div class="w-full bg-white border border-[#ebebeb] rounded-[12px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow relative z-20">
                                                     <div class="flex items-center gap-2 mb-2 pointer-events-none">
                                                         <span
                                                             class="text-orange font-bold text-[22px] leading-none"><?php echo esc_html($year); ?></span>
@@ -168,15 +156,6 @@ $items = $milestones_content['items'] ?? [];
                                                         <p class="text-[#666] text-[13px] leading-[1.4] m-0 pointer-events-none">
                                                             <?php echo esc_html($item_desc); ?></p>
                                                     <?php endif; ?>
-                                                    
-                                                    <!-- Tooltip Popup -->
-                                                    <div class="absolute top-[calc(100%+12px)] left-1/2 -translate-x-1/2 w-[220px] bg-white border border-[#ebebeb] rounded-[8px] p-4 shadow-[0_10px_30px_rgba(0,0,0,0.15)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] pointer-events-none -translate-y-2 group-hover:translate-y-0">
-                                                        <div class="absolute -top-[5px] left-1/2 -translate-x-1/2 w-[10px] h-[10px] bg-white border-t border-l border-[#ebebeb] rotate-45"></div>
-                                                        <h4 class="text-dark font-bold text-[14px] mb-1 leading-tight"><?php echo esc_html($title); ?></h4>
-                                                        <?php if ($item_desc): ?>
-                                                            <p class="text-[#666] text-[12px] leading-[1.4] m-0"><?php echo esc_html($item_desc); ?></p>
-                                                        <?php endif; ?>
-                                                    </div>
                                                 </div>
                                             <?php endif; ?>
                                         </div>

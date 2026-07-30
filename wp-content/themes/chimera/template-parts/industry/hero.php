@@ -40,8 +40,8 @@ $bg_shape_image   = $hero['bg_image'] ?? null;
 
                 <!-- Heading -->
                 <h1 class="text-center md:text-left text-[40px] md:text-[50px] xl:text-[60px] font-jost font-semibold leading-[1.2] tracking-[-0.12px] text-dark">
-                    <span><?php echo esc_html( $heading_line1 ); ?></span>
-                    <span class="text-orange"><?php echo esc_html( $heading_highlight ); ?></span>
+                    <?php echo wp_kses_post( $heading_line1 ); ?>
+                    <span class="text-orange"><?php echo wp_kses_post( $heading_highlight ); ?></span>
                 </h1>
 
                 <!-- Description -->

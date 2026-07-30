@@ -8,6 +8,7 @@
 $values_content = get_field('about_values') ?: [];
 $badge_text = $values_content['badge_text'] ?? '';
 $heading = $values_content['heading'] ?? '';
+$heading_highlight = $values_content['heading_highlight'] ?? '';
 $description = $values_content['description'] ?? '';
 $items = $values_content['items'] ?? [];
 ?>
@@ -27,9 +28,12 @@ $items = $values_content['items'] ?? [];
             <?php endif; ?>
 
             <!-- Heading -->
-            <?php if ( $heading ) : ?>
+            <?php if ( $heading || !empty($heading_highlight) ) : ?>
                 <h2 class="text-dark tracking-[-0.12px] text-[36px] md:text-[44px] leading-none text-center">
-                    <?php echo esc_html( $heading ); ?>
+                    <?php if ( $heading ) echo wp_kses_post( $heading ); ?>
+                    <?php if ( !empty($heading_highlight) ) : ?>
+                        <span class="text-orange"><?php echo wp_kses_post( $heading_highlight ); ?></span>
+                    <?php endif; ?>
                 </h2>
             <?php endif; ?>
 

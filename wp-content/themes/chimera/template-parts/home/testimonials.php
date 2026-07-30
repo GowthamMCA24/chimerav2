@@ -90,14 +90,36 @@ $heading = $args['heading'] ?? 'Trusted Long <br class="sm:hidden"><span class="
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.getElementById('testimonials-track');
-    const cards = document.querySelectorAll('.testimonial-card');
+    let originalCards = Array.from(document.querySelectorAll('.testimonial-card'));
+    const numOriginal = originalCards.length;
     const prevBtn = document.getElementById('testimonial-prev');
     const nextBtn = document.getElementById('testimonial-next');
     
-    let currentIndex = 1; // Default center
+    // Clone cards for infinite loop
+    // Prepend a full set
+    for (let i = numOriginal - 1; i >= 0; i--) {
+        let clone = originalCards[i].cloneNode(true);
+        track.insertBefore(clone, track.firstChild);
+    }
+    // Append a full set
+    for (let i = 0; i < numOriginal; i++) {
+        let clone = originalCards[i].cloneNode(true);
+        track.appendChild(clone);
+    }
+    
+    const cards = Array.from(document.querySelectorAll('.testimonial-card'));
+    
+    let currentIndex = numOriginal + 1; // Center the second original card (index 1 originally)
     const gap = 24; // gap-6 is 24px
+    let isTransitioning = false;
 
-    function updateSlider() {
+    function updateSlider(animate = true) {
+        if (!animate) {
+            track.style.transition = 'none';
+        } else {
+            track.style.transition = 'transform 0.5s ease-out';
+        }
+
         const containerWidth = track.parentElement.offsetWidth;
         const cardWidth = cards[0].offsetWidth;
         
@@ -112,30 +134,40 @@ document.addEventListener('DOMContentLoaded', () => {
             const author = card.querySelector('.testimonial-author');
             const role = card.querySelector('.testimonial-role');
 
+            if (!animate) {
+                card.style.transition = 'none';
+                if(quote) quote.style.transition = 'none';
+                if(desc) desc.style.transition = 'none';
+                if(author) author.style.transition = 'none';
+                if(role) role.style.transition = 'none';
+            } else {
+                card.style.transition = '';
+                if(quote) quote.style.transition = '';
+                if(desc) desc.style.transition = '';
+                if(author) author.style.transition = '';
+                if(role) role.style.transition = '';
+            }
+
             if (idx === currentIndex) {
                 // Active Card State (Warm Sand/Beige color)
                 card.style.background = '';
                 card.classList.remove('bg-[#F9F8F6]', 'opacity-40', 'border-lightGray/60');
                 card.classList.add('bg-[#DECDB9]', 'opacity-100', 'border-transparent');
                 
-                quote.style.color = '#ffffff';
-                quote.style.opacity = '1';
-                desc.style.color = '#1B1B1B';
-                desc.style.opacity = '1';
-                author.style.color = '#1B1B1B';
-                role.style.color = '#4A4A4A';
+                if(quote) { quote.style.color = '#ffffff'; quote.style.opacity = '1'; }
+                if(desc) { desc.style.color = '#1B1B1B'; desc.style.opacity = '1'; }
+                if(author) author.style.color = '#1B1B1B';
+                if(role) role.style.color = '#4A4A4A';
             } else {
                 // Inactive Card State (Faded off-white)
                 card.style.background = 'radial-gradient(56.52% 109.54% at 86.03% 96.3%, #E9D8C1 0%, #DBC5AD 100%)';
                 card.classList.remove('bg-[#DECDB9]', 'opacity-100', 'border-transparent');
                 card.classList.add('bg-[#F9F8F6]', 'opacity-40', 'border-lightGray/60');
                 
-                quote.style.color = '#1B1B1B';
-                quote.style.opacity = '0.08';
-                desc.style.color = '#1B1B1B';
-                desc.style.opacity = '0.6';
-                author.style.color = '#1B1B1B';
-                role.style.color = '#666666';
+                if(quote) { quote.style.color = '#1B1B1B'; quote.style.opacity = '0.08'; }
+                if(desc) { desc.style.color = '#1B1B1B'; desc.style.opacity = '0.6'; }
+                if(author) author.style.color = '#1B1B1B';
+                if(role) role.style.color = '#666666';
             }
         });
 
@@ -146,18 +178,28 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.style.pointerEvents = 'auto';
     }
 
+    track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        
+        if (currentIndex < numOriginal) {
+            currentIndex += numOriginal;
+            updateSlider(false);
+        } else if (currentIndex >= numOriginal * 2) {
+            currentIndex -= numOriginal;
+            updateSlider(false);
+        }
+    });
+
     // Auto slide functionality
     let autoSlideTimer;
-    const autoSlideDelay = 3000; // 5 seconds
+    const autoSlideDelay = 3000; // 3 seconds
 
     function startAutoSlide() {
         stopAutoSlide(); // Ensure no multiple timers
         autoSlideTimer = setInterval(() => {
-            if (currentIndex < cards.length - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0; // Loop back to the first slide
-            }
+            if (isTransitioning) return;
+            isTransitioning = true;
+            currentIndex++;
             updateSlider();
         }, autoSlideDelay);
     }
@@ -170,22 +212,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Attach button actions
     prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = cards.length - 1; // Loop to last
-        }
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex--;
         updateSlider();
         stopAutoSlide();
         startAutoSlide();
     });
 
     nextBtn.addEventListener('click', () => {
-        if (currentIndex < cards.length - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // Loop to first
-        }
+        if (isTransitioning) return;
+        isTransitioning = true;
+        currentIndex++;
         updateSlider();
         stopAutoSlide();
         startAutoSlide();
@@ -194,12 +232,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Make cards clickable to slide to them
     cards.forEach((card, idx) => {
         card.addEventListener('click', () => {
-            if (currentIndex !== idx) {
+            if (currentIndex !== idx && !isTransitioning) {
+                isTransitioning = true;
                 currentIndex = idx;
                 updateSlider();
+                stopAutoSlide();
+                startAutoSlide();
             }
-            stopAutoSlide();
-            startAutoSlide();
         });
     });
 
@@ -227,20 +266,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const endX = e.changedTouches[0].clientX;
         const diff = endX - startX;
 
-        if (diff > 55) {
-            // Swipe right -> prev card
-            if (currentIndex > 0) {
+        if (Math.abs(diff) > 55 && !isTransitioning) {
+            isTransitioning = true;
+            if (diff > 55) {
                 currentIndex--;
             } else {
-                currentIndex = cards.length - 1;
-            }
-            updateSlider();
-        } else if (diff < -55) {
-            // Swipe left -> next card
-            if (currentIndex < cards.length - 1) {
                 currentIndex++;
-            } else {
-                currentIndex = 0;
             }
             updateSlider();
         }
@@ -248,12 +279,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     // Initial positioning
-    updateSlider();
+    track.style.transition = 'none';
+    updateSlider(false);
+    
+    // Force reflow
+    track.offsetHeight;
     
     // Start auto slide initially
     startAutoSlide();
     
     // Recalculate positions on window resize
-    window.addEventListener('resize', updateSlider);
+    window.addEventListener('resize', () => updateSlider(false));
 });
 </script>

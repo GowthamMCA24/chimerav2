@@ -28,12 +28,12 @@ $certificates = $compliance_section['certificates'] ?? '';
             <h2 class="text-dark leading-tight mb-5">
                 <?php
                 if ($heading_black) {
-                    echo esc_html($heading_black);
+                    echo wp_kses_post($heading_black);
                 }
                 ?>
                 <?php
                 if ($heading_orange) {
-                    echo '<span class="text-orange">' . esc_html($heading_orange) . '</span>';
+                    echo '<span class="text-orange">' . wp_kses_post($heading_orange) . '</span>';
                 }
                 ?>
             </h2>

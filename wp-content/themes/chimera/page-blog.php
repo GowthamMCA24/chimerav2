@@ -28,6 +28,7 @@ if ( function_exists('get_field') ) {
     if ( ! empty( $hero['title'] ) ) $archive_args['hero_title'] = $hero['title'];
     if ( ! empty( $hero['desc'] ) )  $archive_args['hero_desc']  = $hero['desc'];
     if ( ! empty( $hero['bg'] ) )    $archive_args['hero_bg']    = $hero['bg'];
+    if ( isset( $hero['hide_hero_section'] ) ) $archive_args['hide_hero'] = $hero['hide_hero_section'];
 
     $cta = get_field('cta_section', $page_id);
     if ( ! empty( $cta['title'] ) ) $archive_args['cta_title'] = $cta['title'];

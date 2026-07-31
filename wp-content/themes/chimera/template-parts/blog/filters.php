@@ -69,7 +69,7 @@ if ( isset( $args['post_type'] ) && $args['post_type'] !== 'post' ) {
 
             <?php $search_id_prefix = isset($args['post_type']) ? $args['post_type'] : 'blog'; ?>
             <!-- Search Bar -->
-            <?php if ( !isset($args['post_type']) || ( $args['post_type'] !== 'casestudies' && $args['post_type'] !== 'webinar' ) ) : ?>
+            <?php if ( !isset($args['post_type']) || $args['post_type'] !== 'webinar' ) : ?>
             <div class="w-full md:w-auto flex-shrink-0">
                 <form id="<?php echo esc_attr( $search_id_prefix ); ?>-ajax-search-form" class="ajax-search-form w-full" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <div class="relative w-full">

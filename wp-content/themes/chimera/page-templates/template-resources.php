@@ -24,7 +24,8 @@ get_header();
     get_template_part( 'template-parts/blog/hero', null, [
         'hero_title' => $hero_title,
         'hero_desc'  => $hero_desc,
-        'hero_bg'    => $hero_bg
+        'hero_bg'    => $hero_bg,
+        'hide_hero'  => $hero['hide_hero_section'] ?? false
     ] ); 
     ?>
 

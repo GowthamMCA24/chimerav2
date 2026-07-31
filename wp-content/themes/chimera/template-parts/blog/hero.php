@@ -6,9 +6,15 @@
  *
  * @package Chimera
  */
+ 
+ 
+ // Check if the hero section should be hidden (passed from parent templates)
+$hide_hero = $args['hide_hero'] ?? false;
+
+if ( ! $hide_hero ) :
 ?>
 
-<section class="w-full overflow-hidden py-[60px] md:py-[80px]">
+<section class="w-full overflow-hidden pt-[60px] md:pt-[80px]">
     <!-- Background Images -->
     <div class="absolute inset-0 pointer-events-none z-0">
         <?php 
@@ -57,3 +63,4 @@
 
     </div>
 </section>
+<?php endif; ?>

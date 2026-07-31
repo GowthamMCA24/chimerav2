@@ -24,7 +24,7 @@ if ( ! empty( $sticky_posts ) && $post_type === 'post' ) {
 $featured_query = new WP_Query( $featured_args );
 ?>
 
-<section class="w-full pb-10 md:pb-[60px] relative z-10">
+<section class="w-full py-10 md:py-[60px] relative z-10">
     <div class="container">
         
         <!-- Featured Post Hero Card -->

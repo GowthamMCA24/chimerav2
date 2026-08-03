@@ -22,8 +22,8 @@ $founders = $founders_content['founders'] ?? [];
         <!-- Heading -->
         <?php if ($heading): ?>
             <h2
-                class="text-orange text-[36px] md:text-[44px] tracking-[-0.12px] font-jost font-semibold leading-none text-center mb-12">
-                <?php echo esc_html($heading); ?>
+                class="text-dark text-[36px] md:text-[44px] tracking-[-0.12px] font-jost font-semibold leading-none text-center mb-12">
+                <?php echo wp_kses_post($heading); ?>
             </h2>
         <?php endif; ?>
 

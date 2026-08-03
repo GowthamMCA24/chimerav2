@@ -7,7 +7,7 @@
  * @package Chimera
  */
 
-$card_image     = get_the_post_thumbnail_url( get_the_ID(), 'chimera-blog-card' );
+$card_image     = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 $categories     = chimera_get_post_categories();
 $reading_time   = chimera_reading_time();
 $cat_name       = ! empty( $categories ) ? $categories[0]->name : '';
@@ -52,7 +52,7 @@ elseif ( $post_type === 'whitepaper' ) {
             <?php if ( $card_image ) : ?>
                 <img src="<?php echo esc_url( $card_image ); ?>" 
                      alt="<?php echo esc_attr( get_the_title() ); ?>" 
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                     class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                      loading="lazy">
             <?php else : ?>
                 <!-- Fallback placeholder -->

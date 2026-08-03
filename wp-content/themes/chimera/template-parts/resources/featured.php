@@ -1,5 +1,5 @@
 <!-- Part 2: Featured Resource Card (Matching Blog Featured Style) -->
-<section class="w-full pb-10 md:pb-[60px] container relative z-10">
+<section class="w-full py-10 md:py-[50px] container relative z-10">
     <?php
     // Query the latest updated post from all resource post types
     $featured_query = new WP_Query([
@@ -35,7 +35,7 @@
         $title = get_the_title();
         $featured_detail_url = esc_url( get_permalink() );
         
-        $thumbnail = get_the_post_thumbnail_url( get_the_ID(), 'large' );
+        $thumbnail = get_the_post_thumbnail_url( get_the_ID(), 'chimera-featured' );
         if ( ! $thumbnail ) {
             $thumbnail = '/wp-content/uploads/2026/06/box.png'; // Fallback
         }
@@ -52,11 +52,11 @@
             $designation = 'Author'; // Fallback
         }
     ?>
-        <div class="flex flex-col md:flex-row gap-8 md:gap-[60px] items-stretch">
+        <div class="border border-orange border-solid flex flex-col md:flex-row gap-8 md:gap-[60px] items-stretch overflow-hidden p-[20px] sm:p-[30px] relative rounded-[10px]" style="background-image: linear-gradient(90deg, rgba(255, 74, 3, 0.1) 0%, rgba(255, 74, 3, 0.1) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)">
             
             <!-- Left: Image -->
-            <div class="w-full md:w-[55%]">
-                <a href="<?php echo $featured_detail_url; ?>" class="block relative overflow-hidden rounded-[20px] group h-full">
+            <div class="w-full md:w-1/2 flex flex-col items-center self-center justify-center overflow-hidden relative rounded-[20px] shrink-0 aspect-video">
+                <a href="<?php echo $featured_detail_url; ?>" class="block w-full h-full group">
                     <img 
                         src="<?php echo esc_url( $thumbnail ); ?>" 
                         alt="<?php echo esc_attr( $title ); ?>" 
@@ -66,7 +66,7 @@
             </div>
             
             <!-- Right: Content -->
-            <div class="w-full md:w-[45%] flex flex-col justify-between">
+            <div class="w-full md:w-1/2 flex flex-col justify-between">
                 <div>
                     <!-- Metadata -->
                     <div class="flex items-center gap-4 mb-5">

@@ -60,19 +60,24 @@ get_header();
                     </p>
                     <div class="flex items-center gap-[10px]">
                         <?php foreach ( $page_social_icons as $social ) : 
-                            $social_icon  = $social['icon'] ?? null;
-                            $link_url     = $social['link'] ?? '';
-                            $target_blank = ! empty( $social['target_blank'] );
-                            $link_target  = $target_blank ? '_blank' : '_self';
+                            $social_icon   = $social['icon'] ?? null;
+                            $link_url      = $social['link'] ?? '';
+                            $backend_color = $social['hover_color'] ?? '';
+                            $target_blank  = ! empty( $social['target_blank'] );
+                            $link_target   = $target_blank ? '_blank' : '_self';
                             
-                            if ( ! empty( $social_icon ) && ! empty( $link_url ) ) : ?>
+                            if ( ! empty( $social_icon ) && ! empty( $link_url ) ) : 
+                                $icon_url = is_array($social_icon) ? $social_icon['url'] : $social_icon;
+                                $icon_alt = is_array($social_icon) && !empty($social_icon['alt']) ? $social_icon['alt'] : 'Social Link';
+                            ?>
                                 <a href="<?php echo esc_url( $link_url ); ?>" 
                                    target="<?php echo esc_attr( $link_target ); ?>" 
-                                   aria-label="<?php echo esc_attr( is_array($social_icon) && !empty($social_icon['alt']) ? $social_icon['alt'] : 'Social Link' ); ?>"
-                                   class="h-10 w-10 rounded-full bg-[#6666661A] text-gray hover:text-white flex items-center justify-center transition-colors duration-200">
-                                    <img src="<?php echo esc_url( is_array($social_icon) ? $social_icon['url'] : $social_icon ); ?>" 
-                                         alt="<?php echo esc_attr( is_array($social_icon) ? $social_icon['alt'] : '' ); ?>" 
-                                         class="h-[18px] w-[18px]">
+                                   aria-label="<?php echo esc_attr( $icon_alt ); ?>"
+                                   <?php if ( ! empty( $backend_color ) ) : ?>style="--brand-hover-color: <?php echo esc_attr( $backend_color ); ?>;" onmouseover="this.style.color='var(--brand-hover-color)'" onmouseout="this.style.color=''"<?php endif; ?>
+                                   class="h-10 w-10 rounded-full bg-[#6666661A] text-gray flex items-center justify-center transition-colors duration-200">
+                                    <span class="w-[18px] h-[18px] inline-block transition-colors duration-200"
+                                          style="-webkit-mask-image: url('<?php echo esc_url( $icon_url ); ?>'); mask-image: url('<?php echo esc_url( $icon_url ); ?>'); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; mask-position: center; -webkit-mask-position: center; background-color: currentColor;">
+                                    </span>
                                 </a>
                             <?php endif; ?>
                         <?php endforeach; ?>

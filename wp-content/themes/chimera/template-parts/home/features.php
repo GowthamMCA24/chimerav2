@@ -11,6 +11,15 @@ $features_heading = !empty($features_content['heading']) ? $features_content['he
 $features_highlight_text = !empty($features_content['highlight_text']) ? $features_content['highlight_text'] : 'Built<br class="hidden lg:block"> for Complex <br class="hidden lg:block">Software and IT services';
 $features_desc = !empty($features_content['description']) ? $features_content['description'] : 'End-to-end engineering capabilities built around enterprise platforms, complex architectures, and large-scale software delivery.';
 
+$overlay_image = !empty($features_content['overlay_image']) ? $features_content['overlay_image'] : '';
+$overlay_url = '';
+if ( $overlay_image ) {
+    $overlay_url = is_array($overlay_image) ? $overlay_image['url'] : (is_numeric($overlay_image) ? wp_get_attachment_image_url($overlay_image, 'full') : $overlay_image);
+}
+if ( ! $overlay_url ) {
+    $overlay_url = home_url( '/wp-content/uploads/2026/06/ai-soluton-and-lead-overlay.png' );
+}
+
 $features_list = !empty($features_content['list']) ? $features_content['list'] : [
     [
         'title' => 'AI & Agentic Systems',
@@ -64,7 +73,13 @@ $features_list = !empty($features_content['list']) ? $features_content['list'] :
 ?>
 
 <section class="w-full bg-white py-[50px] relative overflow-hidden">
-    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-[40px] items-start">
+    
+    <!-- Overlay Image - Left side center -->
+    <div class="absolute hidden lg:flex top-1/2 left-0 -translate-y-1/2 -translate-x-[30%] z-0 pointer-events-none items-center">
+        <img src="<?php echo esc_url( $overlay_url ); ?>" alt="AI Solution Overlay" class="max-w-[1200px] object-contain opacity-60">
+    </div>
+
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-[40px] items-start relative z-10">
         
         <!-- Left Column (Capability Text and Header) -->
         <div class="lg:col-span-4 flex flex-col justify-start">

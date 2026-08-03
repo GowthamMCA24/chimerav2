@@ -41,19 +41,21 @@ $footer_image_2 = $options['footer_image_2'] ?? null;
                         <?php
                             $social_icon = $social['icon'];
                             $social_link = $social['link'];
+                            $backend_color = $social['hover_color'] ?? '';
                             $link_url    = is_array( $social_link ) ? $social_link['url'] : $social_link;
                             $link_target = is_array( $social_link ) && ! empty( $social_link['target'] ) ? $social_link['target'] : '_blank';
                             $link_title  = is_array( $social_link ) && ! empty( $social_link['title'] ) ? $social_link['title'] : '';
-                        ?>
-                        <?php if ( ! empty( $social_icon ) && ! empty( $link_url ) ) : ?>
+                            
+                            if ( ! empty( $social_icon ) && ! empty( $link_url ) ) : ?>
                             <a href="<?php echo esc_url( $link_url ); ?>"
                                target="<?php echo esc_attr( $link_target ); ?>"
                                rel="noopener noreferrer"
-                               class="h-10 w-10 rounded-full bg-[#6666661A] text-gray hover:text-white flex items-center justify-center transition-colors duration-200"
+                               <?php if ( ! empty( $backend_color ) ) : ?>style="--brand-hover-color: <?php echo esc_attr( $backend_color ); ?>;" onmouseover="this.style.color='var(--brand-hover-color)'" onmouseout="this.style.color=''"<?php endif; ?>
+                               class="social-icon-link h-10 w-10 rounded-full bg-[#6666661A] text-gray flex items-center justify-center transition-colors duration-200"
                                aria-label="<?php echo esc_attr( $link_title ? $link_title : $social_icon['alt'] ); ?>">
-                                <img src="<?php echo esc_url( $social_icon['url'] ); ?>"
-                                     alt="<?php echo esc_attr( $social_icon['alt'] ); ?>"
-                                     class="h-[18px] w-[18px]">
+                                <span class="w-[18px] h-[18px] inline-block transition-colors duration-200"
+                                      style="-webkit-mask-image: url('<?php echo esc_url( $social_icon['url'] ); ?>'); mask-image: url('<?php echo esc_url( $social_icon['url'] ); ?>'); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; mask-position: center; -webkit-mask-position: center; background-color: currentColor;">
+                                </span>
                             </a>
                         <?php endif; ?>
                     <?php endforeach; ?>
@@ -196,6 +198,13 @@ $footer_image_2 = $options['footer_image_2'] ?? null;
             <img src="<?php echo esc_url( $logo_2['url'] ); ?>" alt="<?php echo esc_attr( $logo_2['alt'] ); ?>">
         </div>
     <?php endif; ?>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" aria-label="Scroll to top" class="fixed bottom-8 right-8 bg-orange text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-4 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
 
 </footer>
 

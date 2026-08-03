@@ -59,7 +59,7 @@ $featured_query = new WP_Query($featured_args);
 
                 <!-- Right: Content -->
                 <div class="w-full lg:w-1/2 flex flex-col gap-5">
-                    <div class="flex-1 flex flex-col gap-[30px]">
+                    <div class="flex-1 flex flex-col gap-[20px]">
                         <div>
                             <div class="flex items-center">
                                 <?php if ($cat_name): ?>
@@ -75,13 +75,13 @@ $featured_query = new WP_Query($featured_args);
                             <!-- Title -->
                             <a href="<?php the_permalink(); ?>" class="group block">
                                 <h2
-                                    class="text-dark text-[28px] md:text-[32px] font-jost font-semibold leading-[1.2] tracking-[-0.12px] group-hover:text-orange transition-colors duration-300">
+                                    class="text-dark text-[24px] md:text-[26px] font-jost font-semibold leading-[1.2] tracking-[-0.12px] group-hover:text-orange transition-colors duration-300">
                                     <?php the_title(); ?>
                                 </h2>
                             </a>
 
                             <?php if (has_excerpt()): ?>
-                                <p class="text-gray font-normal font-sans text-base leading-[1.5]">
+                                <p class="text-gray font-normal font-sans text-sm leading-[1.5]">
                                     <?php echo wp_kses_post(get_the_excerpt()); ?>
                                 </p>
                             <?php endif; ?>

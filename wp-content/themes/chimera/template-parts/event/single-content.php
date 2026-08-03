@@ -24,10 +24,10 @@ $form_consent_text = get_field( 'form_consent_text' ) ?: 'I agree to the terms a
 
 <section class="w-full bg-white py-[60px] md:py-[80px]">
     <div class="container">
-        <div class="flex flex-col lg:flex-row gap-10 md:gap-[30px] xl:gap-[60px] items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-10 md:gap-[30px] xl:gap-[60px] items-start">
             
             <!-- Left Column: Content -->
-            <div class="w-full lg:flex-1 flex flex-col gap-[60px]">
+            <div class="w-full flex flex-col gap-[60px]">
                 
                 <div class="flex flex-col gap-5">
                     
@@ -49,8 +49,8 @@ $form_consent_text = get_field( 'form_consent_text' ) ?: 'I agree to the terms a
             <!-- Right Column: Registration Form Sidebar -->
             <?php 
             // if ( $is_upcoming ) : ?>
-            <div class="w-full md:w-[450px] xl:w-[550px] flex-shrink-0" id="register">
-                <div class="lg:sticky top-24 bg-offwhite rounded-[20px] px-8 md:px-[60px]">
+            <div class="w-full md:max-w-[450px] lg:max-w-none" id="register">
+                <div class="lg:sticky top-24 bg-offwhite rounded-[20px]">
                     
                     <!-- Form Header -->
                     <div class="flex flex-col gap-[10px] items-center mb-[30px]">

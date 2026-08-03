@@ -18,10 +18,6 @@ $process_image = $process_content['process_image'] ?? get_field('process_image')
 
 <section class="w-full bg-orange-fade pb-[50px] relative border-b border-lightGray/60">
 
-    <!-- Overlay Image - Sits half between the two sections -->
-    <div class="absolute hidden lg:block top-0 left-0 w-full -translate-y-1/2 z-0 flex pointer-events-none">
-        <img src="/wp-content/uploads/2026/06/ai-soluton-and-lead-overlay.png" alt="AI Solution Overlay" class="max-w-[1200px] object-contain">
-    </div>
 
     <div class="container mx-auto relative z-10">
         

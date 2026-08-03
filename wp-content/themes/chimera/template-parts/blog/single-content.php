@@ -26,8 +26,10 @@ $social_icons = get_field('social_icon', 'options');
 $social_title = $social_icons['title'] ?? 'Share article tests';
 $social_linkedin_link = $social_icons['linkedin']['link'] ?? '#';
 $social_linkedin_image = $social_icons['linkedin']['img']['url'] ?? '#';
+$social_linkedin_color = $social_icons['linkedin']['hover_color'] ?? '';
 $social_twitter_link = $social_icons['twitter']['link'] ?? '#';
 $social_twitter_image = $social_icons['twitter']['img']['url'] ?? '#';
+$social_twitter_color = $social_icons['twitter']['hover_color'] ?? '';
 
 ?>
 
@@ -77,10 +79,7 @@ $social_twitter_image = $social_icons['twitter']['img']['url'] ?? '#';
 
                 <!-- Article Content -->
                 <?php
-                $content_classes = 'blog-entry-content prose prose-lg prose-orange max-w-none';
-                if (get_post_type() === 'casestudies') {
-                    $content_classes .= ' [&_h2:first-of-type]:!mt-0';
-                }
+                $content_classes = 'blog-entry-content prose prose-lg prose-orange max-w-none [&>*:first-child]:!mt-0';
                 ?>
                 <div class="<?php echo esc_attr($content_classes); ?>">
                     <?php the_content(); ?>
@@ -123,16 +122,22 @@ $social_twitter_image = $social_icons['twitter']['img']['url'] ?? '#';
                             <!-- LinkedIn -->
                             <a href="<?php echo esc_attr('https://www.linkedin.com/sharing/share-offsite/?url=' . $post_url); ?>"
                                 target="_blank" rel="noopener noreferrer"
+                                onmouseover="this.style.color='<?php echo esc_attr($social_linkedin_color); ?>'" onmouseout="this.style.color=''"
                                 class="w-10 h-10 rounded-[8px] bg-lightGray/60 text-gray flex items-center justify-center transition-all duration-200 shadow-sm"
                                 aria-label="Share on LinkedIn">
-                                <img src="<?php echo $social_linkedin_image; ?>" class="w-4 h-4" alt="LinkedIn">
+                                <span class="w-4 h-4 inline-block transition-colors duration-200"
+                                      style="-webkit-mask-image: url('<?php echo esc_url($social_linkedin_image); ?>'); mask-image: url('<?php echo esc_url($social_linkedin_image); ?>'); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; mask-position: center; -webkit-mask-position: center; background-color: currentColor;">
+                                </span>
                             </a>
                             <!-- Twitter/X -->
                             <a href="<?php echo esc_attr('https://twitter.com/intent/tweet?url=' . $post_url . '&text=' . $post_title_encoded); ?>"
                                 target="_blank" rel="noopener noreferrer"
+                                onmouseover="this.style.color='<?php echo esc_attr($social_twitter_color); ?>'" onmouseout="this.style.color=''"
                                 class="w-10 h-10 rounded-[8px] bg-lightGray/60 text-gray flex items-center justify-center transition-all duration-200 shadow-sm"
                                 aria-label="Share on Twitter">
-                                <img src="<?php echo $social_twitter_image; ?>" class="w-4 h-4" alt="Twitter">
+                                <span class="w-4 h-4 inline-block transition-colors duration-200"
+                                      style="-webkit-mask-image: url('<?php echo esc_url($social_twitter_image); ?>'); mask-image: url('<?php echo esc_url($social_twitter_image); ?>'); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; mask-position: center; -webkit-mask-position: center; background-color: currentColor;">
+                                </span>
                             </a>
                         </div>
                     </div>

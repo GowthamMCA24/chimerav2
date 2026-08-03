@@ -65,6 +65,16 @@ $items = $milestones_content['items'] ?? [];
                     #milestones-slider:active {
                         cursor: grabbing;
                     }
+
+                    .milestone-item.active-milestone .milestone-dot {
+                        filter: drop-shadow(0 0 4px rgba(255,74,3,0.3));
+                    }
+                    .milestone-item.active-milestone .milestone-polygon {
+                        fill: currentColor;
+                    }
+                    .milestone-item:not(.active-milestone) .milestone-polygon {
+                        fill: white;
+                    }
                 </style>
 
                 <div class="relative w-full">
@@ -87,12 +97,11 @@ $items = $milestones_content['items'] ?? [];
                             <?php foreach ($slider_items as $index => $item):
                                 $title = $item['title'] ?? '';
                                 $year = $item['year'] ?? '';
-                                $is_active = $item['is_active'] ?? false;
                                 $item_desc = $item['description'] ?? $item['text'] ?? $item['content'] ?? '';
                                 $is_even = ($index % 2 === 0);
                                 ?>
                                 <!-- Item Column -->
-                                <div class="flex-none w-[260px] sm:w-[260px] md:w-[220px] lg:w-[200px] xl:w-[220px] shrink-0 relative z-10">
+                                <div class="flex-none w-[260px] sm:w-[260px] md:w-[220px] lg:w-[200px] xl:w-[220px] shrink-0 relative z-10 milestone-item">
 
                                     <div class="grid grid-rows-[1fr_auto_1fr] h-full min-h-[300px] w-full py-4">
 
@@ -105,7 +114,7 @@ $items = $milestones_content['items'] ?? [];
                                                 </div>
 
                                                 <!-- Card -->
-                                                <div class="w-full bg-white border border-[#ebebeb] rounded-[12px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow relative z-20">
+                                                <div class="w-full bg-white border border-[#ebebeb] rounded-[12px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-300 relative z-20 milestone-card">
                                                     <div class="flex items-center gap-2 mb-2 pointer-events-none">
                                                         <span
                                                             class="text-orange font-bold text-[22px] leading-none"><?php echo esc_html($year); ?></span>
@@ -123,17 +132,9 @@ $items = $milestones_content['items'] ?? [];
 
                                         <!-- Middle Line Dot -->
                                         <div class="relative flex items-center justify-center h-[2px] z-50 text-orange">
-                                            <?php if ($is_active): ?>
-                                                <!-- Active: Medium hexagon with outer glow & solid fill -->
-                                                <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[20px] h-[20px] drop-shadow-[0_0_4px_rgba(255,74,3,0.3)] pointer-events-none" viewBox="0 0 24 24">
-                                                    <polygon points="12,2 20.7,7 20.7,17 12,22 3.3,17 3.3,7" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
-                                                </svg>
-                                            <?php else: ?>
-                                                <!-- Inactive: Medium hexagon with white fill -->
-                                                <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[20px] h-[20px] pointer-events-none" viewBox="0 0 24 24">
-                                                    <polygon points="12,2 20.7,7 20.7,17 12,22 3.3,17 3.3,7" fill="white" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
-                                                </svg>
-                                            <?php endif; ?>
+                                            <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[20px] h-[20px] pointer-events-none transition-all duration-300 milestone-dot" viewBox="0 0 24 24">
+                                                <polygon points="12,2 20.7,7 20.7,17 12,22 3.3,17 3.3,7" class="transition-all duration-300 milestone-polygon" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+                                            </svg>
                                         </div>
 
                                         <!-- Bottom Card Area -->
@@ -144,7 +145,7 @@ $items = $milestones_content['items'] ?? [];
                                                 </div>
 
                                                 <!-- Card -->
-                                                <div class="w-full bg-white border border-[#ebebeb] rounded-[12px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow relative z-20">
+                                                <div class="w-full bg-white border border-[#ebebeb] rounded-[12px] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-md transition-all duration-300 relative z-20 milestone-card">
                                                     <div class="flex items-center gap-2 mb-2 pointer-events-none">
                                                         <span
                                                             class="text-orange font-bold text-[22px] leading-none"><?php echo esc_html($year); ?></span>
@@ -181,71 +182,123 @@ $items = $milestones_content['items'] ?? [];
                         let isDown = false;
                         let startX;
                         let scrollLeft;
-                        let autoPlayInterval;
+                        let animationId;
+                        let autoPlaySpeed = 1; // Pixels per frame (adjust for marquee speed)
+                        let isHovered = false;
 
-                        const startAutoPlay = () => {
-                            autoPlayInterval = setInterval(() => {
-                                // Find the distance to scroll by measuring the gap between first two items
-                                // item 0 is the line, so items are at index 1 and 2
-                                const firstItem = innerWrapper.children[1];
-                                const secondItem = innerWrapper.children[2];
-
-                                if (!firstItem || !secondItem) return;
-
-                                const scrollDistance = secondItem.offsetLeft - firstItem.offsetLeft;
-
-                                // Scroll right using native smooth behavior
-                                slider.scrollBy({ left: scrollDistance, behavior: 'smooth' });
-
-                                // Seamless infinite loop logic
-                                setTimeout(() => {
-                                    const jumpCount = parseInt(slider.getAttribute('data-jump-count'), 10);
-                                    if (!jumpCount || innerWrapper.children.length <= jumpCount) return;
-
-                                    const targetItem = innerWrapper.children[1 + jumpCount];
-                                    if (!targetItem) return;
-
-                                    const shiftDistance = targetItem.offsetLeft - firstItem.offsetLeft;
-
-                                    // If we have scrolled past the jump threshold, silently jump back
-                                    if (slider.scrollLeft >= shiftDistance - 10) {
-                                        slider.scrollLeft = slider.scrollLeft - shiftDistance;
-                                    }
-                                }, 800); // Wait for smooth scroll animation to finish
-
-                            }, 2000); // 3 seconds interval
+                        const firstItem = innerWrapper.children[0];
+                        
+                        const updateActiveState = () => {
+                            const sliderRect = slider.getBoundingClientRect();
+                            
+                            // Determine padding (px-4 or md:px-8)
+                            const padding = window.innerWidth >= 768 ? 32 : 16;
+                            
+                            const items = innerWrapper.querySelectorAll('.milestone-item');
+                            const cardWidth = items.length > 0 ? items[0].getBoundingClientRect().width : 260;
+                            
+                            // Evaluate active state at the center of where the first card naturally sits on the left
+                            const evaluationPoint = sliderRect.left + padding + (cardWidth / 2);
+                            
+                            let closestItem = null;
+                            let minDistance = Infinity;
+                            
+                            items.forEach(item => {
+                                const itemRect = item.getBoundingClientRect();
+                                // Skip if completely out of viewport
+                                if (itemRect.right < sliderRect.left || itemRect.left > sliderRect.right) {
+                                    item.classList.remove('active-milestone');
+                                    return;
+                                }
+                                
+                                const itemCenter = itemRect.left + itemRect.width / 2;
+                                const distance = Math.abs(evaluationPoint - itemCenter);
+                                
+                                if (distance < minDistance) {
+                                    minDistance = distance;
+                                    closestItem = item;
+                                }
+                                item.classList.remove('active-milestone');
+                            });
+                            
+                            if (closestItem) {
+                                closestItem.classList.add('active-milestone');
+                            }
                         };
 
-                        startAutoPlay();
+                        const loopScroll = () => {
+                            if (!isDown && !isHovered) {
+                                slider.scrollLeft += autoPlaySpeed;
+                            }
+                            
+                            // Seamless wrap logic
+                            const jumpCount = parseInt(slider.getAttribute('data-jump-count'), 10);
+                            const targetItem = innerWrapper.children[jumpCount];
+                            
+                            if (firstItem && targetItem) {
+                                const shiftDistance = targetItem.offsetLeft - firstItem.offsetLeft;
+                                if (slider.scrollLeft >= shiftDistance) {
+                                    slider.scrollLeft -= shiftDistance;
+                                } else if (slider.scrollLeft <= 0 && isDown) {
+                                    // Reverse wrap if manual scrolling backwards
+                                    slider.scrollLeft += shiftDistance;
+                                }
+                            }
+                            
+                            updateActiveState();
+                            animationId = requestAnimationFrame(loopScroll);
+                        };
 
-                        slider.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+                        // Start continuous loop
+                        animationId = requestAnimationFrame(loopScroll);
+
+                        // Drag events
+                        slider.addEventListener('mouseenter', () => {
+                            isHovered = true;
+                        });
+                        
                         slider.addEventListener('mouseleave', () => {
-                            if (!isDown) startAutoPlay();
+                            isHovered = false;
+                            isDown = false;
                         });
 
                         slider.addEventListener('mousedown', (e) => {
                             isDown = true;
                             startX = e.pageX - slider.offsetLeft;
                             scrollLeft = slider.scrollLeft;
-                            clearInterval(autoPlayInterval);
-                        });
-
-                        slider.addEventListener('mouseleave', () => {
-                            isDown = false;
                         });
 
                         slider.addEventListener('mouseup', () => {
                             isDown = false;
-                            startAutoPlay();
                         });
 
                         slider.addEventListener('mousemove', (e) => {
                             if (!isDown) return;
                             e.preventDefault();
                             const x = e.pageX - slider.offsetLeft;
-                            const walk = (x - startX) * 1; // 1:1 Natural drag speed
-                            slider.scrollLeft = scrollLeft - walk;
+                            const walk = (x - startX) * 1.5; // Drag speed multiplier
+                            
+                            let targetScroll = scrollLeft - walk;
+                            
+                            // Handle loop jumping during drag smoothly
+                            const jumpCount = parseInt(slider.getAttribute('data-jump-count'), 10);
+                            const targetItem = innerWrapper.children[jumpCount];
+                            if (firstItem && targetItem) {
+                                const shiftDistance = targetItem.offsetLeft - firstItem.offsetLeft;
+                                if (targetScroll >= shiftDistance) {
+                                    targetScroll -= shiftDistance;
+                                    scrollLeft -= shiftDistance; // prevent drag glitching
+                                } else if (targetScroll <= 0) {
+                                    targetScroll += shiftDistance;
+                                    scrollLeft += shiftDistance; // prevent drag glitching
+                                }
+                            }
+                            
+                            slider.scrollLeft = targetScroll;
                         });
+                        
+                        // Initial state
+                        updateActiveState();
                     });
                 </script>
             <?php endif; ?>

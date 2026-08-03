@@ -58,7 +58,7 @@ $items = $values_content['items'] ?? [];
                     
                     $col_class = $is_wide ? 'md:col-span-4' : 'md:col-span-2';
                 ?>
-                    <div class="<?php echo $col_class; ?> bg-white rounded-[10px] p-[30px] lg:px-[40px] shadow-[-1px_4px_4px_0px_rgba(200,200,200,0.25),1px_1px_4px_0px_rgba(209,205,205,0.25)] flex flex-col items-start">
+                    <div class="<?php echo $col_class; ?> bg-white rounded-[10px] p-[30px] lg:px-[40px] shadow-[-1px_4px_4px_0px_rgba(200,200,200,0.25),1px_1px_4px_0px_rgba(209,205,205,0.25)] flex flex-col items-start border border-transparent hover:border-orange transition-colors duration-300">
                         
                         <div class="flex flex-col gap-[24px] items-start w-full mb-[10px]">
                             

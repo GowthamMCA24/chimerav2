@@ -84,7 +84,7 @@ if (!$featured_query->have_posts()) {
 
                 <!-- Right: Content -->
                 <div class="w-full md:w-1/2 flex flex-col gap-10">
-                    <div class="flex-1 flex flex-col gap-[30px]">
+                    <div class="flex-1 flex flex-col gap-[20px]">
                         <!-- Status Badge -->
                         <div class="flex items-center">
                             <span
@@ -96,7 +96,7 @@ if (!$featured_query->have_posts()) {
                         <!-- Title -->
                         <a href="<?php the_permalink(); ?>" class="group block">
                             <h2
-                                class="text-dark text-2xl md:text-[28px] lg:text-[32px] font-semibold font-jost leading-[1.1] tracking-[-0.12px] group-hover:text-orange transition-colors duration-300">
+                                class="text-dark text-[24px] md:text-[26px] font-semibold font-jost leading-[1.1] tracking-[-0.12px] group-hover:text-orange transition-colors duration-300">
                                 <?php the_title(); ?>
                             </h2>
                         </a>

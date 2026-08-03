@@ -49,6 +49,9 @@ function chimera_scripts() {
     // Enqueue navigation interaction scripts
     wp_enqueue_script( 'chimera-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '1.0.0', true );
 
+    // Enqueue scroll to top script
+    wp_enqueue_script( 'chimera-scroll-top', get_template_directory_uri() . '/assets/js/scroll-top.js', array(), '1.0.0', true );
+
     // Enqueue blog scripts on blog listing and single post pages
     if ( is_page_template( 'page-blog.php' ) || is_singular( 'post' ) || is_singular( 'whitepaper' ) || is_singular( 'casestudies' ) || is_singular( 'webinar' ) ) {
         $blog_js_file = get_template_directory() . '/assets/js/blog.js';

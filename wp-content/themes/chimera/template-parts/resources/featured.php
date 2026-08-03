@@ -80,7 +80,7 @@
                     
                     <!-- Title -->
                     <a href="<?php echo $featured_detail_url; ?>" class="group block mb-5">
-                        <h2 class="text-dark max-w-md text-2xl md:text-[28px] lg:text-[32px] font-semibold font-jost leading-[1.2] group-hover:text-orange transition-colors duration-300">
+                        <h2 class="text-dark text-[24px] md:text-[26px] font-semibold font-jost leading-[1.2] group-hover:text-orange transition-colors duration-300">
                             <?php echo esc_html( $title ); ?>
                         </h2>
                     </a>

@@ -8,23 +8,21 @@
 $culture_content = get_field('about_culture_quote') ?: [];
 $quote_text = $culture_content['quote_text'] ?? '';
 $bg_image = $culture_content['bg_image'] ?? '';
+$bg_color = $culture_content['bg_color'] ?? '#FF4A03'; // Solid top color fallback
 $quote_icon_1 = $culture_content['quote_icon_1'] ?? ($culture_content['quote_icon'] ?? '');
 $quote_icon_2 = $culture_content['quote_icon_2'] ?? '';
 ?>
 
-<section class="w-full relative py-[120px] lg:py-[150px] bg-orange overflow-hidden about-culture-section">
+<section class="w-full relative py-[120px] lg:py-[150px] overflow-hidden about-culture-section" style="background-color: <?php echo esc_attr($bg_color); ?>;">
     
-    <!-- Background Image / Texture -->
-    <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-        <div class="absolute inset-0 mix-blend-overlay">
-            <?php if ( $bg_image ) : 
-                $bg_url = is_array($bg_image) ? $bg_image['url'] : wp_get_attachment_image_url($bg_image, 'full');
-                if ( $bg_url ) {
-                    echo '<img src="' . esc_url($bg_url) . '" alt="" class="w-full h-full object-cover">';
-                }
-            endif; ?>
+    <!-- Background Image -->
+    <?php if ( $bg_image ) : 
+        $bg_url = is_array($bg_image) ? $bg_image['url'] : wp_get_attachment_image_url($bg_image, 'full');
+        if ( $bg_url ) : ?>
+        <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+            <img src="<?php echo esc_url($bg_url); ?>" alt="" class="w-full h-full object-cover">
         </div>
-    </div>
+    <?php endif; endif; ?>
 
     <div class="container mx-auto px-6 relative z-10 flex flex-col items-center justify-center">
         
